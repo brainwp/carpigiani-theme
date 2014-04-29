@@ -43,9 +43,158 @@ function optionsframework_options() {
 		$options_posts[$post->ID] = $post->post_title;
 	}
 
+	// Options Cabecalho
 	$options[] = array(
 		'name' => 'Cabeçalho',
 		'type' => 'heading');
+
+
+	// Options Home
+	$options[] = array(
+		'name' => 'Home',
+		'type' => 'heading');
+
+	$options[] = array(
+		'name' => 'Bloco de Destaques da Home',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => '',
+		'desc' => 'Exibir os Blocos de Destaques na Home?',
+		'id' => 'exibir_destaques_checkbox',
+		'std' => '1',
+		'type' => 'checkbox');
+
+	$options[] = array(
+		'name' => 'Primeiro Bloco',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Ícone',
+		'desc' => 'Faça upload do ícone para o primeiro destaque. Dimensões: 120x90px',
+		'id' => 'icon_feature_upload_um',
+		'type' => 'upload');
+
+	$options[] = array(
+		'name' => 'Título',
+		'desc' => 'Adicione o título para o primeiro destaque',
+		'id' => 'title_feature_um',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Resumo',
+		'desc' => 'Adicione um breve resumo para o primeiro destaque',
+		'id' => 'resumo_feature_um',
+		'std' => '',
+		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Link do Primeiro Bloco',
+		'desc' => 'Adicione aqui a URL para onde o primeiro bloco deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_um',
+		'std' => '',
+		'type' => 'text');
+
+
+	$options[] = array(
+		'name' => 'Segundo Bloco',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Ícone',
+		'desc' => 'Faça upload do ícone para o segundo destaque. Dimensões: 120x90px',
+		'id' => 'icon_feature_upload_dois',
+		'type' => 'upload');
+
+	$options[] = array(
+		'name' => 'Título',
+		'desc' => 'Adicione o título para o segundo destaque',
+		'id' => 'title_feature_dois',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Resumo',
+		'desc' => 'Adicione um breve resumo para o segundo destaque',
+		'id' => 'resumo_feature_dois',
+		'std' => '',
+		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Link do Segundo Bloco',
+		'desc' => 'Adicione aqui a URL para onde o primeiro bloco deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_dois',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Terceiro Bloco',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Ícone',
+		'desc' => 'Faça upload do ícone para o terceiro destaque. Dimensões: 120x90px',
+		'id' => 'icon_feature_upload_tres',
+		'type' => 'upload');
+
+	$options[] = array(
+		'name' => 'Título',
+		'desc' => 'Adicione o título para o terceiro destaque',
+		'id' => 'title_feature_tres',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Resumo',
+		'desc' => 'Adicione um breve resumo para o terceiro destaque',
+		'id' => 'resumo_feature_tres',
+		'std' => '',
+		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Link do Terceiro Bloco',
+		'desc' => 'Adicione aqui a URL para onde o primeiro bloco deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_tres',
+		'std' => '',
+		'type' => 'text');
+	
+	$options[] = array(
+		'name' => 'Quarto Bloco',
+		'desc' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => 'Ícone',
+		'desc' => 'Faça upload do ícone para o quarto destaque. Dimensões: 120x90px',
+		'id' => 'icon_feature_upload_quatro',
+		'type' => 'upload');
+
+	$options[] = array(
+		'name' => 'Título',
+		'desc' => 'Adicione o título para o quarto destaque',
+		'id' => 'title_feature_quatro',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Resumo',
+		'desc' => 'Adicione um breve resumo para o quarto destaque',
+		'id' => 'resumo_feature_quatro',
+		'std' => '',
+		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => 'Link do Quarto Bloco',
+		'desc' => 'Adicione aqui a URL para onde o primeiro bloco deve apontar. Lembre-se de adicionar o http://',
+		'id' => 'link_box_quatro',
+		'std' => '',
+		'type' => 'text');
+
 
 	return $options;
 }
