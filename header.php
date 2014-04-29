@@ -48,7 +48,7 @@
 					<input class="hide" type=”text”>
 				</span>
 			</li>
-			<span class="i-suporte suporte-header">Suporte Online</span>
+			<span class="i-suporte suporte-header"><p>Suporte<br /> Online</p></span>
 		</nav> <!-- #site-navigation -->
 	</header><!-- #masthead -->
 

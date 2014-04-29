@@ -692,7 +692,7 @@ body {
 	float: left;
 }
 .search-menu {
-	float: left;
+	
 }
 .i-search {
 	float: left;
@@ -727,6 +727,18 @@ header {
 	width: 171px;
 	height: 76px;
 	text-indent: -9999px;
+}
+.suporte-header {
+	float: right;
+	background: url( "images/i-suporte-header.png" ) no-repeat;
+	height: 54px;
+	height: 53px;
+	color: #0089C5;
+
+}
+.suporte-header p {
+	
+
 }
 /** Home
 *	- Menu
