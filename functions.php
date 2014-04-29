@@ -165,3 +165,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load CPT Produtos.
  */
 require_once ( get_stylesheet_directory() . '/inc/custom-produtos.php' );
+
+/**
+* Disable Admin Bar for All Users.
+*/
+show_admin_bar(false);
