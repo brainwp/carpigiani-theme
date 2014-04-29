@@ -29,12 +29,22 @@
 			<!-- <h2 class="site-description"><?php //bloginfo( 'description' ); ?></h2> -->
 		</div>
 
-		<!-- <nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php //_e( 'Primary Menu', 'carpigiani-theme' ); ?></button>
-			<a class="skip-link screen-reader-text" href="#content"><?php //_e( 'Skip to content', 'carpigiani-theme' ); ?></a>
+		<!-- Menu Header -->
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle"><?php _e( 'Primary Menu', 'carpigiani-theme' ); ?></button>
+			<a class="skip-link screen-reader-text" href="#content">
+				<?php _e( 'Skip to content', 'carpigiani-theme' ); ?>
+			</a>
 		
-			<?php //wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav> --><!-- #site-navigation -->
+			<?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
+
+			<li>
+				<span class="i-search">
+					<input type=”text”>
+				</span>
+			</li>
+			<span class="i-suporte suporte-header">Suporte Online</span>
+		</nav> <!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
