@@ -10,13 +10,18 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'carpigiani-theme' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'carpigiani-theme' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'carpigiani-theme' ), 'carpigiani-theme', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<span></span>
+			<span class="i-suporte suporte-footer">Suporte Online</span>
+			<div class="social-icons">
+				<a class=”social” id="twitter" href=""></a>
+				<a class=”social” id="instagram" href=""></a>
+				<a class=”social” id="facebook" href=""></a>
+			</div><!-- .i-social -->
 		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	</footer>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
