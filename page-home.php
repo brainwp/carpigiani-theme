@@ -13,10 +13,12 @@ get_header(); ?>
     			while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
 				<li class="item">
 					<div class="excerpt">
-						<span class="btn">
-						</div><!-- .btn -->		
+						<?php the_excerpt(); ?>
+						<a href="<?php the_permalink(); ?>" class="btn">
+							Veja <?php the_title(); ?> &gt;&gt;
+						</a><!-- .btn -->		
 					</div><!-- .excerpt -->
-					<div class="image"></div><!-- .image -->
+					<div class="image"><?php the_post_thumbnail( 'slider-home' ); ?></div><!-- .image -->
 				</li><!-- .item -->
 			<?php endwhile;  wp_reset_query(); ?>
 
