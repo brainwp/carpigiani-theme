@@ -1,18 +1,32 @@
-<?php get_header(); ?>
+<?php
+
+/* Template Name: Home */
+
+get_header(); ?>
 
 <section class="slider-content-home">
 
-	<div class="wrap">
-		<div class="item">
-			<div class="excerpt">
-				<span class="btn">
-			</div><!-- .btn -->		
-		</div><!-- .excerpt -->
-		<div class="image"></div><!-- .image -->
-		</div><!-- .item -->
-	</div><!-- .wrap -->
+		<div id="carousel" class="wrap list_carousel responsive">
+			<ul id="foo5">
 
-</section><!-- .slider-content-home -->
+			<?php $slider_query = new WP_Query('post_type=produtos&posts_per_page=4');
+    			while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
+				<li class="item">
+					<div class="excerpt">
+						<span class="btn">
+						</div><!-- .btn -->		
+					</div><!-- .excerpt -->
+					<div class="image"></div><!-- .image -->
+				</li><!-- .item -->
+			<?php endwhile;  wp_reset_query(); ?>
+
+			</ul>
+			<div class="clearfix"></div>
+			<a id="prev-slider" class="prev" href="#">&lt;</a>
+			<a id="next-slider" class="next" href="#">&gt;</a>
+		</div>
+
+</section><!-- #carousel .slider-content-home -->
 
 <section class="body-content-home">
 
