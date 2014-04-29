@@ -17,6 +17,8 @@
 
 <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png" type="image/x-icon">
 
+<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+
 <?php wp_head(); ?>
 </head>
 
@@ -24,8 +26,11 @@
 <div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">
+		<span class="wear"></span>
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title">
+				<a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			</h1>
 			<!-- <h2 class="site-description"><?php //bloginfo( 'description' ); ?></h2> -->
 		</div>
 
@@ -38,9 +43,9 @@
 		
 			<?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
 
-			<li>
+			<li class="search-menu">
 				<span class="i-search">
-					<input type=”text”>
+					<input class="hide" type=”text”>
 				</span>
 			</li>
 			<span class="i-suporte suporte-header">Suporte Online</span>
