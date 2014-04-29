@@ -160,3 +160,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+* Disable Admin Bar for All Users.
+*/
+show_admin_bar(false);
