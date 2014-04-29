@@ -41,13 +41,13 @@
 				<?php _e( 'Skip to content', 'carpigiani-theme' ); ?>
 			</a>
 		
-			<?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
-
-			<li class="search-menu">
-				<span class="i-search">
+			<!-- <li class="search-menu">
+				<span class="i-search">Busca
 					<input class="hide" type=”text”>
 				</span>
-			</li>
+			</li> -->
+			<?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
+
 			<span class="i-suporte suporte-header"><p>Suporte<br /> Online</p></span>
 		</nav> <!-- #site-navigation -->
 	</header><!-- #masthead -->
