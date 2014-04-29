@@ -728,6 +728,7 @@ object {
 }
 .gallery-caption {}
 
+
 #intro {
 	width: 580px;
 	margin: 0 auto;
@@ -848,11 +849,80 @@ footer {
 /*--------------------------------------------------------------
 12.5 Slider
 --------------------------------------------------------------*/
-
 .slider-content-home {
 	float: left;
 	width: 100%;
-	height: 288px;
 	background-color: #eef0ef;
 }
 
+.body-content-home {
+	float: left;
+	width: 100%;
+	height: 280px;
+	background-color: #FFFFFF;
+}
+.slider-content-home .wrap {
+	max-width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.list_carousel {
+	margin: 0;
+	width: 100%;
+}
+.list_carousel ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+.list_carousel li.item {
+	font-size: 0.8em;
+	font-weight: lighter;
+	color: #005264;
+	text-align: left;
+	width: 100%;
+	max-width: 980px;
+	height: 280px;
+	padding: 0;
+	margin: 6px;
+	display: block;
+	overflow: hidden;
+	float: left;
+}
+.list_carousel li.item .excerpt {
+	float: left;
+	width: 35%;
+	height: 280px;
+	padding: 20px 20px 0 0;
+}
+.list_carousel li.item .image {
+	float: right;
+	width: 65%;
+	height: 280px;
+	text-align: right;
+}
+.list_carousel li.item .btn {
+	padding: 10px 12px;
+	background-color: #008FCB;
+	color: #FFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+.list_carousel li.item .image img {
+
+}
+.clearfix {
+	float: none;
+	clear: both;
+}
+.prev {
+	float: left;
+	margin-left: 10px;
+}
+.next {
+	float: right;
+	margin-right: 10px;
+}
