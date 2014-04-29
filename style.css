@@ -368,6 +368,11 @@ a:active {
 	float: left;
 	width: 100%;
 }
+.menu {
+	display: table;
+	width: 55%;
+	margin: 0 auto;
+}
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
@@ -376,10 +381,14 @@ a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
+	margin: 0 10px;
 }
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	text-transform: lowercase;
+	font-size: 1.313em;
+	color: #0089C5;
 }
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -671,3 +680,76 @@ object {
 	max-width: 11.11%;
 }
 .gallery-caption {}
+
+
+/** Home
+*	- geral
+*/
+body {
+	font-family: 'Montserrat Alternates', 'sans-serif';
+}
+.i-suporte {
+	float: left;
+}
+.search-menu {
+	float: left;
+}
+.i-search {
+	float: left;
+}
+.hide {
+	display: none;
+}
+
+/** Home
+*	- Header
+*/
+
+.home {}
+header {
+	float: left;
+	width: 100%;
+	height: 137px;
+	background-color: #FFFFFF;
+}
+#masthead .wear {
+	float: left;
+	width: 100%;
+	height: 27px;
+	background-color: #008ec8;
+}
+.site-branding {
+	float: left;
+}
+.site-branding #logo {
+	float: left;
+	background: url( "images/logo-carpegiani.png" ) no-repeat;
+	width: 171px;
+	height: 76px;
+	text-indent: -9999px;
+}
+/** Home
+*	- Menu
+*/
+.site-navigation {
+	display: table;
+	width: 100%;
+}
+.slider-content-home {
+	float: left;
+	width: 100%;
+	height: 288px;
+	background-color: #eef0ef;
+}
+.body-content-home {
+	float: left;
+	width: 100%;
+	height: 280px;
+	background-color: #FFFFFF;
+}
+footer {
+	float: left;
+	width: 100%;
+	height: 96px;
+	background-color: #FFFFFF;
+}
