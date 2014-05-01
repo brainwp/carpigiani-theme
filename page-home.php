@@ -23,10 +23,13 @@ get_header(); ?>
 			<?php endwhile;  wp_reset_query(); ?>
 
 			</ul>
+			
 			<div class="clearfix"></div>
-			<a id="prev-slider" class="prev" href="#">&lt;</a>
-			<a id="next-slider" class="next" href="#">&gt;</a>
+
 		</div>
+
+			<a id="prev-slider" class="prev" href="#"></a>
+			<a id="next-slider" class="next" href="#"></a>
 
 </section><!-- #carousel .slider-content-home -->
 

@@ -613,6 +613,7 @@ a:active {
 .list_carousel {
 	margin: 0;
 	width: 100%;
+	position: relative;
 }
 .list_carousel ul {
 	margin: 0;
@@ -663,17 +664,43 @@ a:active {
 	clear: both;
 }
 .prev {
-	float: left;
-	margin-left: 10px;
+	position: absolute;
+	top: 115px;
+	z-index: 2147483647;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	text-decoration: none;
+	background: url("images/setas-slider.png") no-repeat scroll 11px 6px transparent;
+	left: 30px;	
+	width: 50px;
+	height: 50px;
+}
+.prev:hover {
+	background: url("images/setas-slider.png") no-repeat scroll 11px -49px #FFF;
 }
 .next {
-	float: right;
-	margin-right: 10px;
+	position: absolute;
+	top: 115px;
+	z-index: 2147483647;
+	padding: 15px 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	text-decoration: none;
+	background: url("images/setas-slider.png") no-repeat scroll -31px 6px transparent;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+}
+.next:hover {
+	background: url("images/setas-slider.png") no-repeat scroll -31px -49px #FFF;
 }
 .slider-content-home {
-	float: left;
 	width: 100%;
 	background-color: #eef0ef;
+	overflow: hidden;
+	position: relative;
 }
 
 /*--------------------------------------------------------------
