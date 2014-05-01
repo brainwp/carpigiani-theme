@@ -12,12 +12,12 @@
 
 	<footer>
 		<div class="site-info">
-			<span></span>
-			<span class="i-suporte suporte-footer">Suporte Online</span>
+			<span id="law"><i>Carpigiani do Brasil todos direitos reservados</i></span>
+			<span class="i-suporte suporte-footer"><p>Suporte Online</p></span>
 			<div class="social-icons">
-				<a class=”social” id="twitter" href=""></a>
-				<a class=”social” id="instagram" href=""></a>
-				<a class=”social” id="facebook" href=""></a>
+				<a class="social" id="twitter" href=""></a>
+				<a class="social" id="instagram" href=""></a>
+				<a class="social" id="facebook" href=""></a>
 			</div><!-- .i-social -->
 		</div><!-- .site-info -->
 	</footer>
