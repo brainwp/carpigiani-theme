@@ -148,6 +148,12 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+h1 { font-size: 2.6em; }
+h2 { font-size: 2.4em; }
+h3 { font-size: 2.2em; }
+h4 { font-size: 1.8em; }
+h5 { font-size: 1.6em; }
+h6 { font-size: 1em; }
 p {
 	margin-bottom: 1.5em;
 }
@@ -624,6 +630,13 @@ a:active {
 /*--------------------------------------------------------------
 10.4 - Slider
 --------------------------------------------------------------*/
+.slider-content-single {
+	width: 100%;
+	background-color: #eef0ef;
+	overflow: hidden;
+	position: relative;
+}
+
 .slider-content-home .wrap {
 	max-width: 980px;
 	margin: 0 auto;
@@ -720,6 +733,46 @@ a:active {
 	background-color: #eef0ef;
 	overflow: hidden;
 	position: relative;
+}
+
+.slider-content-single .master-wrap {
+	max-width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.slider-content-single .desc {
+	max-width: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+	float: left;
+	padding: 20px 30px 0 0;
+	font-size: 0.9em;
+}
+
+.slider-content-single .desc h2 {
+	color: #255563;
+	font-size: 1.5em;
+	line-height: 1;
+}
+
+.slider-content-single .desc h1 {
+	color: #008fcb;
+	line-height: 1.4;
+}
+
+.slider-content-single .wrap {
+	max-width: 580px;
+	margin: 0 auto;
+	overflow: hidden;
+	float: right;
+}
+
+.slider-content-single .list_carousel li.item .image {
+	float: right;
+	width: auto;
+	height: 280px;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
