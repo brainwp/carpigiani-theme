@@ -11,6 +11,9 @@
 	</div><!-- #content -->
 
 	<footer>
+
+		<span class="responsive"><img src="<?php bloginfo( 'template_url' );?>/images/backgroud-footer.png">
+
 		<div class="site-info">
 			<span id="law"><i>Carpigiani do Brasil todos direitos reservados</i></span>
 
@@ -22,7 +25,7 @@
 				<a class="social" id="facebook" href=""></a>
 			</div><!-- .i-social -->
 			<span class="i-suporte suporte-footer"><p>Suporte <br> Online</p></span>
-		</div><!-- .site-info -->
+		</div><!-- .site-info --></span>
 	</footer>
 
 </div><!-- #page -->
