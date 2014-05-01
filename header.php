@@ -27,7 +27,9 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<span class="wear"></span>
-		<span class="responsive"><img src="<?php bloginfo( 'template_url' );?>/images/backgroud-header."></span>
+
+		<span class="responsive"><img src="<?php bloginfo( 'template_url' );?>/images/backgroud-header.png"></span>
+		
 		<div class="site-branding">
 			<h1 class="site-title">
 				<a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
