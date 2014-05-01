@@ -14,7 +14,7 @@
 		<div class="site-info">
 			<span id="law"><i>Carpigiani do Brasil todos direitos reservados</i></span>
 
-			<span class="i-suporte suporte-footer"><p>Suporte Online</p></span>
+			<!-- <span class="i-suporte suporte-footer"><p>Suporte Online</p></span> -->
 
 			<div class="social-icons">
 				<a class="social" id="twitter" href=""></a>

@@ -558,21 +558,24 @@ a:active {
 .widget_search .search-submit {
 	display: none;
 }
-
-/*--------------------------------------------------------------
-10.0 Content
---------------------------------------------------------------*/
-.body-content-home {
-	float: left;
-	width: 100%;
-	height: 280px;
-	background-color: #FFFFFF;
-}
 .hide {
 	display: none;
 }
 .i-suporte p {
 	font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+10.0 Content
+--------------------------------------------------------------*/
+.site-content {
+	clear: both;
+}
+.site-content .body-content-home {
+	float: left;
+	width: 100%;
+	height: 280px;
+	background-color: #FFFFFF;
 }
 
 /*--------------------------------------------------------------
@@ -688,8 +691,11 @@ a:active {
 }
 .slider-content-home {
 	float: left;
+	background-color: #EDECEC;
+	max-width: 125.000em;
 	width: 100%;
-	background-color: #eef0ef;
+	height: 447px;
+	/* margin: 0 auto; */
 }
 
 /*--------------------------------------------------------------
@@ -797,7 +803,7 @@ object {
 header {
 	float: left;
 	width: 100%;
-	height: 137px;
+	height: 215px;
 	background-color: #FFFFFF;
 }
 #masthead .wear {
@@ -808,7 +814,7 @@ header {
 }
 .site-branding {
 	display: table;
-    margin: 0 auto;
+    margin: 62px auto;
     width: 80em;
 }
 .site-branding .site-title {}
@@ -820,7 +826,7 @@ header {
 	text-indent: -9999px;
 }
 .suporte-header {
-	float: right;
+	float: right !important;
 	background: url( "images/i-suporte-header.png" ) no-repeat;
 	height: 3.375em; /* 54px*/
 	height: 3.375em;
@@ -843,7 +849,6 @@ footer {
 	width: 100%;
 	height: 96px;
 	/* background-color: #FFFFFF; */
-	background-color: #CCC;
 }
 #law {
 	float: left;
@@ -862,7 +867,7 @@ footer {
 	width: 4.625em; /* Equivalente a 74px */
 	width: 7.625em;
 	background: url( 'images/i-suporte-footer.png' ) no-repeat;
-	margin: 0.468em 0 0.4868em 0; /** Equivalente: 11px e 142px */
+	margin: 0.468em 9.500em 0.4868em 0; /** Equivalente: 11px e 142px */
 	font-size: 1.625em;
 }
 .suporte-footer p {
@@ -873,12 +878,13 @@ footer {
 }
 footer .social-icons {
 	float: right;
-    margin: 30px 50px 10px 0;
+    margin: 1.875em 0 0.625em 0;
 }
 footer a.social {
 	float: right;
-	width: 3.188em; /* Equivalente a 51px */
-	height: 3.188em;
+	width: 2.500em; /* Equivalente a 51px */
+	height:2.500em;
+	margin-left: 0.625em;
 }
 footer .social-icons #twitter{
 	background: url( 'images/i-social-twiter.png' ) no-repeat;
