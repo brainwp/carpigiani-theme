@@ -27,30 +27,48 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<span class="wear"></span>
-		<span class="responsive"><img src="<?php bloginfo( 'template_url' );?>/images/backgroud-header.png"></span>
+		<span class="responsive"><img src="<?php bloginfo( 'template_url' );?>/images/backgroud-header."></span>
 		<div class="site-branding">
 			<h1 class="site-title">
 				<a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			</h1>
 			<!-- <h2 class="site-description"><?php //bloginfo( 'description' ); ?></h2> -->
-		</div>
-
 		<!-- Menu Header -->
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Primary Menu', 'carpigiani-theme' ); ?></button>
 			<a class="skip-link screen-reader-text" href="#content">
 				<?php _e( 'Skip to content', 'carpigiani-theme' ); ?>
-			</a>
-		
-			<!-- <li class="search-menu">
-				<span class="i-search">Busca
-					<input class="hide" type=”text”>
-				</span>
-			</li> -->
-			<?php wp_nav_menu( array( 'theme_location' => 'header' ) ); ?>
+			</a>			
 
-			<span class="i-suporte suporte-header"><p>Suporte<br /> Online</p></span>
+			<?php
+
+				$args = array(
+					'theme_location'  => '',
+					'menu'            => '',
+					'container'       => 'div',
+					'container_class' => '',
+					'container_id'    => '',
+					'menu_class'      => 'menu',
+					'menu_id'         => '',
+					'echo'            => true,
+					'fallback_cb'     => 'wp_page_menu',
+					'before'          => '',
+					'after'           => '',
+					'link_before'     => '',
+					'link_after'      => '',
+					'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'depth'           => 0,
+					'walker'          => ''
+				);
+
+				wp_nav_menu( $args );
+
+			?>
+
+			<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
 		</nav> <!-- #site-navigation -->
+		</div>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
