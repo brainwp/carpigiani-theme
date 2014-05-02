@@ -41,7 +41,7 @@ get_header(); ?>
 					    $attachments = get_posts( $slider_single );
 					    if ( $attachments ) {
 					        foreach ( $attachments as $attachment ) {
-					            $image_attributes = wp_get_attachment_image_src( $attachment->ID, 'full' ); ?>
+					            $image_attributes = wp_get_attachment_image_src( $attachment->ID, 'slider-home' ); ?>
 							    <li class="item">        
 							        <div class="image"><img src="<?php echo $image_attributes[0]; ?>" /></div><!-- .image -->
 							    </li><!-- .item -->    
@@ -65,7 +65,7 @@ get_header(); ?>
 
 
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			<?php get_template_part( 'content', 'single-produto' ); ?>
 
 			<?php carpigiani_theme_post_nav(); ?>
 

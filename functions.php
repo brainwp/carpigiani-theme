@@ -177,6 +177,53 @@ require get_template_directory() . '/inc/jetpack.php';
 require_once ( get_stylesheet_directory() . '/inc/custom-produtos.php' );
 
 /**
+ * ACF
+ */
+define( 'ACF_LITE' , true );
+require get_template_directory() . '/inc/advanced-custom-fields/acf.php';
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_campos-de-produtos',
+		'title' => 'Campos de Produtos',
+		'fields' => array (
+			array (
+				'key' => 'field_53639ff5ca3ca',
+				'label' => 'Sub Título',
+				'name' => 'sub_titulo',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => 'Sub Título',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'produtos',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+
+/**
 * Disable Admin Bar for All Users.
 */
 show_admin_bar(false);
