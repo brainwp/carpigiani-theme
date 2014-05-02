@@ -139,6 +139,9 @@ function carpigiani_theme_scripts() {
 	// carouFredSel
 	wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/js/caroufredsel/jquery.carouFredSel-6.2.1.js', array(), '', true );
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js' );
+	
+	// Click Search Script - Header Menu
+	wp_enqueue_script( 'scripts.search', get_template_directory_uri() . '/js/scripts.search.js' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

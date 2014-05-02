@@ -386,7 +386,7 @@ a:active {
 }
 .menu-menu-header-container {
 	float: left;
-    width: 28em;
+    width: 26em;
     margin: 3.125em 0 0 16.938em;
 }
 .main-navigation ul {
@@ -576,12 +576,13 @@ a:active {
 --------------------------------------------------------------*/
 .site-content {
 	clear: both;
+	position: relative;
 }
 .site-content .body-content-home {
 	float: left;
 	width: 100%;
 	height: 280px;
-	background-color: #FFFFFF;
+	background-color: #EDECEC;
 }
 
 /*--------------------------------------------------------------
@@ -836,6 +837,18 @@ header {
 	height: 215px;
 	background-color: #FFFFFF;
 }
+#i-search {
+	background: url("images/i-search.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: left;
+    height: 15px;
+    margin: 3.525em 0.4em 0;
+    width: 15px;
+}
+#search {
+	float: left;
+	margin-top: 3.125em;
+	/* border: #fff; */
+}
 #masthead .wear {
 	float: left;
 	width: 100%;
@@ -843,9 +856,13 @@ header {
 	background-color: #008ec8;
 }
 .site-branding {
-	display: table;
-    margin: 62px auto;
+	clear: both;
+    display: table;
+    margin: -175px auto 62px;
+    position: relative;
+    top: 0;
     width: 80em;
+    z-index: 1;
 }
 .site-branding .site-title {}
 .site-branding #logo {
@@ -862,13 +879,44 @@ header {
 	height: 3.375em;
 	color: #0089C5;
 	margin-top: 1.425em;
-	width: 7.500em;
+	width: 7.900em;
 }
 .suporte-header p {
 	color: #1E79AF;
     float: right;
     line-height: 19px;
     margin: 0.488em 0 0.625em 4.188em;
+}
+header .responsive {
+	clear: both;
+    display: table;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 125em;
+    /* position: relative;
+    z-index: 0; */
+}
+header .responsive img {
+	width:100% !important;
+    height:100% !important;
+    display:block;
+}
+footer .responsive {
+	/* bottom: -110px; */
+    clear: both;
+    display: table;
+    height: auto;
+    margin: 0 auto;
+    max-width: 125em;
+    /* position: relative; */
+    width: 100%;
+    z-index: -1;
+}
+footer .responsive img {
+	width:100% !important;
+    height:100% !important;
+    display:block;
 }
 
 /*--------------------------------------------------------------
@@ -878,7 +926,7 @@ footer {
 	float: left;
 	width: 100%;
 	height: 96px;
-	/* background-color: #FFFFFF; */
+	border-top: solid 1px #ACE0F6;
 }
 #law {
 	float: left;
@@ -888,8 +936,9 @@ footer {
 }
 .site-info {
 	display: table;
-	margin:0 auto;
+	margin: -110px auto 0;
 	width: 80.000em;
+	position: relative;
 }
 .suporte-footer {
 	display: table;

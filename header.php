@@ -17,8 +17,11 @@
 
 <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png" type="image/x-icon">
 
+
 <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <?php wp_head(); ?>
 </head>
@@ -28,7 +31,9 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<span class="wear"></span>
-		<span class="responsive"><img src="<?php bloginfo( 'template_url' );?>/images/backgroud-header."></span>
+
+		<span class="responsive"><img src="<?php bloginfo( 'template_url' );?>/images/backgroud-header.png"></span>
+
 		<div class="site-branding">
 			<h1 class="site-title">
 				<a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
@@ -65,6 +70,8 @@
 				wp_nav_menu( $args );
 
 			?>
+
+			<span id="i-search"></span><input type="text" name="campo" id="search" value="" style="width:100px;">
 
 			<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
 		</nav> <!-- #site-navigation -->
