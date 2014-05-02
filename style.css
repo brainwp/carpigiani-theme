@@ -64,7 +64,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family: inherit;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 100%;
 	font-style: inherit;
 	font-weight: inherit;
@@ -129,9 +129,6 @@ a:active {
 a img {
 	border: 0;
 }
-body {
-	font-family: 'Montserrat Alternates', 'sans-serif';
-}
 
 /*--------------------------------------------------------------
 2.0 Typography
@@ -142,13 +139,14 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	/*font-family: 'Montserrat Alternates', 'sans-serif';*/
 }
 h1 { font-size: 2.6em; }
 h2 { font-size: 2.4em; }
@@ -632,13 +630,6 @@ a:active {
 /*--------------------------------------------------------------
 10.4 - Slider
 --------------------------------------------------------------*/
-.slider-content-single {
-	width: 100%;
-	background-color: #eef0ef;
-	overflow: hidden;
-	position: relative;
-}
-
 .slider-content-home .wrap {
 	max-width: 980px;
 	margin: 0 auto;
@@ -735,46 +726,6 @@ a:active {
 	background-color: #eef0ef;
 	overflow: hidden;
 	position: relative;
-}
-
-.slider-content-single .master-wrap {
-	max-width: 980px;
-	margin: 0 auto;
-	overflow: hidden;
-}
-
-.slider-content-single .desc {
-	max-width: 400px;
-	margin: 0 auto;
-	overflow: hidden;
-	float: left;
-	padding: 20px 30px 0 0;
-	font-size: 0.9em;
-}
-
-.slider-content-single .desc h2 {
-	color: #255563;
-	font-size: 1.5em;
-	line-height: 1;
-}
-
-.slider-content-single .desc h1 {
-	color: #008fcb;
-	line-height: 1.4;
-}
-
-.slider-content-single .wrap {
-	max-width: 580px;
-	margin: 0 auto;
-	overflow: hidden;
-	float: right;
-}
-
-.slider-content-single .list_carousel li.item .image {
-	float: right;
-	width: auto;
-	height: 280px;
-	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -999,6 +950,53 @@ footer .social-icons #facebook{
 /*--------------------------------------------------------------
 15.1 - Single Produtos
 --------------------------------------------------------------*/
+.slider-content-single {
+	width: 100%;
+	background-color: #eef0ef;
+	overflow: hidden;
+	position: relative;
+}
+
+.slider-content-single .master-wrap {
+	max-width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.slider-content-single .desc {
+	max-width: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+	float: left;
+	padding: 20px 30px 0 0;
+	font-size: 0.9em;
+}
+
+.slider-content-single .desc h2 {
+	color: #255563;
+	font-size: 1.5em;
+	line-height: 1;
+}
+
+.slider-content-single .desc h1 {
+	color: #008fcb;
+	line-height: 1.4;
+}
+
+.slider-content-single .wrap {
+	max-width: 580px;
+	margin: 0 auto;
+	overflow: hidden;
+	float: right;
+}
+
+.slider-content-single .list_carousel li.item .image {
+	float: right;
+	width: auto;
+	height: 280px;
+	text-align: center;
+}
+
 .content-single-produto {
 	max-width: 800px;
 	margin: 20px auto;
@@ -1014,3 +1012,79 @@ footer .social-icons #facebook{
 	font-size: 0.6em;
 	margin-left: 10px;
 	color: #666;
+}
+
+.footer-content-single {
+	width: 100%;
+	min-height: 200px;
+	background-color: #eef0ef;
+	overflow: hidden;
+	padding:  20px 0;
+}
+
+.footer-content-single .wrap {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.footer-content-single h3 {
+	color: #295263;
+	text-transform: lowercase;
+	font-size: 1.6em;
+}
+
+.footer-content-single .outras-categorias {
+	float: left;
+}
+
+.footer-content-single .outras-categorias ul {
+	list-style: none;
+	padding: 0;
+	margin: 20px 0 0 0;
+}
+
+.footer-content-single .outras-categorias ul li {
+	width: 140px;
+	height: 172px;
+	float: left;
+	text-align: center;
+	position: relative;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-right: 5px;
+	text-transform: lowercase;
+}
+
+.footer-content-single .outras-categorias ul li.artesanal {
+	background: url('images/icon-artesanal.png') 16px 8px no-repeat transparent;
+}
+
+.footer-content-single .outras-categorias ul li.restaurante {
+	background: url('images/icon-restaurante.png') 16px 8px no-repeat transparent;
+}
+
+.footer-content-single .outras-categorias ul li.chocolate-e-creme {
+	background: url('images/icon-chocolate.png') 16px 8px no-repeat transparent;
+}
+
+.footer-content-single .outras-categorias ul li.soft {
+	background: url('images/icon-soft.png') 16px 8px no-repeat transparent;
+}
+
+.footer-content-single .outras-categorias ul li a {
+	text-decoration: none;
+	padding: 115px 7px 0 7px;
+	display: block;
+	color: #275262;
+	position: absolute;
+	width: 140px;
+	height: 172px;
+}
+.footer-content-single .outras-categorias ul li a:hover {
+	color: #038DC3;
+}
+
+.footer-content-single .outras-categorias ul li:hover {
+	background-color: #FFF;
+}

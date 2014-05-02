@@ -18,6 +18,7 @@ get_header(); ?>
 				<div class="desc">
 					<?php
 						$terms = get_the_terms( $post->ID , 'tipos' );
+						$this_term = $terms[2]->term_id;
 						if ( $terms != null ){
 							foreach( $terms as $term ) {
 								echo "<h2 class=" . $term->name . ">" . $term->name . "</h2>";
@@ -61,25 +62,41 @@ get_header(); ?>
 
 			</section><!-- #carousel .slider-content-single -->
 
-
-
-
-
 			<?php get_template_part( 'content', 'single-produto' ); ?>
 
-			<?php carpigiani_theme_post_nav(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
 		<?php endwhile; // end of the loop. ?>
+
+		<section class="footer-content-single">
+			<div class="wrap">
+				<div class="outras-categorias">
+					<h3>Outras Categorias</h3>
+					<?php
+					$args = array(
+								'orderby' => 'count',
+								'hide_empty' => 0,
+								'exclude' => $this_term,
+							); 
+				        $terms = get_terms( 'tipos', $args );
+				        $count = count( $terms );
+				        if ( $count > 0 ){
+				            echo '<ul>';
+				            foreach ( $terms as $term ) {
+				                $termlinks = get_term_link ( $term, 'tipos' );
+				                ?>
+									<li class="<?php echo $term->slug; ?>">
+										<a href="<?php echo $termlinks; ?>">
+											<?php echo $term->name; ?>
+										</a>
+									</li>
+						<?php  }
+				       		echo "</ul>";
+				        }
+					?>
+				</div><!-- .outras-categorias -->
+			</div><!-- .wrap -->
+		</section><!-- .footer-content-single -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
