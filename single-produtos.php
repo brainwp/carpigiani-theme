@@ -19,6 +19,7 @@ get_header(); ?>
 					<?php
 						$terms = get_the_terms( $post->ID , 'tipos' );
 						$this_term = $terms[2]->term_id;
+						$this_term_name = $terms[2]->name;
 						if ( $terms != null ){
 							foreach( $terms as $term ) {
 								echo "<h2 class=" . $term->name . ">" . $term->name . "</h2>";
@@ -49,13 +50,13 @@ get_header(); ?>
 						<?php } ?>
 					<?php } ?>
 
-					</ul>
+					</ul><!-- #foo4 -->
 					
 					<div class="clearfix"></div>
 
-				</div>
+				</div><!-- #carousel -->
 
-			</div>
+			</div><!-- .master-wrap -->
 
 				<a id="prev-slider" class="prev" href="#"></a>
 				<a id="next-slider" class="next" href="#"></a>
@@ -93,6 +94,44 @@ get_header(); ?>
 				        }
 					?>
 				</div><!-- .outras-categorias -->
+				<div class="outros-produtos">
+					
+					<h3>+ nessa categoria</h3>
+					
+					<div class="slider-footer-single">
+
+						<div id="carousel" class="wrap list_carousel responsive">
+
+							<ul id="foo3">
+								<?php
+								$outros_query = new WP_Query( array(
+									'post_type' => 'produtos',
+									'post__not_in' => array( $post->ID ),
+							        'posts_per_page' => '8',
+							        'tipos' => $this_term_name,
+							        'caller_get_posts'=> 1
+							    ) );
+		    						while ($outros_query->have_posts()) : $outros_query->the_post(); ?>
+
+									    <li class="item">        
+									        <div class="image">
+									        	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+									        </div><!-- .image -->
+									    </li><!-- .item -->    
+
+		    					<?php endwhile;  wp_reset_query(); ?>
+							</ul><!-- #foo3 -->
+							
+							<div class="clearfix"></div>
+
+						</div><!-- #carousel -->
+
+						<a id="prev-outros" class="prev" href="#"></a>
+						<a id="next-outros" class="next" href="#"></a>
+
+					</div><!-- .slider-footer-single -->
+
+				</div><!-- .outros-produtos -->
 			</div><!-- .wrap -->
 		</section><!-- .footer-content-single -->
 

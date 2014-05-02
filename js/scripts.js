@@ -4,7 +4,10 @@ jQuery(function($) {
 		next: '#next-slider',
 		responsive: true,
 		width: '100%',
-		scroll: 1,
+		scroll: {
+			items: 1,
+			pauseOnHover: true,
+		},
 		items: {
 			width: 980,
 			visible: {
@@ -18,9 +21,29 @@ jQuery(function($) {
 		next: '#next-slider',
 		responsive: true,
 		width: '100%',
-		scroll: 1,
+		scroll: {
+			items: 1,
+			pauseOnHover: true,
+		},
 		items: {
 			width: 580,
+			visible: {
+				min: 1,
+				max: 1
+			}
+		}
+	});
+	$('#foo3').carouFredSel({
+		prev: '#prev-outros',
+		next: '#next-outros',
+		responsive: true,
+		width: '100%',
+		scroll: {
+			items: 1,
+			pauseOnHover: true,
+		},
+		items: {
+			width: 400,
 			visible: {
 				min: 1,
 				max: 1
