@@ -378,11 +378,11 @@ a:active {
 .main-navigation {
 	display: block;
 	float: left;
-	width: 50%;
+	width: 70%;
 }
 #site-navigation {
 	display: table;
-	width: 69.313em;
+	width: 100%;
 }
 .menu-menu-header-container {
 	float: left;
@@ -404,7 +404,7 @@ a:active {
 	display: block;
 	text-decoration: none;
 	text-transform: lowercase;
-	font-size: 1.313em;
+	font-size: 1.1em;
 	color: #0089C5;
 }
 .main-navigation ul ul {
@@ -849,43 +849,63 @@ header {
 	margin-top: 3.125em;
 	/* border: #fff; */
 }
-#masthead .wear {
-	float: left;
-	width: 100%;
-	height: 27px;
-	background-color: #008ec8;
+
+#masthead {
+	background: url("images/background-header.png") #FFF;
 }
+
+#masthead .wrap {
+	max-width: 980px;
+	height: auto;
+	background-color: #008ec8;
+	margin: 0 auto;
+}
+
 .site-branding {
-	clear: both;
     display: table;
-    margin: -175px auto 62px;
-    position: relative;
-    top: 0;
-    width: 80em;
+    margin: 100px auto 0 30px;
+    float: left;
+    max-width: 700px;
     z-index: 1;
 }
-.site-branding .site-title {}
-.site-branding #logo {
+
+.logo {
 	float: left;
 	background: url( "images/logo-carpegiani.png" ) no-repeat;
 	width: 10.688em;
 	height: 4.750em;
 	text-indent: -9999px;
+	position: relative;
+	margin: 55px 0 0 0;
+}
+
+.logo a {
+	display: block;
+	width: 10.688em;
+	height: 4.750em;
+
+}
+.infos-header {
+    float: right;
+    margin: 45px 0 0;
+    max-width: 300px;
+    overflow: hidden;
 }
 .suporte-header {
 	float: right !important;
 	background: url( "images/i-suporte-header.png" ) no-repeat;
 	height: 3.375em; /* 54px*/
-	height: 3.375em;
 	color: #0089C5;
-	margin-top: 1.425em;
+	margin: 45px 0 0 20px;
 	width: 7.900em;
 }
 .suporte-header p {
 	color: #1E79AF;
     float: right;
     line-height: 19px;
-    margin: 0.488em 0 0.625em 4.188em;
+    margin: 0 0 0 50px;
+    font-weight: 400;
+    font-size: 0.8em;
 }
 header .responsive {
 	clear: both;

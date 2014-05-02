@@ -30,52 +30,30 @@
 <div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">
-		<span class="wear"></span>
 
-		<span class="responsive"><img src="<?php bloginfo( 'template_url' );?>/images/backgroud-header.png"></span>
+		<div class="wrap">
 
-		<div class="site-branding">
-			<h1 class="site-title">
-				<a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</h1>
-			<!-- <h2 class="site-description"><?php //bloginfo( 'description' ); ?></h2> -->
-		<!-- Menu Header -->
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'carpigiani-theme' ); ?></button>
-			<a class="skip-link screen-reader-text" href="#content">
-				<?php _e( 'Skip to content', 'carpigiani-theme' ); ?>
-			</a>			
+			<div class="logo">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			</div><!-- .logo -->
 
-			<?php
+			<div class="site-branding">
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<button class="menu-toggle"><?php _e( 'Primary Menu', 'carpigiani-theme' ); ?></button>
+					<a class="skip-link screen-reader-text" href="#content">
+						<?php _e( 'Skip to content', 'carpigiani-theme' ); ?>
+					</a>			
 
-				$args = array(
-					'theme_location'  => '',
-					'menu'            => '',
-					'container'       => 'div',
-					'container_class' => '',
-					'container_id'    => '',
-					'menu_class'      => 'menu',
-					'menu_id'         => '',
-					'echo'            => true,
-					'fallback_cb'     => 'wp_page_menu',
-					'before'          => '',
-					'after'           => '',
-					'link_before'     => '',
-					'link_after'      => '',
-					'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-					'depth'           => 0,
-					'walker'          => ''
-				);
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul><li class="item-menu">%3$s</li></ul>' ) ); ?>
+				</nav>
+			</div><!-- #site-navigation -->
 
-				wp_nav_menu( $args );
+			<div class="infos-header">
+				<span id="i-search"></span><input type="text" name="campo" id="search" value="" style="width:100px;">
+				<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
+			</div><!-- .infos-header -->
 
-			?>
-
-			<span id="i-search"></span><input type="text" name="campo" id="search" value="" style="width:100px;">
-
-			<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
-		</nav> <!-- #site-navigation -->
-		</div>
+		</div><!-- .wrap -->
 
 	</header><!-- #masthead -->
 
