@@ -13,8 +13,11 @@ get_header(); ?>
 			<section class="error-404 not-found">
 				<span id="img-404"></span>
 				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Erro! Página can&rsquo;t não encontrada.', 'carpigiani-theme' ); ?></h1>
-				</header><!-- .page-header -->				
+					<h1 class="page-title"><?php _e( '<span>Erro!</span><br /> Página não encontrada.', 'carpigiani-theme' ); ?></h1>
+				</header><!-- .page-header -->
+
+				
+
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->

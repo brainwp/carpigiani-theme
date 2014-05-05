@@ -41,6 +41,7 @@ and Blueprint http://www.blueprintcss.org/
 	10.2 - Asides
 	10.3 - Comments
 	10.4 - Slider
+	10.5 - 404
 11.0 - Infinite scroll
 12.0 - Media
 	12.1 - Captions
@@ -727,6 +728,32 @@ a:active {
 	background-color: #eef0ef;
 	overflow: hidden;
 	position: relative;
+}
+
+
+/*--------------------------------------------------------------
+10.5 - 404
+--------------------------------------------------------------*/
+.error-404 {
+	width: 67%;
+	display: table;
+	margin: 50px auto 20px auto;
+	color: #0095cd;
+}
+.error-404 #img-404 {
+	float: left;
+	background: url( "images/img-404.jpg" ) no-repeat;
+	width: 350px;
+	height: 205px;
+}
+.error-404 .page-header {
+	float: right;
+	width: 57%;
+	font-size: 15px;
+}
+.error-404 .page-header span{
+	font-weight: bold;
+	font-size: 60px;
 }
 
 /*--------------------------------------------------------------
