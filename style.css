@@ -42,6 +42,7 @@ and Blueprint http://www.blueprintcss.org/
 	10.3 - Comments
 	10.4 - Slider
 	10.5 - 404
+	10.6 - Page
 11.0 - Infinite scroll
 12.0 - Media
 	12.1 - Captions
@@ -755,6 +756,27 @@ a:active {
 	font-weight: bold;
 	font-size: 60px;
 }
+
+/*--------------------------------------------------------------
+10.6 - Page
+--------------------------------------------------------------*/
+.content-page {
+	max-width: 800px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+.content-page .entry-content p {
+	color: #666666;
+}
+.content-page h1 {
+	color: #008FCB;
+}
+.content-page h1 span {
+	font-size: 0.6em;
+	margin-left: 10px;
+	color: #666;
+}
+
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll

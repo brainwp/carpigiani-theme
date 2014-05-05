@@ -6,10 +6,9 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'content-page' ); ?>>
+
+	<h1 class="entry-title"><?php the_title(); ?></h1>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -20,5 +19,4 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'carpigiani-theme' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->
