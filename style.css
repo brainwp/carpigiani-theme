@@ -47,6 +47,8 @@ and Blueprint http://www.blueprintcss.org/
 	12.2 - Galleries
 13.0 - Header
 14.0 - Footer
+15.0 - Produtos
+	15.1 - Single Produtos
 
 --------------------------------------------------------------*/
 
@@ -62,7 +64,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family: inherit;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 100%;
 	font-style: inherit;
 	font-weight: inherit;
@@ -127,9 +129,6 @@ a:active {
 a img {
 	border: 0;
 }
-body {
-	font-family: 'Montserrat Alternates', 'sans-serif' !important;
-}
 
 /*--------------------------------------------------------------
 2.0 Typography
@@ -140,14 +139,21 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	/*font-family: 'Montserrat Alternates', 'sans-serif';*/
 }
+h1 { font-size: 2.6em; }
+h2 { font-size: 2.4em; }
+h3 { font-size: 2.2em; }
+h4 { font-size: 1.8em; }
+h5 { font-size: 1.6em; }
+h6 { font-size: 1em; }
 p {
 	margin-bottom: 1.5em;
 }
@@ -372,11 +378,11 @@ a:active {
 .main-navigation {
 	display: block;
 	float: left;
-	width: 50%;
+	width: 70%;
 }
 #site-navigation {
 	display: table;
-	width: 69.313em;
+	width: 100%;
 }
 .menu-menu-header-container {
 	float: left;
@@ -398,7 +404,7 @@ a:active {
 	display: block;
 	text-decoration: none;
 	text-transform: lowercase;
-	font-size: 1.313em;
+	font-size: 1.1em;
 	color: #0089C5;
 }
 .main-navigation ul ul {
@@ -843,43 +849,63 @@ header {
 	margin-top: 3.125em;
 	/* border: #fff; */
 }
-#masthead .wear {
-	float: left;
-	width: 100%;
-	height: 27px;
-	background-color: #008ec8;
+
+#masthead {
+	background: url("images/background-header.png") #FFF;
 }
+
+#masthead .wrap {
+	max-width: 980px;
+	height: auto;
+	background-color: #008ec8;
+	margin: 0 auto;
+}
+
 .site-branding {
-	clear: both;
     display: table;
-    margin: -175px auto 62px;
-    position: relative;
-    top: 0;
-    width: 80em;
+    margin: 100px auto 0 30px;
+    float: left;
+    max-width: 700px;
     z-index: 1;
 }
-.site-branding .site-title {}
-.site-branding #logo {
+
+.logo {
 	float: left;
 	background: url( "images/logo-carpegiani.png" ) no-repeat;
 	width: 10.688em;
 	height: 4.750em;
 	text-indent: -9999px;
+	position: relative;
+	margin: 55px 0 0 0;
+}
+
+.logo a {
+	display: block;
+	width: 10.688em;
+	height: 4.750em;
+
+}
+.infos-header {
+    float: right;
+    margin: 45px 0 0;
+    max-width: 300px;
+    overflow: hidden;
 }
 .suporte-header {
 	float: right !important;
 	background: url( "images/i-suporte-header.png" ) no-repeat;
 	height: 3.375em; /* 54px*/
-	height: 3.375em;
 	color: #0089C5;
-	margin-top: 1.425em;
+	margin: 45px 0 0 20px;
 	width: 7.900em;
 }
 .suporte-header p {
 	color: #1E79AF;
     float: right;
     line-height: 19px;
-    margin: 0.488em 0 0.625em 4.188em;
+    margin: 0 0 0 50px;
+    font-weight: 400;
+    font-size: 0.8em;
 }
 header .responsive {
 	clear: both;
@@ -896,42 +922,35 @@ header .responsive img {
     height:100% !important;
     display:block;
 }
-footer .responsive {
-	/* bottom: -110px; */
-    clear: both;
-    display: table;
-    height: auto;
-    margin: 0 auto;
-    max-width: 125em;
-    /* position: relative; */
-    width: 100%;
-    z-index: -1;
-}
-footer .responsive img {
-	width:100% !important;
-    height:100% !important;
-    display:block;
-}
 
 /*--------------------------------------------------------------
 14.0 - Footer
 --------------------------------------------------------------*/
-footer {
-	float: left;
+.full {
 	width: 100%;
-	height: 96px;
+	height: auto;
 	border-top: solid 1px #ACE0F6;
+	background: url("images/background-footer.png") center top;
+	overflow: hidden;
+	padding: 25px 0;
+	margin-top: 30px;
 }
+
+.full .wrap {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
 #law {
 	float: left;
     margin: 34px 0;
     color: #74BDCB;
-    font-size: 1.250em;
+    font-size: 1em;
 }
 .site-info {
 	display: table;
-	margin: -110px auto 0;
-	width: 80.000em;
+	margin: 10px auto 0;
+	width: 100%;
 	position: relative;
 }
 .suporte-footer {
@@ -939,15 +958,16 @@ footer {
 	float: right !important;
 	width: 4.625em; /* Equivalente a 74px */
 	width: 7.625em;
-	background: url( 'images/i-suporte-footer.png' ) no-repeat;
-	margin: 0.468em 9.500em 0.4868em 0; /** Equivalente: 11px e 142px */
-	font-size: 1.625em;
+	background: url( 'images/i-suporte-header.png' ) no-repeat;
+	margin: 30px 30px 0 0; /** Equivalente: 11px e 142px */
 }
 .suporte-footer p {
-	float: right;
-	line-height: 32px;
-    margin: 0.188em 0 0.625em 3.188em; /* Equivalente: 5px; */
     color: #1E79AF;
+    float: left;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 19px;
+    margin: 1px 0 0 50px;
 }
 footer .social-icons {
 	float: right;
@@ -955,9 +975,9 @@ footer .social-icons {
 }
 footer a.social {
 	float: right;
-	width: 2.500em; /* Equivalente a 51px */
-	height:2.500em;
-	margin-left: 0.625em;
+	width: 40px;
+	height: 40px;
+	margin: 1px 0 0 5px;
 }
 footer .social-icons #twitter{
 	background: url( 'images/i-social-twiter.png' ) no-repeat;
@@ -987,3 +1007,197 @@ footer .social-icons #facebook{
 	float: left;
 }
 
+/*--------------------------------------------------------------
+15.0 - Produtos
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+15.1 - Single Produtos
+--------------------------------------------------------------*/
+.slider-content-single {
+	width: 100%;
+	background-color: #eef0ef;
+	overflow: hidden;
+	position: relative;
+}
+
+.slider-content-single .master-wrap {
+	max-width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.slider-content-single .desc {
+	max-width: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+	float: left;
+	padding: 20px 30px 0 0;
+	font-size: 0.9em;
+}
+
+.slider-content-single .desc h2 {
+	color: #255563;
+	font-size: 1.5em;
+	line-height: 1;
+}
+
+.slider-content-single .desc h1 {
+	color: #008fcb;
+	line-height: 1.4;
+}
+
+.slider-content-single .wrap {
+	max-width: 580px;
+	margin: 0 auto;
+	overflow: hidden;
+	float: right;
+}
+
+.slider-content-single .list_carousel li.item .image {
+	float: right;
+	width: auto;
+	height: 280px;
+	text-align: center;
+}
+
+.content-single-produto {
+	max-width: 800px;
+	margin: 20px auto;
+	color: #666;
+	overflow: hidden;
+}
+
+.content-single-produto h1 {
+	color: #008FCB;
+}
+
+.content-single-produto h1 span {
+	font-size: 0.6em;
+	margin-left: 10px;
+	color: #666;
+}
+
+.footer-content-single {
+	width: 100%;
+	min-height: 200px;
+	background-color: #eef0ef;
+	overflow: hidden;
+	padding:  20px 0;
+}
+
+.footer-content-single .wrap {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.footer-content-single h3 {
+	color: #295263;
+	text-transform: lowercase;
+	font-size: 1.6em;
+	text-align: center;
+}
+
+.footer-content-single .outras-categorias {
+	float: left;
+}
+
+.footer-content-single .outras-categorias ul {
+	list-style: none;
+	padding: 0;
+	margin: 30px 0 0 0;
+}
+
+.footer-content-single .outras-categorias ul li {
+	width: 140px;
+	height: 172px;
+	float: left;
+	text-align: center;
+	position: relative;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-right: 5px;
+	text-transform: lowercase;
+}
+
+.footer-content-single .outras-categorias ul li.artesanal {
+	background: url('images/icon-artesanal.png') 16px 8px no-repeat transparent;
+}
+
+.footer-content-single .outras-categorias ul li.restaurante {
+	background: url('images/icon-restaurante.png') 16px 8px no-repeat transparent;
+}
+
+.footer-content-single .outras-categorias ul li.chocolate-e-creme {
+	background: url('images/icon-chocolate.png') 16px 8px no-repeat transparent;
+}
+
+.footer-content-single .outras-categorias ul li.soft {
+	background: url('images/icon-soft.png') 16px 8px no-repeat transparent;
+}
+
+.footer-content-single .outras-categorias ul li a {
+	text-decoration: none;
+	padding: 115px 7px 0 7px;
+	display: block;
+	color: #275262;
+	position: absolute;
+	width: 140px;
+	height: 172px;
+}
+.footer-content-single .outras-categorias ul li a:hover {
+	color: #038DC3;
+}
+
+.footer-content-single .outras-categorias ul li:hover {
+	background-color: #FFF;
+}
+
+.footer-content-single .outros-produtos {
+	float: right;
+	width: 35%;
+}
+
+.slider-footer-single {
+	width: 100%;
+	background-color: #eef0ef;
+	overflow: hidden;
+	position: relative;
+	height: 240px;
+	text-align: center;
+	padding: 0 20px;
+}
+
+.slider-footer-single .prev {
+	left: 0px;
+	top: 95px;
+}
+
+.slider-footer-single .next {
+	right: 0px;
+	top: 95px;
+}
+
+.slider-footer-single .wrap {
+	max-width: 450px;
+	margin: 30px auto 0;
+	overflow: hidden;
+}
+
+.slider-footer-single .list_carousel ul#foo3 {
+	overflow: hidden;
+}
+
+.slider-footer-single .list_carousel ul#foo3 li.item .image {
+	width: auto;
+	height: auto;
+	text-align: center;
+	float: none;
+}
+
+.slider-footer-single .list_carousel ul#foo3 li.item .image img {
+	margin: 0 auto;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
