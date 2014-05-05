@@ -18,9 +18,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<section class="slider-content-single">
-
-				<?php get_template_part( 'content', 'page' ); ?>
-
+					<?php get_template_part( 'content', 'page' ); ?>
 				</section><!-- #carousel .slider-content-single -->
 
 			<?php endwhile; // end of the loop. ?>
