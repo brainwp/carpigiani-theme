@@ -7,12 +7,8 @@
 ?>
 <div class="master-wrap">
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'content-produtos' ); ?>>
-
-		<div class="entry-title-slider"><h1 class="entry-title">Produtos<?php //the_title(); ?></h1></div>
-
+		<!-- <div class="entry-title-slider"><h1 class="entry-title">Produtos<?php //the_title(); ?></h1></div> -->
 		<div class="entry-content">
-			
-
 			<?php 
 
 				$args = array(
@@ -44,7 +40,6 @@
 				</li>
 				<?php endforeach; ?>
 			</ul>
-
 		</div><!-- .entry-content -->
-	</article><!-- #post-## -->
+	</article><!-- #post-## -->		
 </div><!-- .master-wrap -->

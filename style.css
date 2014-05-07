@@ -833,30 +833,35 @@ a:active {
     margin: 0 auto;
     max-width: 980px;
     overflow: hidden;
-    position: relative;
+    /* position: relative;
     top: -73px;
-    z-index: 99;
+    z-index: 99; */
 }
 .slider-content .entry-title {
-    color: #ffffff;
-    font-size: 2.500em;
+    clear: both;
+    color: #FFFFFF;
+    display: table;
+    font-size: 2.5em;
+    margin: 0 auto;
     text-transform: lowercase;
+    width: 979px;
 }
 .slider-content-produtos .master-wrap article.content-produtos {
-    margin-bottom: 5px;
+    margin-bottom: -5px;
 }
 .slider-content-produtos {
    display: table;
+   border-bottom: 2px solid #FFC0CB;
 }
 .slider-content-produtos .entry-title-slider {
 	background-color: #008CC5;
 	height: 70px;
-	position: relative;
 	width: 100%;
-	z-index: 0;
+	/* position: relative;
+	z-index: 0; */
 }
 .slider-content-produtos .entry-content {
-	margin: 3px 0 0 0;
+	margin: 0;
 }
 .slider-content-produtos .entry-content li {
 	list-style: none;
@@ -866,7 +871,42 @@ a:active {
 	height: auto;
 	margin: 0 auto;
 }
-
+.site-content .body-content-produtos {
+    float: left;
+    /* min-height: 280px; */
+    overflow: hidden;
+    width: 100%;
+}
+.site-content .body-content-produtos .wrap {
+    margin: 20px auto;
+    max-width: 800px;
+    overflow: hidden;
+}
+.body-content-produtos .wrap .box {
+    float: left;
+    padding: 10px;
+    text-align: center;
+    width: 25%;
+}
+.body-content-produtos .wrap .box .icon {
+    display: block;
+    margin: 10px auto;
+    max-height: 100px;
+    overflow: hidden;
+    width: 100%;
+}
+.body-content-produtos .wrap .box .excerpt a {
+    color: #6E7073;
+    font-size: 1.250em;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+.body-category-produtos {
+	clear: both;
+	border-bottom: 2px solid #95B5AC;
+	background-color: #BFD6D0;
+	min-height: 280px; 
+}
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll
