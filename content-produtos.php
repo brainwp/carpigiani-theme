@@ -34,7 +34,9 @@
 			?>
 			
 			<ul class="entry-image-slider">
-					<img src="<?php bloginfo( 'template_url' ); ?>/images/th-cat.jpg" alt="">
+
+				<img src="<?php bloginfo( 'template_url' ); ?>/images/th-cat.jpg" alt="">
+
 				<?php foreach (get_categories() as $cat) : ?>
 				<li>
 					<img src="<?php //echo z_taxonomy_image_url($cat->term_id); ?>" />
@@ -42,9 +44,6 @@
 				</li>
 				<?php endforeach; ?>
 			</ul>
-
-
-
 
 		</div><!-- .entry-content -->
 	</article><!-- #post-## -->
