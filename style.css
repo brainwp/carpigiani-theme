@@ -746,18 +746,21 @@ a:active {
 }
 .error-404 #img-404 {
 	float: left;
-	background: url( "images/img-404.jpg" ) no-repeat;
+	/* background: url( "images/img-404.jpg" ) no-repeat; */
 	width: 350px;
 	height: 205px;
 }
 .error-404 .page-header {
 	float: right;
-	width: 57%;
-	font-size: 15px;
+	width: 55%;
+	font-size: 0.738em;
 }
-.error-404 .page-header span{
+.error-404 .page-header h1 {
+    margin-top: 40px;
+}
+.error-404 .page-header span {
 	font-weight: bold;
-	font-size: 60px;
+	font-size: 1.550em;
 }
 
 /*--------------------------------------------------------------

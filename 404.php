@@ -11,7 +11,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
-				<span id="img-404"></span>
+				<img src="<?php bloginfo( 'template_url' ); ?>/images/img-404.jpg" alt="">
 				<header class="page-header">
 					<h1 class="page-title"><?php _e( '<span>Erro!</span><br /> Página não encontrada.', 'carpigiani-theme' ); ?></h1>
 				</header><!-- .page-header -->
