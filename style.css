@@ -44,6 +44,7 @@ and Blueprint http://www.blueprintcss.org/
 	10.5 - 404
 	10.6 - Page
 	10.7 - Home
+	10.8 - Produtos
 11.0 - Infinite scroll
 12.0 - Media
 	12.1 - Captions
@@ -816,6 +817,31 @@ a:active {
 	color: #005264;
 	font-size: 0.8em;
 	text-decoration: none;
+}
+
+
+/*--------------------------------------------------------------
+10.8 - Produtos
+--------------------------------------------------------------*/
+.slider-content {
+    background-color: #008CC5;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+	height: 70px;
+}
+.slider-content .master-wrap {
+    margin: 0 auto;
+    max-width: 980px;
+    overflow: hidden;
+}
+.slider-content .entry-title {
+    color: #ffffff;
+    font-size: 2.500em;
+    text-transform: lowercase;
+}
+.slider-content-produtos .master-wrap article.content-produtos {
+    margin-bottom: 5px;
 }
 
 
