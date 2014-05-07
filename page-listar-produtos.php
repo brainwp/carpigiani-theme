@@ -108,7 +108,7 @@ get_header(); ?>
 				</div><!-- .wrap -->
 			</section><!-- .body-content-produtos -->
 
-			<section class="body-category-produtos"></section>
+			<section class="body-category-produtos"></section><!-- .body-category-produtos -->
 
 		<?php endwhile; // end of the loop. ?>
 
