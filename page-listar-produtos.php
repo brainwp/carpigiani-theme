@@ -108,7 +108,10 @@ get_header(); ?>
 				</div><!-- .wrap -->
 			</section><!-- .body-content-produtos -->
 
-			<section class="body-category-produtos"></section><!-- .body-category-produtos -->
+			<section data-background="background-<?php //$post-ID(); ?>" class="cat-artesanal body-category-produtos"></section><!-- .body-category-produtos -->
+			<section data-background="background-<?php //$post-ID(); ?>" class="cat-restaurante body-category-produtos"></section><!-- .body-category-produtos -->
+			<section data-background="background-<?php //$post-ID(); ?>" class="cat-soft body-category-produtos"></section><!-- .body-category-produtos -->
+			<section data-background="background-<?php //$post-ID(); ?>" class="cat-chocolate body-category-produtos"></section><!-- .body-category-produtos -->
 
 		<?php endwhile; // end of the loop. ?>
 
