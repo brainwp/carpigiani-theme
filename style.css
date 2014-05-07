@@ -824,16 +824,18 @@ a:active {
 10.8 - Produtos
 --------------------------------------------------------------*/
 .slider-content {
-    background-color: #008CC5;
+    background-color: #EDECEC;
     overflow: hidden;
     position: relative;
     width: 100%;
-	height: 70px;
 }
 .slider-content .master-wrap {
     margin: 0 auto;
     max-width: 980px;
     overflow: hidden;
+    position: relative;
+    top: -73px;
+    z-index: 99;
 }
 .slider-content .entry-title {
     color: #ffffff;
@@ -842,6 +844,27 @@ a:active {
 }
 .slider-content-produtos .master-wrap article.content-produtos {
     margin-bottom: 5px;
+}
+.slider-content-produtos {
+   display: table;
+}
+.slider-content-produtos .entry-title-slider {
+	background-color: #008CC5;
+	height: 70px;
+	position: relative;
+	width: 100%;
+	z-index: 0;
+}
+.slider-content-produtos .entry-content {
+	margin: 3px 0 0 0;
+}
+.slider-content-produtos .entry-content li {
+	list-style: none;
+}
+.entry-image-slider {
+	max-width: 980px;
+	height: auto;
+	margin: 0 auto;
 }
 
 

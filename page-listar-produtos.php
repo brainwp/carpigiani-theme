@@ -19,9 +19,9 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<section class="slider-content slider-content-produtos">
-				<!-- <div class="entry-slider"></div> -->
+				<div class="entry-title-slider"></div>
 
-				<?php get_template_part( 'content', 'produtos' ); ?>
+					<?php get_template_part( 'content', 'produtos' ); ?>
 
 			</section><!-- #carousel .slider-content-single -->
 
