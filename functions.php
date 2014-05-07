@@ -78,6 +78,7 @@ function carpigiani_theme_setup() {
 
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'slider-home', 600, 290, true );
+	add_image_size( 'slider-cat-produto', 980, 433, true );
 }
 
 	// This theme uses wp_nav_menu() in one location.
