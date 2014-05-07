@@ -44,6 +44,7 @@ and Blueprint http://www.blueprintcss.org/
 	10.5 - 404
 	10.6 - Page
 	10.7 - Home
+	10.8 - Single
 11.0 - Infinite scroll
 12.0 - Media
 	12.1 - Captions
@@ -364,7 +365,7 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #246B89;
 }
 a:visited {
 	color: purple;
@@ -763,15 +764,26 @@ a:active {
 10.6 - Page
 --------------------------------------------------------------*/
 .content-page {
-	max-width: 800px;
-	margin: 20px auto;
-	overflow: hidden;
+	color: #005264;
+	background-color: #EEF0EF;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
-.content-page .entry-content p {
-	color: #666666;
+
+.content-page .wrap {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px 0 10px;
+}
+
+.content-page .entry-content, .content-page .entry-content p {
+	font-size: 0.95em;
+	color: #005264;
 }
 .content-page h1 {
 	color: #008FCB;
+	font-size: 2.6em;
 }
 .content-page h1 span {
 	font-size: 0.6em;
@@ -818,6 +830,9 @@ a:active {
 	text-decoration: none;
 }
 
+/*--------------------------------------------------------------
+10.8 - Single
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll
@@ -1160,6 +1175,10 @@ footer .social-icons #facebook{
 .content-single-produto h1 {
 	color: #008FCB;
 }
+
+.content-single-produto .entry-content, .content-single-produto .entry-content p {
+	font-size: 0.95em;
+} 
 
 .content-single-produto h1 span {
 	font-size: 0.6em;
