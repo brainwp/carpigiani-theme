@@ -43,6 +43,7 @@ and Blueprint http://www.blueprintcss.org/
 	10.4 - Slider
 	10.5 - 404
 	10.6 - Page
+	10.7 - Home
 11.0 - Infinite scroll
 12.0 - Media
 	12.1 - Captions
@@ -583,8 +584,9 @@ a:active {
 .site-content .body-content-home {
 	float: left;
 	width: 100%;
-	height: 280px;
+	min-height: 280px;
 	background-color: #EDECEC;
+	overflow: hidden;
 }
 
 /*--------------------------------------------------------------
@@ -736,7 +738,7 @@ a:active {
 10.5 - 404
 --------------------------------------------------------------*/
 .error-404 {
-	width: 67%;
+	width: 980px;
 	display: table;
 	margin: 50px auto 20px auto;
 	color: #0095cd;
@@ -775,6 +777,45 @@ a:active {
 	font-size: 0.6em;
 	margin-left: 10px;
 	color: #666666;
+}
+
+/*--------------------------------------------------------------
+10.7 - Home
+--------------------------------------------------------------*/
+.body-content-home .wrap {
+	max-width: 800px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+
+.body-content-home .wrap .box {
+	width: 25%;
+	float: left;
+	padding: 10px;
+	text-align: center;
+}
+
+.body-content-home .wrap .box .icon {
+	width: 100%;
+	max-height: 100px;
+	display: block;
+	overflow: hidden;
+	margin: 10px auto; 
+}
+
+.body-content-home .wrap .box a.title {
+	color: #128ec4;
+	text-decoration: none;
+	display: block;
+	margin: 20px auto 10px;
+	font-weight: 600;
+	font-size: 0.9em;
+}
+
+.body-content-home .wrap .box .excerpt a {
+	color: #005264;
+	font-size: 0.8em;
+	text-decoration: none;
 }
 
 
@@ -1249,4 +1290,23 @@ footer .social-icons #facebook{
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+	.body-content-home .wrap .box {
+		width: 50%;
+	}
+	.body-content-home .wrap .box .icon {
+		max-height: 150px;
+	}
+}
+
+@media (max-width: 360px) {
+	.body-content-home .wrap .box {
+		width: 100%;
+	}
+	.body-content-home .wrap .box .icon {
+		max-width: 170px;
+		max-height: 100px;
+	}
 }
