@@ -53,20 +53,20 @@ get_header(); ?>
 	    				$category_slug = get_category_link( $category->slug );
 					?>
 
-					<div class="box" data-category="">
-						<div class="cat-hover cat-hover-<?php echo $category->slug ?>">
-							
-							<a class="trick" rel="<?php echo esc_url( $category_link); ?>" href="<?php the_permalink();?>">
-								<span class="cat-icon icon-<?php echo $category->slug ?>"></span>
-								<span class="excerpt"><a rel="<?php echo esc_url( $category_link); ?>" href="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
-							</a>
+						<div class="box" data-category="">
+							<div class="cat-hover cat-hover-<?php echo $category->slug ?>">
+								
+								<a class="trick" rel="<?php echo esc_url( $category_link); ?>" href="<?php the_permalink();?>">
+									<span class="cat-icon icon-<?php echo $category->slug ?>"></span>
+									<span class="excerpt"><a rel="<?php echo esc_url( $category_link); ?>" href="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
+								</a>
 
-						</div>
-						<?php	
-							//$child_args = array( 'child_of' => $cat_ID, 'hide_empty' => 0, );
-							//$child_categories = get_categories( $child_args );
-						?>
-					</div><!-- .box -->						
+							</div>
+							<?php	
+								$child_args = array( 'child_of' => $cat_ID, 'hide_empty' => 0, );
+								$child_categories = get_categories( $child_args );
+							?>
+						</div><!-- .box -->						
 
 						<?php endforeach; ?>
 
@@ -77,9 +77,9 @@ get_header(); ?>
 			<section data-background="background-<?php //$post-ID(); ?>" class="cat-restaurante body-category-produtos"></section>
 			<section data-background="background-<?php //$post-ID(); ?>" class="cat-soft body-category-produtos"></section>
 			<section data-background="background-<?php //$post-ID(); ?>" class="cat-chocolate body-category-produtos"></section>
-			 -->		
+			 -->
 			
-			<section id="single-home-container" class="cat-artesanal body-category-produtos">
+			<section id="single-home-container" class="cat-artesanal body-category-produtos tit-<?php echo $category->slug; ?>">
 				<div class="wrap"></div>				
 			</section><!-- .body-category-produtos -->
 

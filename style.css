@@ -975,8 +975,7 @@ section.cat-chocolate {
 	color: #ffffff;
 }
 .cat-hover-artesenal:hover {
-	background-color: #EBDEED;
-    
+	background-color: #EBDEED;    
 }
 .cat-hover-restaurante:hover{
 	background-color: #D2CB84;
@@ -985,6 +984,18 @@ section.cat-chocolate {
 	background-color: #BFD6D0;
 }
 .cat-hover-chocolate-e-creme:hover {
+	background-color: #8E857C;
+}
+section.tit-artesenal {
+	background-color: #EBDEED;
+}
+section.tit-restaurante {
+	background-color: #D2CB84;
+}
+section.tit-soft {
+	background-color: #BFD6D0;
+}
+section.tit-chocolate-e-creme {
 	background-color: #8E857C;
 }
 /* .body-category-produtos .loader5 {
