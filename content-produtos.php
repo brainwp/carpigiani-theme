@@ -5,6 +5,7 @@
  * @package carpigiani-theme
  */
 ?>
+
 <div class="master-wrap">
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'content-produtos' ); ?>>
 		<!-- <div class="entry-title-slider"><h1 class="entry-title">Produtos<?php //the_title(); ?></h1></div> -->
@@ -28,7 +29,14 @@
 			        <?php } ?>
 	    		<?php } ?>
 
+<!-- <<<<<<< HEAD -->
 			</ul>
 		</div><!-- .entry-content -->
 	</article><!-- #post-## -->		
 </div><!-- .master-wrap -->
+<!-- =======
+		<h1 class="entry-title">Produtos<?php //the_title(); ?></h1>
+		
+	</article>#post-##
+</div>.master-wrap
+>>>>>>> master -->
