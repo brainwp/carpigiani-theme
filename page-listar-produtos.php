@@ -27,96 +27,65 @@ get_header(); ?>
 
 			<section class="body-content body-content-produtos">
 				<div class="wrap">
+
 					<?php
-						// Bloco 1
-						$icone_1 = of_get_option('icon_feature_upload_um');
-						$title_1 = of_get_option('title_feature_um');
-						$excerpt_1 = of_get_option('resumo_feature_um');
-						$link_1 = of_get_option('link_box_um');
+						$args = array(
+						'type'                     => '',
+						'child_of'                 => 0,
+						'parent'                   => '',
+						'orderby'                  => 'ID',
+						'order'                    => 'ASC',
+						'hide_empty'               => 0,
+						'hierarchical'             => 1,
+						'exclude'                  => '1',
+						'include'                  => '',
+						'number'                   => '4',
+						'taxonomy'                 => 'category',
+						'pad_counts'               => false );
 
-						// Bloco 2
-						$icone_2 = of_get_option('icon_feature_upload_dois');
-						$title_2 = of_get_option('title_feature_dois');
-						$excerpt_2 = of_get_option('resumo_feature_dois');
-						$link_2 = of_get_option('link_box_dois');
+						$categories = get_categories( $args );
 
-						// Bloco 3
-						$icone_3 = of_get_option('icon_feature_upload_tres');
-						$title_3 = of_get_option('title_feature_tres');
-						$excerpt_3 = of_get_option('resumo_feature_tres');
-						$link_3 = of_get_option('link_box_tres');
-
-						// Bloco 4
-						$icone_4 = of_get_option('icon_feature_upload_quatro');
-						$title_4 = of_get_option('title_feature_quatro');
-						$excerpt_4 = of_get_option('resumo_feature_quatro');
-						$link_4 = of_get_option('link_box_quatro');
+						foreach( $categories as $category ) :
+						$cat_ID = $category->term_id; // Get ID the category.
+						// Get the URL of this category
+	    				$category_link = get_category_link( $cat_ID );
+						// Get the Slug of this category
+	    				$category_slug = get_category_link( $category->slug );
 					?>
-					<div class="box">
-						<span class="icon">
-							<a href="<?php echo $link_1; ?>">
-							<?php if ( $icone_1 ) { ?>
-								<img src="<?php echo $icone_1; ?>" alt="<?php echo $title_1; ?>">
-							<?php } else { ?>
-								<img src="<?php echo get_template_directory_uri(); ?>/images/icon-artesanal.png" alt="<?php echo $title_1; ?>">
-							<?php } ?>
-							</a>			
-						</span>
-						<a class="title" href="<?php echo $link_1; ?>"><?php echo $title_1; ?></a>
-						<span class="excerpt"><a href="<?php //echo $link_1; ?>"><?php //echo $excerpt_1; ?>Artesenal</a></span>
-					</div><!-- .box -->
-					<div class="box">
-						<span class="icon">
-							<a href="<?php echo $link_2; ?>">
-							<?php if ( $icone_2 ) { ?>
-								<img src="<?php echo $icone_2; ?>" alt="<?php echo $title_2; ?>">
-							<?php } else { ?>
-								<img src="<?php echo get_template_directory_uri(); ?>/images/icon-restaurante.png" alt="<?php echo $title_2; ?>">
-							<?php } ?>
+
+					<div class="box" data-category="">
+						<div class="cat-hover cat-hover-<?php echo $category->slug ?>">
+							
+							<a class="trick" rel="<?php echo esc_url( $category_link); ?>" href="<?php the_permalink();?>">
+								<span class="cat-icon icon-<?php echo $category->slug ?>"></span>
+								<span class="excerpt"><a rel="<?php echo esc_url( $category_link); ?>" href="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
 							</a>
-						</span>
-						<a class="title" href="<?php echo $link_2; ?>"><?php echo $title_2; ?></a>
-						<span class="excerpt"><a href="<?php //echo $link_2; ?>"><?php //echo $excerpt_2; ?>Restaurante</a></span>
-					</div><!-- .box -->
-					<div class="box">
-						<span class="icon">
-							<a href="<?php echo $link_3; ?>">
-							<?php if ( $icone_3 ) { ?>
-								<img src="<?php echo $icone_3; ?>" alt="<?php echo $title_3; ?>">
-							<?php } else { ?>
-								<img src="<?php echo get_template_directory_uri(); ?>/images/icon-soft.png" alt="<?php echo $title_3; ?>">
-							<?php } ?>
-							</a>
-						</span>
-						<a class="title" href="<?php echo $link_3; ?>"><?php echo $title_3; ?></a>
-						<span class="excerpt"><a href="<?php //echo $link_3; ?>"><?php //echo $excerpt_3; ?>Soft</a></span>
-					</div><!-- .box -->
-					<div class="box">
-						<span class="icon">
-							<a href="<?php echo $link_4; ?>">
-							<?php if ( $icone_4 ) { ?>
-								<img src="<?php echo $icone_4; ?>" alt="<?php echo $title_4; ?>">
-							<?php } else { ?>
-								<img src="<?php echo get_template_directory_uri(); ?>/images/icon-chocolate.png" alt="<?php echo $title_4; ?>">
-							<?php } ?>	
-							</a>
-						</span>
-						<a class="title" href="<?php echo $link_4; ?>"><?php echo $title_4; ?></a>
-						<span class="excerpt"><a href="<?php //echo $link_4; ?>"><?php //echo $excerpt_4; ?>Chocolate e Creme</a></span>
-					</div><!-- .box -->
+
+						</div>
+						<?php	
+							//$child_args = array( 'child_of' => $cat_ID, 'hide_empty' => 0, );
+							//$child_categories = get_categories( $child_args );
+						?>
+					</div><!-- .box -->						
+
+						<?php endforeach; ?>
 
 				</div><!-- .wrap -->
 			</section><!-- .body-content-produtos -->
 
-			<section data-background="background-<?php //$post-ID(); ?>" class="cat-artesanal body-category-produtos"></section><!-- .body-category-produtos -->
-			<section data-background="background-<?php //$post-ID(); ?>" class="cat-restaurante body-category-produtos"></section><!-- .body-category-produtos -->
-			<section data-background="background-<?php //$post-ID(); ?>" class="cat-soft body-category-produtos"></section><!-- .body-category-produtos -->
-			<section data-background="background-<?php //$post-ID(); ?>" class="cat-chocolate body-category-produtos"></section><!-- .body-category-produtos -->
+			<!-- <section data-background="background-<?php //$post-ID(); ?>" class="cat-artesanal body-category-produtos"></section>
+			<section data-background="background-<?php //$post-ID(); ?>" class="cat-restaurante body-category-produtos"></section>
+			<section data-background="background-<?php //$post-ID(); ?>" class="cat-soft body-category-produtos"></section>
+			<section data-background="background-<?php //$post-ID(); ?>" class="cat-chocolate body-category-produtos"></section>
+			 -->		
+			
+			<section id="single-home-container" class="cat-artesanal body-category-produtos">
+				<div class="wrap"></div>				
+			</section><!-- .body-category-produtos -->
 
 		<?php endwhile; // end of the loop. ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
