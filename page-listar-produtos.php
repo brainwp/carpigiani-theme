@@ -72,18 +72,14 @@ get_header(); ?>
 
 				</div><!-- .wrap -->
 			</section><!-- .body-content-produtos -->
-
 			<!-- <section data-background="background-<?php //$post-ID(); ?>" class="cat-artesanal body-category-produtos"></section>
 			<section data-background="background-<?php //$post-ID(); ?>" class="cat-restaurante body-category-produtos"></section>
 			<section data-background="background-<?php //$post-ID(); ?>" class="cat-soft body-category-produtos"></section>
 			<section data-background="background-<?php //$post-ID(); ?>" class="cat-chocolate body-category-produtos"></section>
 			 -->
-			
-			<section id="single-home-container" class="cat-artesanal body-category-produtos tit-<?php echo $category->slug; ?>">
-				<div class="wrap"></div>				
-			</section><!-- .body-category-produtos -->
-
 		<?php endwhile; // end of the loop. ?>
+			
+			<section id="single-home-container" class="cat-artesanal body-category-produtos"></section><!-- .body-category-produtos -->		
 
 	</main><!-- #main -->
 </div><!-- #primary -->

@@ -918,8 +918,8 @@ a:active {
 }
 .body-category-produtos {
 	clear: both;
-	border-bottom: 2px solid #95B5AC;
-	background-color: #BFD6D0;
+	/* border-bottom: 2px solid #95B5AC;
+	background-color: #BFD6D0; */
 	min-height: 280px; 
 }
 .body-category-produtos {

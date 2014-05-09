@@ -1,5 +1,4 @@
-
-
+/* Carregamento dos produtos das categorias via Ajax */
 $(document).ready(function(){
 
 	$.ajaxSetup({cache:false});
@@ -34,12 +33,6 @@ $(document).ready(function(){
 
     return false;
     });*/
-
-
-
-        
-
-    
 
 });
 
