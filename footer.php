@@ -29,6 +29,18 @@
 
 </div><!-- #page -->
 
+<script >
+$('.trick').on('click', function(){
+$('.cat-hover').removeClass('grown');
+$('.cat-hover').addClass('spot');
+});
+
+$('.cat-hover').on('click', function(){
+$(this).removeClass('spot');
+$(this).addClass('grown');
+});
+</script>
+
 <?php wp_footer(); ?>
 
 </body>

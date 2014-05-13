@@ -926,6 +926,24 @@ a:active {
 	clear: both;
 	min-height: 280px; 
 }
+.body-category-produtos .post {
+	float: left;
+	width: 16%;
+	max-height: 300px;
+}
+.body-category-produtos .post:first-child {
+	margin-left: 11%;
+}
+.body-category-produtos h1 {
+	display: table;
+	margin: 0 auto;
+	font-size: 1em;
+	text-align: center;
+}
+.body-category-produtos h1 a {
+	color: #636568;
+	text-decoration: none;
+}
 section.cat-artesanal {
 	background-color: #EBDEED;
 	border-bottom: 2px solid #C2B7C4;
@@ -1005,6 +1023,12 @@ section.tit-chocolate-e-creme {
 	height: 115px;
 	margin: 40px auto 0 auto;
 } */
+.dNone {
+	display: none;
+}
+.dBlock {
+	display: block;
+}
 
 /* LOADER */
 .box-loader:nth-child(2n-1){
@@ -1146,9 +1170,16 @@ section.tit-chocolate-e-creme {
 
 .body-category-produtos .wrap {
     margin: 20px auto;
-    max-width: 980px;
+    max-width: 980px !important;
+    /* max-height: 330px; */
     overflow: hidden;
 }
+.body-category-produtos .content-posts {
+	position: relative;
+}
+.body-category-produtos .content-posts {
+}
+
 
 
 /*--------------------------------------------------------------

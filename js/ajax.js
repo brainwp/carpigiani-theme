@@ -3,12 +3,12 @@ $(document).ready(function(){
 
 	$.ajaxSetup({cache:false});
 	$(".trick").click(function(){
-		var post_link = $(this).attr("rel");
-		//$("#single-home-container").html("<div class='box'><span class='loader5'></span></div>");
-		$("#single-home-container").html("<div class='box-loader'><span class='clock'></span></div>");
-		$("#single-home-container").load(post_link);
-		return false;
-	});
+        var post_link = $(this).attr("rel");
+        //$("#single-home-container").html("<div class='box'><span class='loader5'></span></div>");
+        $("#cat-prod-container").html("<div class='box-loader'><span class='clock'></span></div>");
+        $("#cat-prod-container").load(post_link);
+        return false;
+    });
 
 	/*$.ajax({
         url: "http://localhost/wp-content/themes/carpigiani-theme/single-home.php",

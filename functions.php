@@ -79,6 +79,7 @@ function carpigiani_theme_setup() {
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'slider-home', 600, 290, true );
 	add_image_size( 'slider-cat-produto', 980, 433, true );
+	add_image_size( 'th-cat-post', 140, 245, true );
 }
 
 	// This theme uses wp_nav_menu() in one location.
@@ -232,3 +233,16 @@ if(function_exists("register_field_group"))
 * Disable Admin Bar for All Users.
 */
 show_admin_bar(false);
+
+/**
+* Exibe 5 post da categoria em questão
+*/
+add_action( 'pre_get_posts', 'show_posts_in_cat', 1 );
+function show_posts_in_cat( $query ) {
+
+    if ( is_category() ) {
+        // Display 50 posts for a custom post type called 'movie'
+        $query->set( 'posts_per_page', 5 );
+        return;
+    }
+}

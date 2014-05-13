@@ -53,8 +53,20 @@ get_header(); ?>
 	    				$category_slug = get_category_link( $category->slug );
 					?>
 
+					<script >
+$('.trick').on('click', function(){
+$('.cat-hover').removeClass('grown');
+$('.cat-hover').addClass('spot');
+});
+
+$('.cat-hover').on('click', function(){
+$(this).removeClass('spot');
+$(this).addClass('grown');
+});
+					</script>
+
 						<div class="box" data-category="">
-							<div class="cat-hover cat-hover-<?php echo $category->slug ?>">
+							<div class="cat-hover grown cat-hover-<?php echo $category->slug ?>">
 								
 								<a class="trick" rel="<?php echo esc_url( $category_link); ?>" href="<?php the_permalink();?>">
 									<span class="cat-icon icon-<?php echo $category->slug ?>"></span>
@@ -79,7 +91,8 @@ get_header(); ?>
 			 -->
 		<?php endwhile; // end of the loop. ?>
 			
-			<section id="single-home-container" class="cat-artesanal body-category-produtos"></section><!-- .body-category-produtos -->		
+			<section id="cat-prod-container" class="cat-artesanal body-category-produtos"></section><!-- .body-category-produtos -->		
+		
 
 	</main><!-- #main -->
 </div><!-- #primary -->
