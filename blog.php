@@ -1,31 +1,39 @@
 <?php
 /**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package carpigiani-theme
+ * The template for Blog
+  * @package carpigiani-theme
  */
 global $_query;
-
 get_header(); ?>
-			<?php echo $_query->titulo; ?>
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+	<div class="wrap">
+		<div id="primary" class="content-area blog">
+			<main id="main" class="site-main" role="main">
 
-				<section class="content-page">
-					<?php the_title(); ?>
-				</section><!-- .content-pagee -->
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; // end of the loop. ?>
+					<div class="each-post">
+						<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+							<?php if ( has_post_thumbnail() ) : ?>
+							<div class="thumb">
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+							</div><!-- .thumb -->
+						<?php else : ?>
+						<?php endif; ?>
+						
+						<?php the_excerpt(); ?>
+						<div class="leia">
+							<a href="<?php the_permalink(); ?>">Leia mais>></a>
+						</div><!-- .leia -->
+					</div><!-- .each-post -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				<?php endwhile; // end of the loop. ?>
 
-<?php //get_sidebar(); ?>
+			</main><!-- #main -->
+		</div><!-- #primary -->
+
+	<?php get_sidebar(); ?>
+	
+	</div><!-- .wrap -->
+
 <?php get_footer(); ?>
