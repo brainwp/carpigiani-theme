@@ -617,6 +617,79 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
+.site-content .wrap {
+	max-width: 1280px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.site-content .wrap #primary {
+	float: left;
+	margin-right: 2%;
+	width: 70%;
+	max-width: 980px;
+}
+
+.site-content .wrap #secondary {
+	float: left;
+	width: 27%;
+}
+
+.each-post {
+	width: 100%;
+	overflow: hidden;
+	clear: both;
+	margin-bottom: 20px;
+	background: #F0F0F0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.each-post h1 {
+	display: block;
+	padding: 20px;
+	font-size: 2.6em;
+}
+
+.each-post h1 a {
+	text-decoration: none;
+	color: #008FCB;
+}
+
+.each-post .thumb {
+	width: 100%;
+	max-height: 300px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.each-post p {
+	font-size: 1em;
+	padding: 0 20px;
+	color: #333;
+	margin-bottom: 0;
+}
+
+.each-post .leia {
+	background: #CCC;
+	padding: 5px 10px;
+	display: inline-block;
+	margin: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.each-post .leia:hover {
+	background: #0092ca;
+}
+
+.each-post .leia a {
+	color: #fff;
+	text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/

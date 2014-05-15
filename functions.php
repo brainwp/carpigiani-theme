@@ -184,6 +184,11 @@ require get_template_directory() . '/inc/jetpack.php';
 require_once ( get_stylesheet_directory() . '/inc/custom-produtos.php' );
 
 /**
+ * WP MVC.
+ */
+//require_once ( get_stylesheet_directory() . '/router.php' );
+
+/**
  * ACF
  */
 define( 'ACF_LITE' , true );
