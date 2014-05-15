@@ -184,7 +184,7 @@ require_once ( get_stylesheet_directory() . '/inc/custom-produtos.php' );
 /**
  * WP MVC.
  */
-require_once ( get_stylesheet_directory() . '/router.php' );
+//require_once ( get_stylesheet_directory() . '/router.php' );
 
 /**
  * ACF
