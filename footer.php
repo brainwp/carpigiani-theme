@@ -30,15 +30,46 @@
 </div><!-- #page -->
 
 <script >
-$('.trick').on('click', function(){
-$('.cat-hover').removeClass('grown');
-$('.cat-hover').addClass('spot');
-});
+	$('.trick').on('click', function(){
+		$('.cat-hover').removeClass('mdiv-5');
+		$('.cat-hover').addClass('mdiv');
+	});
 
-$('.cat-hover').on('click', function(){
-$(this).removeClass('spot');
-$(this).addClass('grown');
-});
+	$('.cat-hover').on('click', function(){
+		$(this).removeClass('mdiv');
+		$(this).addClass('mdiv-5');
+	});
+
+	$('.trick').on('click', function(){
+		$('.cat-hover').removeClass('mdiv-6');
+		$('.cat-hover').addClass('mdiv');
+	});
+
+	$('.cat-hover').on('click', function(){
+		$(this).removeClass('mdiv ');
+		$(this).addClass('mdiv-6');
+	});
+
+	$('.trick').on('click', function(){
+		$('.cat-hover').removeClass('mdiv-7');
+		$('.cat-hover').addClass('mdiv');
+	});
+
+	$('.cat-hover').on('click', function(){
+		$(this).removeClass('mdiv ');
+		$(this).addClass('mdiv-7');
+	});
+
+	$('.trick').on('click', function(){
+		$('.cat-hover').removeClass('mdiv-8');
+		$('.cat-hover').addClass('mdiv');
+	});
+
+	$('.cat-hover').on('click', function(){
+		$(this).removeClass('mdiv ');
+		$(this).addClass('mdiv-8');
+	});
+	
 </script>
 
 <?php wp_footer(); ?>

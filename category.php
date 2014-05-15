@@ -46,18 +46,42 @@ wp_reset_postdata();*/
 
 ?>
 
+<?php
+	$args = array(
+	'type'                     => 'post',
+	'child_of'                 => 0,
+	'parent'                   => '',
+	'orderby'                  => 'name',
+	'order'                    => 'ASC',
+	'hide_empty'               => 0,
+	'hierarchical'             => 1,
+	'exclude'                  => '1',
+	'include'                  => '',
+	'number'                   => '1',
+	'taxonomy'                 => 'category');
 
+	$categories = get_categories( $args );
 
-<section class="body-category-produtos tit-<?php echo $category->slug; ?>">
+	foreach( $categories as $category ) :
+	$cat_ID = $category->term_id; // Get ID the category.
+	// Get the URL of this category
+	$category_link = get_category_link( $cat_ID );
+	// Get the Slug of this category
+	$category_slug = get_category_link( $category->slug );
+?>
+
+<?php //echo the_ID();
+//echo $cat_ID; ?>
+
+<section id="id-<?php echo the_ID(); ?>" class="tit-<?php echo $category->slug; ?> trick-<?php echo $category->slug; ?>" rel="<?php echo $category->slug; ?>">
 	<div class="wrap">
-		<div id="carousel" class="content-posts wrap list_carousel responsive">
+		<div class="content-posts wrap list_carousel responsive">
 			<ul id="foo2">
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 					<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 						<?php
-							// Must be inside a loop.
 							if ( has_post_thumbnail() ) {
 								the_post_thumbnail( 'th-cat-post' );
 							}
@@ -65,7 +89,6 @@ wp_reset_postdata();*/
 								echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/th-prod-default.png" />';
 							}
 						?>
-						<?php //the_post_thumbnail( 'th-cat-post' ); ?> 
 						<h1><a href="<?php //the_permalink(); ?>"><?php the_title(); ?></a></h1>
 					</div>
 
@@ -91,3 +114,4 @@ wp_reset_postdata();*/
 	</div><!-- .wrap -->
 </section><!-- .content-pagee -->
 
+<?php endforeach; ?>

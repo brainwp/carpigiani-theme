@@ -924,7 +924,9 @@ a:active {
 }
 .body-category-produtos {
 	clear: both;
-	min-height: 280px; 
+	/* min-height: 280px; */
+	max-height: 360px;
+	overflow: hidden;
 }
 .body-category-produtos .post {
 	float: left;
@@ -992,8 +994,30 @@ section.cat-chocolate {
 .cat-hover a:hover {
 	color: #ffffff;
 }
+
+
+
+.mdiv {
+	background-color: none;
+}
+.mdiv-5 {
+	background-color: #EBDEED;
+}
+.mdiv-6 {
+	background-color: #8E857C;
+}
+.mdiv-7 {
+	background-color: #D2CB84;
+}
+.mdiv-8 {
+	background-color: #BFD6D0;
+}
+
+
+
+
 .cat-hover-artesenal:hover {
-	background-color: #EBDEED;    
+	background-color: #EBDEED;
 }
 .cat-hover-restaurante:hover{
 	background-color: #D2CB84;
@@ -1023,12 +1047,6 @@ section.tit-chocolate-e-creme {
 	height: 115px;
 	margin: 40px auto 0 auto;
 } */
-.dNone {
-	display: none;
-}
-.dBlock {
-	display: block;
-}
 
 /* LOADER */
 .box-loader:nth-child(2n-1){
@@ -1062,13 +1080,15 @@ section.tit-chocolate-e-creme {
 	text-transform: uppercase;
 	transition: all .3s ease;
 }
-
-.box-loader:hover p{
+.box-loader:hover p {
 	bottom:0px;
 	top:175px;
 	opacity: 1;
 	transition: all .2s ease;
 	z-index: 2;
+}
+.cat-active {
+
 }
 
 /* MEDIA QUERIES */

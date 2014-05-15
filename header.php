@@ -21,9 +21,24 @@
 <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
 
+<!-- <link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/demo.css" />
+<link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/elastislide.css" />
+<link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/custom.css" /> -->
+
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
-
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php //bloginfo( 'template_url' ) ?>/js/jquerypp.custom.js"></script>
+<script type="text/javascript" src="<?php //bloginfo( 'template_url' ) ?>/js/jquery.elastislide.js"></script>
+<script type="text/javascript">	
+	$( '#carousel-elast' ).elastislide();	
+</script> -->
+<script type="text/javascript">
+/*$(document).ready(function(){
+	$('.trick').on('click', function(){
+		$("li a[href='"+location.href.substring(location.href.lastIndexOf("/")+1,255)+"']").addClass("jony");
+	});
+});*/
+</script>
 
 <?php wp_head(); ?>
 </head>

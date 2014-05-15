@@ -16,16 +16,14 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php while (have_posts()) : the_post(); ?>
 
 			<section class="slider-content slider-content-produtos">
 				<div class="entry-title-slider"><h1 class="entry-title">Produtos<?php //the_title(); ?></h1></div>
-
-					<?php get_template_part( 'content', 'produtos' ); ?>
-
+				<?php get_template_part( 'content', 'produtos' ); ?>
 			</section><!-- #carousel .slider-content-single -->
 
-			<section class="body-content body-content-produtos">
+			<section id="scroll" class="body-content body-content-produtos">
 				<div class="wrap">
 
 					<?php
@@ -53,22 +51,11 @@ get_header(); ?>
 	    				$category_slug = get_category_link( $category->slug );
 					?>
 
-					<script >
-$('.trick').on('click', function(){
-$('.cat-hover').removeClass('grown');
-$('.cat-hover').addClass('spot');
-});
+						<div id="boxe" class="box" data-category="data-<?php echo $cat_ID; ?>">
 
-$('.cat-hover').on('click', function(){
-$(this).removeClass('spot');
-$(this).addClass('grown');
-});
-					</script>
-
-						<div class="box" data-category="">
-							<div class="cat-hover grown cat-hover-<?php echo $category->slug ?>">
+							<div id="mdiv-<?php echo $cat_ID; ?>" class="cat-hover cat-hover-<?php echo $category->slug ?> mdiv">
 								
-								<a class="trick" rel="<?php echo esc_url( $category_link); ?>" href="<?php the_permalink();?>">
+								<a id="trick" class="trick trick-<?php echo $category->slug ?>" rel="<?php echo esc_url( $category_link); ?>" href="#scroll">
 									<span class="cat-icon icon-<?php echo $category->slug ?>"></span>
 									<span class="excerpt"><a rel="<?php echo esc_url( $category_link); ?>" href="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
 								</a>
@@ -84,15 +71,12 @@ $(this).addClass('grown');
 
 				</div><!-- .wrap -->
 			</section><!-- .body-content-produtos -->
-			<!-- <section data-background="background-<?php //$post-ID(); ?>" class="cat-artesanal body-category-produtos"></section>
-			<section data-background="background-<?php //$post-ID(); ?>" class="cat-restaurante body-category-produtos"></section>
-			<section data-background="background-<?php //$post-ID(); ?>" class="cat-soft body-category-produtos"></section>
-			<section data-background="background-<?php //$post-ID(); ?>" class="cat-chocolate body-category-produtos"></section>
-			 -->
-		<?php endwhile; // end of the loop. ?>
 			
-			<section id="cat-prod-container" class="cat-artesanal body-category-produtos"></section><!-- .body-category-produtos -->		
-		
+		<?php endwhile; // end of the loop. ?>
+
+		<section id="cat-prod-container" class="cat-artesanal body-category-produtos" rel="<?php echo esc_url( $category_link); ?>">
+			<?php get_template_part( 'content', 'post-categories' ); ?>
+		</section><!-- .body-category-produtos -->
 
 	</main><!-- #main -->
 </div><!-- #primary -->

@@ -4,11 +4,24 @@ $(document).ready(function(){
 	$.ajaxSetup({cache:false});
 	$(".trick").click(function(){
         var post_link = $(this).attr("rel");
+        var post_id = $(this).attr("rel");
+        //alert(post_id);
         //$("#single-home-container").html("<div class='box'><span class='loader5'></span></div>");
         $("#cat-prod-container").html("<div class='box-loader'><span class='clock'></span></div>");
         $("#cat-prod-container").load(post_link);
+
+        $("#cat-prod-container #mdiv-5").load(post_id).style({ color: 'red' });
+
         return false;
     });
+
+    /*$('.trick a').click(function(){
+
+            $('.cat-hover').removeClass('cat-active');
+
+            $(this).addClass('cat-active');
+
+    });*/
 
 	/*$.ajax({
         url: "http://localhost/wp-content/themes/carpigiani-theme/single-home.php",
@@ -33,6 +46,16 @@ $(document).ready(function(){
 
     return false;
     });*/
+
+/* START | Menu de Categorias */
+/*$(function() {
+    var $links = $('.nav-menu-toogle .active-toggle');
+    $links.click(function(){
+        $('.sub-category-hide').fadeOut(300);
+        $('ul#child-' + $(this).data('category')).slideToggle('slow');
+    });
+});*/
+/* END | Menu de Categorias */
 
 });
 
