@@ -26,19 +26,12 @@
 <link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/custom.css" /> -->
 
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script type="text/javascript" src="<?php //bloginfo( 'template_url' ) ?>/js/jquerypp.custom.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="<?php //bloginfo( 'template_url' ) ?>/js/jquerypp.custom.js"></script>
 <script type="text/javascript" src="<?php //bloginfo( 'template_url' ) ?>/js/jquery.elastislide.js"></script>
 <script type="text/javascript">	
 	$( '#carousel-elast' ).elastislide();	
 </script> -->
-<script type="text/javascript">
-/*$(document).ready(function(){
-	$('.trick').on('click', function(){
-		$("li a[href='"+location.href.substring(location.href.lastIndexOf("/")+1,255)+"']").addClass("jony");
-	});
-});*/
-</script>
 
 <?php wp_head(); ?>
 </head>
@@ -59,16 +52,53 @@
 					<button class="menu-toggle"><?php _e( 'Primary Menu', 'carpigiani-theme' ); ?></button>
 					<a class="skip-link screen-reader-text" href="#content">
 						<?php _e( 'Skip to content', 'carpigiani-theme' ); ?>
-					</a>			
+					</a>
 
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul><li class="item-menu">%3$s</li></ul>' ) ); ?>
+					<?php
+
+$defaults = array(
+	'theme_location'  => '',
+	'menu'            => '',
+	'container'       => 'div',
+	'container_class' => '',
+	'container_id'    => '',
+	'menu_class'      => 'menu',
+	'menu_id'         => '',
+	'echo'            => true,
+	'fallback_cb'     => 'wp_page_menu',
+	'before'          => '',
+	'after'           => '',
+	'link_before'     => '',
+	'link_after'      => '',
+	'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+	'depth'           => 0,
+	'walker'          => ''
+);
+
+wp_nav_menu( $defaults );
+
+?>
+					<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul><li class="item-menu">%3$s</li></ul>' ) ); ?>
 				</nav>
 			</div><!-- #site-navigation -->
 
-			<div class="infos-header">
+			<!-- <div class="infos-header">
 				<span id="i-search"></span><input type="text" name="campo" id="search" value="" style="width:100px;">
 				<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
-			</div><!-- .infos-header -->
+			</div>.infos-header -->
+
+			<div class="wrapper-simple">
+				<input type="text" placeholder="Pesquisa">
+				<input id="" type="submit" value="">
+				<img src="<?php bloginfo( 'template_url' ) ?>/images/i-search.png">
+			</div>
+
+			<div class="infos-header">
+				<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
+			</div>
+
+			
+
 
 		</div><!-- .wrap -->
 
