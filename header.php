@@ -89,7 +89,7 @@ wp_nav_menu( $defaults );
 
 			<div class="wrapper-simple">
 				<input type="text" placeholder="Pesquisa">
-				<input id="" type="submit" value="">
+				<input type="submit" value="">
 				<img src="<?php bloginfo( 'template_url' ) ?>/images/i-search.png">
 			</div>
 

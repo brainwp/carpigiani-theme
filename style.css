@@ -1548,8 +1548,8 @@ header .responsive img {
 }
 .wrapper-simple img {
 	position: absolute;
-	top: 1.2em;
-	left: 1.5em;
+	top: 1.5em;
+	left: 1.2em;
 	z-index: 1;
 }
 .wrapper-simple .cancel {

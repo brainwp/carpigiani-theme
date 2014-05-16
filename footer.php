@@ -29,6 +29,7 @@
 
 </div><!-- #page -->
 
+<!-- Script for Categories Menus -->
 <script >
 	$('.trick').on('click', function(){
 		$('.cat-hover').removeClass('mdiv-5');

@@ -9,9 +9,7 @@ $(document).ready(function(){
         //$("#single-home-container").html("<div class='box'><span class='loader5'></span></div>");
         $("#cat-prod-container").html("<div class='box-loader'><span class='clock'></span></div>");
         $("#cat-prod-container").load(post_link);
-
-        $("#cat-prod-container #mdiv-5").load(post_id).style({ color: 'red' });
-
+        $("#cat-prod-container #mdiv-5").load(post_id).style({ color: 'red' });//mudar cor depois
         return false;
     });
 
