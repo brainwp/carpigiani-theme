@@ -444,6 +444,15 @@ a:active {
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
 }
+.nav-menu a:hover {
+	border-bottom: solid 3px #cecece;
+}
+.nav-menu .actived a:hover {
+	border-bottom: none;
+}
+.nav-menu .actived {
+	border-bottom: solid 3px #cecece;
+}
 /* Small menu */
 .menu-toggle {
 	display: none;
@@ -457,6 +466,15 @@ a:active {
 	.main-navigation ul {
 		display: none;
 	}
+}
+
+/* iPhone 3+4 landscape · width: 480px */
+@media (max-width: 600px ) and (min-device-width: 480px)  {
+	
+	.body-search {
+		display:none;
+	}
+
 }
 .site-main .comment-navigation,
 .site-main .paging-navigation,
@@ -1417,7 +1435,7 @@ header {
 
 .site-branding {
     display: table;
-    margin: 100px auto 0 30px;
+    margin: 104px auto 0 30px;
     float: left;
     max-width: 700px;
     z-index: 1;
@@ -1493,7 +1511,7 @@ header .responsive img {
 	box-shadow: none;
 	position: relative;
 	top: 83px;
-	left: -20px;
+	left: -6px;
 
 	/* float: right; */
 	 /* margin: 45px 0 0;  */
@@ -1510,7 +1528,7 @@ header .responsive img {
     margin-top: 0.2em;
     min-width: 55px;
     position: relative;
-    top: -3px;
+    top: -2px;
     vertical-align: sub;
     z-index: 2;
 }

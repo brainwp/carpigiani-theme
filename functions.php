@@ -252,3 +252,25 @@ function show_posts_in_cat( $query ) {
         return;
     }
 }
+
+/**
+* Active menu from nava_menu header.
+*/
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+	if( in_array('current-menu-item', $classes) ){
+		$classes[] = 'actived ';
+	}
+return $classes;
+}
+
+/**
+* Active menu from custom_post_type 'Produtos'.
+*/
+add_filter('nav_menu_css_class' , 'wpsites_nav_class' , 10 , 2);
+function wpsites_nav_class($classes, $item){
+	if( is_archive() && $item->title == "Produtos"){
+	         $classes[] = "actived";
+	}
+return $classes;
+}
