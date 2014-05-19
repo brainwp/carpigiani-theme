@@ -8,11 +8,11 @@ $(document).ready(function() {
 	  .end().find('.wrapper-simple img').animate({'marginLeft': '2px'})
 	  .end().find(this).animate({'marginLeft':'22em'}).addClass('cancel');
 	
-	}, function() {
+	}, function( data ) {
 		
 		$('.wrapper-simple').animate({'width':'60px'})
-		.end().find('.wrapper-simple input[type=text]').animate({'width': '1px'})
-		.end().find('.wrapper-simple img').animate({'marginLeft': '0'})
+		.end()$(data).find('.wrapper-simple input[type=text]').animate({'width': '1px'})
+		.end()$(data).find('.wrapper-simple img').animate({'marginLeft': '0'})
 		//.end().find(this).animate({'marginLeft':'0'}).attr('value', '');
 		.end().find(this).animate({'marginLeft':'0'}).removeClass('cancel');
 		

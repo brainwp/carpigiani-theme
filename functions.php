@@ -267,8 +267,8 @@ return $classes;
 /**
 * Active menu from custom_post_type 'Produtos'.
 */
-add_filter('nav_menu_css_class' , 'wpsites_nav_class' , 10 , 2);
-function wpsites_nav_class($classes, $item){
+add_filter('nav_menu_css_class' , 'post_type_nav_class' , 10 , 2);
+function post_type_nav_class($classes, $item){
 	if( is_archive() && $item->title == "Produtos"){
 	         $classes[] = "actived";
 	}

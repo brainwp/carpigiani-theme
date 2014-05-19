@@ -86,19 +86,22 @@
 				<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
 			</div>.infos-header -->
 
-			<div class="body-search">				
-				<div class="wrapper-simple">
-					<input type="text" placeholder="Pesquisa">
-					<input type="submit" value="">
-					<img src="<?php bloginfo( 'template_url' ) ?>/images/i-search.png">
-				</div>
+			<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+				<div class="body-search">
+					<div class="wrapper-simple">
+						<input type="text" placeholder="Pesquisa" name="s" id="" value="<?php the_search_query(); ?>">
+						<input type="submit" value="">
+						<img src="<?php bloginfo( 'template_url' ) ?>/images/i-search.png">
+					</div>
 
-				<div class="infos-header">
-					<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
-				</div>
-			</div><!-- .body-search -->
+					<div class="infos-header">
+						<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
+					</div>
+				</div><!-- .body-search -->
+			</form>
 
-			
+
+			    
 
 
 		</div><!-- .wrap -->
