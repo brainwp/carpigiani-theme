@@ -100,10 +100,6 @@
 				</div><!-- .body-search -->
 			</form>
 
-
-			    
-
-
 		</div><!-- .wrap -->
 
 	</header><!-- #masthead -->

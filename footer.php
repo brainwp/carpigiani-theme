@@ -30,7 +30,7 @@
 </div><!-- #page -->
 
 <!-- Script for Categories Menus -->
-<script >
+<script>
 	$('.trick').on('click', function(){
 		$('.cat-hover').removeClass('mdiv-5');
 		$('.cat-hover').addClass('mdiv');
@@ -70,7 +70,7 @@
 		$(this).removeClass('mdiv ');
 		$(this).addClass('mdiv-8');
 	});
-	
+
 </script>
 
 <?php wp_footer(); ?>
