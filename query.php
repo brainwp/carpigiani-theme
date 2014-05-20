@@ -40,7 +40,8 @@ function _init_query_object() {
  * If there's something to be given at all queries like footer menus or sidebar
  * items, just put it in the end outside the `if` condition.
  */
-function _query_processor( &$query ) {
+
+function _query_processor( $query ) {
 
     global $_query, $post, $wpdb, $wp_query;
 
@@ -53,6 +54,10 @@ function _query_processor( &$query ) {
     } elseif ( $blog = get_query_var( 'blog' ) ) {
         _query_blog();
     }
+
+	elseif ( $produtos = get_query_var( 'produtos' ) ) {
+		_query_produtos();
+	}
 
     elseif( $query->get( 's' ) ) {
 
@@ -99,4 +104,54 @@ function _query_blog() {
         'order' => 'ASC'
     ) );
 
+}
+function _query_produtos() {
+	$type = $_GET['p-type'];
+	global $wp_query, $_query;
+
+	if(empty($type)){
+		$_query->titulo = 'Produtos';
+
+		$wp_query = new WP_Query( array(
+			'post_type' => 'produtos',
+			'order' => 'ASC',
+			'tipo'  => 'soft'
+		) );
+	}
+	else{
+		if($type == 'soft'){
+			$_query->titulo = 'Produtos';
+			$wp_query = new WP_Query( array(
+				'post_type' => 'produtos',
+				'order' => 'ASC',
+				'tipo'  => 'soft'
+			) );
+		}
+
+		if($type == 'restaurante'){
+			$_query->titulo = 'Produtos';
+			$wp_query = new WP_Query( array(
+				'post_type' => 'produtos',
+				'order' => 'ASC',
+				'tipo'  => 'restaurante'
+			) );
+		}
+
+		if($type == 'chocolate-e-creme'){
+			$_query->titulo = 'Produtos';
+			$wp_query = new WP_Query( array(
+				'post_type' => 'produtos',
+				'order' => 'ASC',
+				'tipo'  => 'chocolate-e-creme'
+			) );
+		}
+		if($type == 'artesanal'){
+			$_query->titulo = 'Produtos';
+			$wp_query = new WP_Query( array(
+				'post_type' => 'produtos',
+				'order' => 'ASC',
+				'tipo'  => 'artesanal'
+			) );
+		}
+	}
 }

@@ -79,6 +79,7 @@ function carpigiani_theme_setup() {
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'slider-home', 600, 290, true );
 	add_image_size( 'slider-cat-produto', 980, 433, true );
+	add_image_size( 'th-cat-post', 140, 245, true );
 }
 
 	// This theme uses wp_nav_menu() in one location.
@@ -141,6 +142,7 @@ function carpigiani_theme_scripts() {
 	wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/js/caroufredsel/jquery.carouFredSel-6.2.1.js', array(), '', true );
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js' );
 	wp_enqueue_script( 'ajax', get_template_directory_uri() . '/js/ajax.js' );
+	//wp_enqueue_script( 'intrucao', get_template_directory_uri() . '/js/intrucao.js' );
 	
 	// Click Search Script - Header Menu
 	wp_enqueue_script( 'scripts.search', get_template_directory_uri() . '/js/scripts.search.js' );
@@ -241,4 +243,40 @@ if(function_exists("register_field_group"))
 /**
 * Disable Admin Bar for All Users.
 */
+
 show_admin_bar(false);
+
+/**
+* Exibe 5 post da categoria em questão
+*/
+add_action( 'pre_get_posts', 'show_posts_in_cat', 1 );
+function show_posts_in_cat( $query ) {
+
+    if ( is_category() ) {
+        // Display 50 posts for a custom post type called 'movie'
+        $query->set( 'posts_per_page', 5 );
+        return;
+    }
+}
+
+/**
+* Active menu from nava_menu header.
+*/
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+	if( in_array('current-menu-item', $classes) ){
+		$classes[] = 'actived ';
+	}
+return $classes;
+}
+
+/**
+* Active menu from custom_post_type 'Produtos'.
+*/
+add_filter('nav_menu_css_class' , 'post_type_nav_class' , 10 , 2);
+function post_type_nav_class($classes, $item){
+	if( is_archive() && $item->title == "Produtos"){
+	         $classes[] = "actived";
+	}
+return $classes;
+}
