@@ -29,7 +29,7 @@ class tipos_widget extends WP_Widget {
 		echo $args['before_title'] . $title . $args['after_title']; ?>
 
 	<?php 
-		$args = array(
+		$args_tax = array(
 		    'orderby'       => 'name', 
 		    'order'         => 'ASC',
 		    'hide_empty'    => false, 
@@ -45,7 +45,7 @@ class tipos_widget extends WP_Widget {
 		    'pad_counts'    => false, 
 		); 
 
-		 $terms = get_terms("tipos", $args);
+		 $terms = get_terms("tipos", $args_tax);
 		 if ( !empty( $terms ) && !is_wp_error( $terms ) ){
 		     echo "<ul>";
 		     foreach ( $terms as $term ) {
@@ -97,3 +97,5 @@ function load_tipos_widget() {
 	register_widget( 'tipos_widget' );
 }
 add_action( 'widgets_init', 'load_tipos_widget' );
+
+?>
