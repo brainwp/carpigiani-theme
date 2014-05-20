@@ -55,10 +55,6 @@ function _query_processor( $query ) {
         _query_blog();
     }
 
-	elseif ( $produtos = get_query_var( 'produtos' ) ) {
-		_query_produtos();
-	}
-
     elseif( $query->get( 's' ) ) {
 
     /* Archives */
@@ -115,7 +111,12 @@ function _query_produtos() {
 		$wp_query = new WP_Query( array(
 			'post_type' => 'produtos',
 			'order' => 'ASC',
-			'tipo'  => 'soft'
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'tipos',
+					'field' => 'soft',
+				)
+			),
 		) );
 	}
 	else{
@@ -124,7 +125,12 @@ function _query_produtos() {
 			$wp_query = new WP_Query( array(
 				'post_type' => 'produtos',
 				'order' => 'ASC',
-				'tipo'  => 'soft'
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'tipos',
+						'field' => 'soft',
+					)
+				),
 			) );
 		}
 
@@ -133,7 +139,12 @@ function _query_produtos() {
 			$wp_query = new WP_Query( array(
 				'post_type' => 'produtos',
 				'order' => 'ASC',
-				'tipo'  => 'restaurante'
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'tipos',
+						'field' => 'restaurante',
+					)
+				),
 			) );
 		}
 
@@ -142,7 +153,12 @@ function _query_produtos() {
 			$wp_query = new WP_Query( array(
 				'post_type' => 'produtos',
 				'order' => 'ASC',
-				'tipo'  => 'chocolate-e-creme'
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'tipos',
+						'field' => 'chocolate-e-creme',
+					)
+				),
 			) );
 		}
 		if($type == 'artesanal'){
@@ -150,7 +166,13 @@ function _query_produtos() {
 			$wp_query = new WP_Query( array(
 				'post_type' => 'produtos',
 				'order' => 'ASC',
-				'tipo'  => 'artesanal'
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'tipos',
+						'field' => 'slug',
+						'term'  => 'artesanal'
+					)
+				),
 			) );
 		}
 	}
