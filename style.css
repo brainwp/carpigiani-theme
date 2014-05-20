@@ -560,7 +560,18 @@ a:active {
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 1em;
+	padding: 20px;
+	background: #f6f6f6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #f6f6f6;
+}
+
+.widget:hover {
+	border: 1px solid #d3d3d3;
+	background: #f4f4f4;
 }
 
 /* Make sure select elements fit in widgets */
@@ -579,11 +590,11 @@ a:active {
 	font-weight: bold;
 }
 .widget-title {
-	color: #008FCB;
+	color: #008FCB; /* Azul padrão */
 	font-size: 1.8em;
 }
 .widget ul {
-	margin: 10px 20px;
+	margin: 10px 15px;
 	list-style: none;
 }
 
@@ -652,6 +663,7 @@ a:active {
 .site-content .wrap #secondary {
 	float: left;
 	width: 27%;
+	padding-left: 10px;
 }
 
 .each-post {
