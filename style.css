@@ -628,6 +628,9 @@ a:active {
 .i-suporte p {
 	font-weight: bold;
 }
+.body-search {
+	display: table;
+}
 
 /*--------------------------------------------------------------
 10.0 Content
@@ -671,7 +674,7 @@ a:active {
 }
 
 .site-content .wrap {
-	max-width: 1280px;
+	max-width: 980px;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -1452,7 +1455,7 @@ header {
 }
 .track-header {
     background-color: #008EC8;
-    height: auto;
+    height: 50px;
     margin: 0 auto;
     max-width: 100%;
 }
@@ -1705,7 +1708,9 @@ footer .social-icons #facebook{
 .i-search {
 	float: left;
 }
-.content-search {}
+.search-form {
+	float:left;
+}
 .content-search header {
 	height: inherit;
     padding: 10px 20px 10px 0;

@@ -82,11 +82,6 @@
 					</nav>
 				</div><!-- #site-navigation -->
 
-				<!-- <div class="infos-header">
-					<span id="i-search"></span><input type="text" name="campo" id="search" value="" style="width:100px;">
-					<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
-				</div>.infos-header -->
-
 				<form id="search-form" role="search" method="get" id="searchform" class="search-form" action="<?php echo home_url( '/' ); ?>">
 					<div class="body-search">
 						<div class="wrapper-simple">
@@ -97,7 +92,7 @@
 
 						<div class="infos-header">
 							<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
-						</div>
+						</div><!-- .infos-header -->
 					</div><!-- .body-search -->
 				</form>
 
