@@ -184,7 +184,7 @@ require_once ( get_stylesheet_directory() . '/inc/custom-produtos.php' );
 /**
  * WP MVC.
  */
-//require_once ( get_stylesheet_directory() . '/router.php' );
+require_once ( get_stylesheet_directory() . '/router.php' );
 
 /**
  * ACF
@@ -236,4 +236,4 @@ if(function_exists("register_field_group"))
 /**
 * Disable Admin Bar for All Users.
 */
-show_admin_bar(false);
+show_admin_bar( false );

@@ -40,7 +40,8 @@ function _init_query_object() {
  * If there's something to be given at all queries like footer menus or sidebar
  * items, just put it in the end outside the `if` condition.
  */
-function _query_processor( &$query ) {
+
+function _query_processor( $query ) {
 
     global $_query, $post, $wpdb, $wp_query;
 
