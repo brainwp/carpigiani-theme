@@ -457,6 +457,7 @@ a:active {
 .menu-toggle {
 	display: none;
 }
+
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
@@ -466,17 +467,26 @@ a:active {
 	.main-navigation ul {
 		display: none;
 	}
+
 }
 
 /* iPhone 3+4 landscape · width: 480px */
-@media (max-width: 600px ) and (min-device-width: 480px)  {
+@media (max-width: 600px ) and (min-device-width: 568px)  {
 	
 	.body-search {
 		display:none;
 	}
 
+	#site-navigation {
+		clear: both;
+	}
+
 }
 @media (max-width: 480px ) {
+
+	.body-search {
+		display:none;
+	}
 	
 	.error-404 .page-header {
 	    display: table;
@@ -887,7 +897,7 @@ a:active {
 }
 .error-404 .page-header {
 	float: right;
-	width: 55%;
+	width: 50%;
 	font-size: 0.738em;
 }
 .error-404 .page-header h1 {
@@ -899,6 +909,10 @@ a:active {
 }
 .error-404 .wrap {
 	width:70%;
+}
+.error-404 img {
+	float:left;
+	width:45%;
 }
 
 /*--------------------------------------------------------------
@@ -1230,8 +1244,22 @@ section.tit-chocolate-e-creme {
 
 /* MEDIA QUERIES */
 @media (max-width: 700px){
+
 	.box-loader{
 		width: 50%;
+	}
+
+	.body-search {
+		display:none;
+	}
+
+	.error-404 {
+	    margin: 40px auto 20px;
+	}
+
+	.error-404 img {
+	    float: left;
+	    width: 100%;
 	}
 
 	/* .box-loader:nth-child(2n-1){
@@ -1245,11 +1273,16 @@ section.tit-chocolate-e-creme {
 }
 
 @media (max-width: 420px){
+
 	.box-loader{
 		width: 100%;
 	}
 
-	./* box-loader:nth-child(4n),.box:nth-child(4n-3){
+	.logo {
+		left: 21%;
+	}
+
+	/*. box-loader:nth-child(4n),.box:nth-child(4n-3){
 		background-color: inherit;
 	}
 	
