@@ -94,8 +94,8 @@ get_header(); ?>
 				        }
 					?>
 				</div><!-- .outras-categorias -->
-				<div class="outros-produtos">
-					
+
+				<div class="outros-produtos">					
 					<h3>+ nessa categoria</h3>
 					
 					<div class="slider-footer-single">

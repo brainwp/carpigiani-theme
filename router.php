@@ -21,11 +21,13 @@ function _query_vars ( $query_vars ) {
 add_action( 'rewrite_rules_array', '_rewrite_rules' );
 function _rewrite_rules( $rules ) {
     $prefix = 'index.php?';
+
     $_rules = array();
     foreach( _query_rules() as $rule => $query ) {
         $_rules[ $rule ] = $prefix . $query;
     }
     return array_merge($_rules, $rules);
+
 }
 
 add_action( 'pre_get_posts', '_pre_get_posts', 1 );
