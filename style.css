@@ -675,6 +675,11 @@ a:active {
 	margin: 0 auto;
 	overflow: hidden;
 }
+.content-results .wrap {
+	max-width: 1010px;
+	margin: 0 auto;
+	overflow: hidden;
+}
 
 .site-content .wrap #primary {
 	float: left;
