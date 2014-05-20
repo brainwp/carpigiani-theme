@@ -50,4 +50,21 @@ jQuery(function($) {
 			}
 		}
 	});
+	$('#foo2').carouFredSel({
+		prev: '#prev-outros',
+		next: '#next-outros',
+		responsive: true,
+		width: '100%',
+		scroll: {
+			items: 1,
+			pauseOnHover: true,
+		},
+		items: {
+			width: 400,
+			visible: {
+				min: 1,
+				max: 1
+			}
+		}
+	});
 });

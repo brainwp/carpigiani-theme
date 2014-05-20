@@ -1,84 +1,87 @@
 <?php
 
     /*
-    Template Name: single-home
+    * Template Name: Post Categories
     */
 
-?>    
+get_header(); ?>
+
+<?php //$post = get_post($_POST['id']); ?>
 
 <?php
+global $wp_query;
 
-    $post = get_post($_POST['id']);
+//grab all categories from query string (if using `category_name`)
+$category_slugs_array = explode("+",esc_attr($wp_query->query['category_name']));
+
+$categories = array('artesanal', 'chocolate-e-creme', 'restaurante', 'solf');
+$category_ids = array(5,6,7,8);
+
+//loop through all the slugs
+foreach($category_slugs_array as $category_slug) {
+    //get category object using slug
+    $category = get_category_by_slug( $category_slug );
+
+    //check to make sure a matching category has been found
+    if(isset($category->cat_ID)) {
+        $categories[] = $category;
+        $category_ids[] = $category->cat_ID;
+    }
+}
+
+if ($$category_ids != 5) {
+    // trago os posts relacionados a esta categoria
+    var_dump('positivo');
+} else {
+    var_dump('negativo');
+}
+
+
+var_dump($categories); //array of categories
+var_dump($category_ids); //array of category IDs
 
 ?>
 
-<!--single-home-->
-<div id="single-home post-<?php the_ID(); ?>">jony
+<?php 
+/*$args = array( 'post_type' => 'post', 'posts_per_page' => 10 );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();
+the_title();
+echo '<div class="entry-content">';
+the_title();
+echo '</div>';
+endwhile;*/
+?>
 
-<!--single-home-bg-->
-<div class="single-home-bg">
+<section class="body-category-produtos">
+    <div class="wrap">
+        <div class="content-posts wrap list_carousel responsive">
+            <ul id="foo2">
 
-</div>
-<!--single-home-bg-->
+                <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
-<?php while (have_posts()) : the_post(); ?>
+                
+                <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+                    <?php
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail( 'th-cat-post' );
+                        }
+                        else {
+                            echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/th-prod-default.png" />';
+                        }
+                    ?>
+                    <h1><a href="#"><?php the_title(); ?></a></h1>
+                </div>
 
-    <!--sh-image-->
-    <div class="sh-image">
+                <?php endwhile; ?>
+                <?php else : ?>
+                        <p>I'm not sure what you're looking for.</p>
+                <?php endif; ?>
+                
 
-        <?php the_post_thumbnail(); ?>
+            </ul><!-- .content-posts wrap list_carousel responsive -->
+        </div><!-- .wrap -->
+    </div><!-- .body-category-produtos -->
+</section><!-- .body-category-produtos -->
 
-    </div>
-    <!--sh-image-->
-
-    <!--sh-post-->
-    <div class="sh-post">
-sknfsdk
-        <!--sh-cat-date-->
-        <div class="sh-cat-date">
-
-            <?php
-
-                $category = get_the_category(); 
-                echo $category[0]->cat_name;
-
-            ?>
-
-            - <?php the_time('l, F jS, Y') ?>
-
-        </div>
-        <!--sh-cat-date-->
-
-        <!--sh-title-->
-        <div class="sh-title">
-
-            <?php the_title();?>
-
-        </div>
-        <!--sh-title-->
-
-        <!--sh-excerpt-->
-        <div class="sh-excerpt">
-
-            <?php the_excerpt();?>
-
-        </div>
-        <!--sh-excerpt-->
-
-        <!--sh-content-->
-        <div class="sh-content">
-
-            <?php the_content();?>
-
-        </div>
-        <!--sh-content-->
-
-</div>
-<!--sh-post-->        
-
-<?php endwhile;?>
-
-<div class="clearfix"></div>    
-
-</div>
-<!--single-home-->
+<?php get_footer(); ?>
