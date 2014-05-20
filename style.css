@@ -628,6 +628,23 @@ a:active {
 	background: #0177a9; /* Azul escuro */;
 }
 
+.widget .widget_tipos_widget {
+	padding: 10px;
+}
+
+.widget.widget_tipos_widget ul {
+	padding: 0;
+	margin: 0;
+}
+
+.widget .each-widget-tipo {
+	width: 48%;
+	margin: 0 2% 5px 0;
+	float: left;
+	height: 110px;
+	background: #CCC;
+}
+
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
