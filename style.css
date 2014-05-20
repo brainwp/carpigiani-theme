@@ -369,12 +369,15 @@ a {
 	color: #246B89;
 }
 a:visited {
-	color: purple;
+	color: #297a9c;
+}
+a:hover {
+	text-decoration: underline;
 }
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #0177a9;
 }
 
 /*--------------------------------------------------------------
@@ -574,6 +577,22 @@ a:active {
 }
 .i-suporte p {
 	font-weight: bold;
+}
+.widget-title {
+	color: #008FCB;
+	font-size: 1.8em;
+}
+.widget ul {
+	margin: 10px 20px;
+	list-style: none;
+}
+
+.widget ul li a {
+	text-decoration: none;
+}
+
+.widget ul li a:hover {
+	text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
