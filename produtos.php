@@ -55,7 +55,7 @@ get_header(); ?>
 
 							<a id="trick" class="trick trick-<?php echo $category->slug ?>" rel="<?php echo get_bloginfo('url') . '/produtos/?p-type=' . $category->slug; ?>" href="#scroll">
 								<span class="cat-icon icon-<?php echo $category->slug ?>"></span>
-								<span class="excerpt"><a rel="<?php echo esc_url( $category_link); ?>" href="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
+								<span class="excerpt"><a rel="<?php echo esc_url( $category_link); ?>"><?php echo $category->name; ?></a></span>
 							</a>
 
 						</div>
