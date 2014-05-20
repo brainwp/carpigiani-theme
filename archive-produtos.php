@@ -15,12 +15,8 @@ if ( ! isset( $_GET['p-type'] ) ) {
 	$produtos = new WP_Query( array(
 		'post_type' => 'produtos',
 		'order' => 'ASC',
-		'tax_query' => array(
-			array(
-				'taxonomy' => 'tipos',
-				'field' => 'soft',
-			)
-		),
+		'tipos' => 'soft',
+		'posts_per_page' => '8'
 	) );
 
 	get_header(); ?>
@@ -96,18 +92,12 @@ if ( ! isset( $_GET['p-type'] ) ) {
 
 	<?php get_footer();
 } else {
-	wp_reset_postdata();
 	if($type == 'soft'){
 		$produtos = new WP_Query( array(
 			'post_type' => 'produtos',
 			'order' => 'ASC',
-			'tax_query' => array(
-				array(
-					'taxonomy' => 'tipos',
-					'term'  =>  array('soft'),
-					'field' => 'soft',
-				)
-			),
+			'tipos' => 'soft',
+			'posts_per_page' => '8'
 		) );
 	}
 
@@ -115,13 +105,8 @@ if ( ! isset( $_GET['p-type'] ) ) {
 		$produtos = new WP_Query( array(
 			'post_type' => 'produtos',
 			'order' => 'ASC',
-			'tax_query' => array(
-				array(
-					'taxonomy' => 'tipos',
-					'term'  =>  array('restaurante'),
-					'field' => 'restaurante',
-				)
-			),
+			'tipos' => 'restaurante',
+			'posts_per_page' => '8'
 		) );
 	}
 
@@ -129,26 +114,16 @@ if ( ! isset( $_GET['p-type'] ) ) {
 		$produtos = new WP_Query( array(
 			'post_type' => 'produtos',
 			'order' => 'ASC',
-			'tax_query' => array(
-				array(
-					'taxonomy' => 'tipos',
-					'term'  =>  array('chocolate-e-creme'),
-					'field' => 'chocolate-e-creme',
-				)
-			),
+			'tipos' => 'chocolate-e-creme',
+			'posts_per_page' => '8'
 		) );
 	}
 	if($type == 'artesanal'){
 		$produtos = new WP_Query( array(
 			'post_type' => 'produtos',
 			'order' => 'ASC',
-			'tax_query' => array(
-				array(
-					'taxonomy' => 'tipos',
-					'term'  =>  array('artesanal'),
-					'field' => 'slug',
-				)
-			),
+			'tipos' => 'artesanal',
+			'posts_per_page' => '8'
 		) );
 	}
 	?>
