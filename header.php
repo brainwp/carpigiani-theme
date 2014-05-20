@@ -34,7 +34,7 @@
 
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ) ?>/rmm-css/responsivemobilemenu.css" type="text/css" media="screen" />
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ) ?>/js/responsivemobilemenu.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/> -->
 
 <?php wp_head(); ?>
 </head>
@@ -70,12 +70,11 @@
 							wp_nav_menu( $defaults );
 						?>		                
 		            </ul>
-		        </div>
+		        </div><!-- .rmm -->
 
 				<div class="logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</div><!-- .logo -->
-
 
 				<div class="site-branding">
 					<!-- <nav id="site-navigation" class="main-navigation" role="navigation"> -->

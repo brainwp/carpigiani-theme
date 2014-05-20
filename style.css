@@ -391,8 +391,9 @@ a:active {
 }
 .menu-menu-header-container {
 	float: left;
-    width: 21em;
-    margin: 0.125em 0 0 -0.062em;
+	width:100%;
+    /* width: 21em; */
+    margin: 0.9em 0 0 -0.062em;
     /* width: 26em;
     margin: 3.125em 0 0 16.938em; */
 }
@@ -458,6 +459,10 @@ a:active {
 	display: none;
 }
 
+/* iPhone 5 landscape · width: 568px */
+
+@media (max-width: 600px ) and (min-device-width: 568px)) {}
+
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
@@ -479,6 +484,10 @@ a:active {
 
 	#site-navigation {
 		clear: both;
+	}
+
+	.logo {
+		left:30%;
 	}
 
 }

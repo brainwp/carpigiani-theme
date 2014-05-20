@@ -150,7 +150,7 @@ border-bottom-right-radius: 6px;
 }
 .rmm.graphite .rmm-toggled ul li a {
 	display:block;
-	width:90%;
+	width:100%;
 	background-color:#008EC8;
 	text-align:center;
 	padding:10px 0px 10px 0px;
