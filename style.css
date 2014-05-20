@@ -857,6 +857,27 @@ a:active {
 }
 .bypostauthor {
 }
+#respond {
+	margin-top: 25px;
+}
+#reply-title {
+	color: #008FCB; /* Azul padrão */
+}
+#respond #commentform input[type="submit"]{
+	background: #008FCB; /* Azul padrão */;
+	box-shadow: none;
+	color: #FFF;
+	text-shadow: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float: left;
+}
+
+#respond #commentform input[type="submit"]:hover {
+	background: #0177a9; /* Azul escuro */;
+}
+
 
 /*--------------------------------------------------------------
 10.4 - Slider
@@ -1432,7 +1453,41 @@ section.tit-chocolate-e-creme {
 /*--------------------------------------------------------------
 10.9 - Single
 --------------------------------------------------------------*/
+.content-single {
+	color: #005264;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
 
+.content-single header {
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.content-single .wrap {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px 0 10px;
+}
+
+.content-single .entry-content {
+	padding-right: 25px;
+}
+
+.content-single .entry-content, .content-single .entry-content p {
+	font-size: 0.95em;
+	color: #005264;
+}
+.content-single h1 {
+	color: #008FCB;
+	font-size: 2.6em;
+}
+.content-single h1 span {
+	font-size: 0.6em;
+	margin-left: 10px;
+	color: #666666;
+}
 
 
 /*--------------------------------------------------------------
