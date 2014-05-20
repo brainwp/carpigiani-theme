@@ -567,6 +567,7 @@ a:active {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	border: 1px solid #f6f6f6;
+	overflow: hidden;
 }
 
 .widget:hover {
@@ -604,6 +605,27 @@ a:active {
 
 .widget ul li a:hover {
 	text-decoration: underline;
+}
+
+.widget input[type="text"] {
+	float: left;
+	margin-right: 5px;
+	max-width: 70%;
+}
+
+.widget input[type="submit"] {
+	background: #008FCB; /* Azul padrão */;
+	box-shadow: none;
+	color: #FFF;
+	text-shadow: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float: left;
+}
+
+.widget input[type="submit"]:hover {
+	background: #0177a9; /* Azul escuro */;
 }
 
 /*--------------------------------------------------------------
