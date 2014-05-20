@@ -662,6 +662,8 @@ a:active {
 	max-height: 300px;
 	overflow: hidden;
 	margin-bottom: 20px;
+	background: #cccccc;
+	text-align: center;
 }
 
 .each-post p {
