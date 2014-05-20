@@ -394,8 +394,9 @@ a:active {
 }
 .menu-menu-header-container {
 	float: left;
-    width: 21em;
-    margin: 0.125em 0 0 -0.062em;
+	width:100%;
+    /* width: 21em; */
+    margin: 0.9em 0 0 -0.062em;
     /* width: 26em;
     margin: 3.125em 0 0 16.938em; */
 }
@@ -460,6 +461,11 @@ a:active {
 .menu-toggle {
 	display: none;
 }
+
+/* iPhone 5 landscape · width: 568px */
+
+@media (max-width: 600px ) and (min-device-width: 568px)) {}
+
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
@@ -469,17 +475,30 @@ a:active {
 	.main-navigation ul {
 		display: none;
 	}
+
 }
 
 /* iPhone 3+4 landscape · width: 480px */
-@media (max-width: 600px ) and (min-device-width: 480px)  {
+@media (max-width: 600px ) and (min-device-width: 568px)  {
 	
 	.body-search {
 		display:none;
 	}
 
+	#site-navigation {
+		clear: both;
+	}
+
+	.logo {
+		left:30%;
+	}
+
 }
 @media (max-width: 480px ) {
+
+	.body-search {
+		display:none;
+	}
 	
 	.error-404 .page-header {
 	    display: table;
@@ -724,6 +743,11 @@ a:active {
 	background: url( 'images/icon-chocolate.png' ) center center no-repeat;
 }
 
+.body-search {
+	display: table;
+}
+
+
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -766,7 +790,12 @@ a:active {
 }
 
 .site-content .wrap {
-	max-width: 1280px;
+	max-width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.content-results .wrap {
+	max-width: 1010px;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -998,7 +1027,7 @@ a:active {
 }
 .error-404 .page-header {
 	float: right;
-	width: 55%;
+	width: 50%;
 	font-size: 0.738em;
 }
 .error-404 .page-header h1 {
@@ -1010,6 +1039,10 @@ a:active {
 }
 .error-404 .wrap {
 	width:70%;
+}
+.error-404 img {
+	float:left;
+	width:45%;
 }
 
 /*--------------------------------------------------------------
@@ -1357,8 +1390,22 @@ section.tit-chocolate-e-creme {
 
 /* MEDIA QUERIES */
 @media (max-width: 700px){
+
 	.box-loader{
 		width: 50%;
+	}
+
+	.body-search {
+		display:none;
+	}
+
+	.error-404 {
+	    margin: 40px auto 20px;
+	}
+
+	.error-404 img {
+	    float: left;
+	    width: 100%;
 	}
 
 	/* .box-loader:nth-child(2n-1){
@@ -1372,11 +1419,16 @@ section.tit-chocolate-e-creme {
 }
 
 @media (max-width: 420px){
+
 	.box-loader{
 		width: 100%;
 	}
 
-	./* box-loader:nth-child(4n),.box:nth-child(4n-3){
+	.logo {
+		left: 21%;
+	}
+
+	/*. box-loader:nth-child(4n),.box:nth-child(4n-3){
 		background-color: inherit;
 	}
 	
@@ -1616,7 +1668,7 @@ header {
 }
 .track-header {
     background-color: #008EC8;
-    height: auto;
+    height: 50px;
     margin: 0 auto;
     max-width: 100%;
 }
@@ -1869,7 +1921,9 @@ footer .social-icons #facebook{
 .i-search {
 	float: left;
 }
-.content-search {}
+.search-form {
+	float:left;
+}
 .content-search header {
 	height: inherit;
     padding: 10px 20px 10px 0;

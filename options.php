@@ -48,7 +48,46 @@ function optionsframework_options() {
 		'name' => 'Cabeçalho',
 		'type' => 'heading');
 
+	// Start | Options Home [ 'FRASE FOOTER' ]
+	$options[] = array(
+		'name' => 'Footer',
+		'type' => 'heading');
 
+	$options[] = array(
+		'name' => 'Direitos Reservados',
+		'desc' => 'Adicione uma frase sobre os direitos reservados',
+		'id' => 'perfil_law',
+		'std' => '',
+		'type' => 'text');
+	// End | Options Home [ 'FRASE FOOTER' ]
+
+	// Start | Options Home [ 'REDES SOCIAIS' ]
+	$options[] = array(
+		'name' => 'Geral',
+		'type' => 'heading');
+
+	$options[] = array(
+		'name' => 'Perfil Facebook',
+		'desc' => 'Adicione o Perfil do Facebook',
+		'id' => 'perfil_facebook',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Perfil Instagran',
+		'desc' => 'Adicione o Perfil do Instagran',
+		'id' => 'perfil_instagram',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => 'Perfil Twitter',
+		'desc' => 'Adicione o Perfil do Twitter',
+		'id' => 'perfil_twitter',
+		'std' => '',
+		'type' => 'text');
+	// End | Options Home [ 'REDES SOCIAIS' ]
+	
 	// Options Home
 	$options[] = array(
 		'name' => 'Home',
