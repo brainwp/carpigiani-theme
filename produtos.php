@@ -10,15 +10,8 @@
  *
  * @package carpigiani-theme
  */
-$type = $_GET['p-type'];
+global $wp_query;
 if ( ! isset( $_GET['p-type'] ) ) {
-	$produtos = new WP_Query( array(
-		'post_type' => 'produtos',
-		'order' => 'ASC',
-		'tipos' => 'soft',
-		'posts_per_page' => '8'
-	) );
-
 	get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -80,13 +73,11 @@ if ( ! isset( $_GET['p-type'] ) ) {
 				<!-- .wrap -->
 			</section>
 			<!-- .body-content-produtos -->
-				<section id="produtos-row" class="cat-artesanal body-category-produtos" rel="<?php echo esc_url( $category_link ); ?>">
-					<div class="wrap" id="cat-prod-container">
-						<?php while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
-							<?php get_template_part( 'content', 'produtos' ); ?>
-						<?php endwhile; // end of the loop. ?>
-					</div>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<section id="cat-prod-container" class="cat-artesanal body-category-produtos" rel="<?php echo esc_url( $category_link ); ?>">
+					<?php get_template_part( 'content', 'produtos' ); ?>
 				</section><!-- .body-category-produtos -->
+			<?php endwhile; // end of the loop. ?>
 
 		</main>
 		<!-- #main -->
@@ -94,42 +85,8 @@ if ( ! isset( $_GET['p-type'] ) ) {
 
 	<?php get_footer();
 } else {
-	if($type == 'soft'){
-		$produtos = new WP_Query( array(
-			'post_type' => 'produtos',
-			'order' => 'ASC',
-			'tipos' => 'soft',
-			'posts_per_page' => '8'
-		) );
-	}
-
-	if($type == 'restaurante'){
-		$produtos = new WP_Query( array(
-			'post_type' => 'produtos',
-			'order' => 'ASC',
-			'tipos' => 'restaurante',
-			'posts_per_page' => '8'
-		) );
-	}
-
-	if($type == 'chocolate-e-creme'){
-		$produtos = new WP_Query( array(
-			'post_type' => 'produtos',
-			'order' => 'ASC',
-			'tipos' => 'chocolate-e-creme',
-			'posts_per_page' => '8'
-		) );
-	}
-	if($type == 'artesanal'){
-		$produtos = new WP_Query( array(
-			'post_type' => 'produtos',
-			'order' => 'ASC',
-			'tipos' => 'artesanal',
-			'posts_per_page' => '8'
-		) );
-	}
 	?>
-	<?php while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
+	<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 		<?php get_template_part( 'content', 'produtos' ); ?>
 	<?php endwhile; // end of the loop. ?>
 <?

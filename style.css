@@ -369,12 +369,15 @@ a {
 	color: #246B89;
 }
 a:visited {
-	color: purple;
+	color: #297a9c;
+}
+a:hover {
+	text-decoration: underline;
 }
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #0177a9;
 }
 
 /*--------------------------------------------------------------
@@ -610,7 +613,19 @@ a:active {
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 1em;
+	padding: 20px;
+	background: #f6f6f6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #f6f6f6;
+	overflow: hidden;
+}
+
+.widget:hover {
+	border: 1px solid #d3d3d3;
+	background: #f4f4f4;
 }
 
 /* Make sure select elements fit in widgets */
@@ -627,6 +642,86 @@ a:active {
 }
 .i-suporte p {
 	font-weight: bold;
+}
+.widget-title {
+	color: #008FCB; /* Azul padrão */
+	font-size: 1.8em;
+	text-align: center;
+	display: block;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #DDD;
+}
+.widget ul {
+	margin: 10px 15px;
+	list-style: none;
+}
+
+.widget ul li a {
+	text-decoration: none;
+}
+
+.widget ul li a:hover {
+	text-decoration: underline;
+}
+
+.widget input[type="text"] {
+	float: left;
+	margin-right: 5px;
+	max-width: 70%;
+}
+
+.widget input[type="submit"] {
+	background: #008FCB; /* Azul padrão */;
+	box-shadow: none;
+	color: #FFF;
+	text-shadow: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float: left;
+}
+
+.widget input[type="submit"]:hover {
+	background: #0177a9; /* Azul escuro */;
+}
+
+.widget .widget_tipos_widget {
+	padding: 10px;
+}
+
+.widget.widget_tipos_widget ul {
+	padding: 0;
+	margin: 10px 0;
+}
+
+.widget .each-widget-tipo {
+	width: 48%;
+	margin: 0 2% 5px 0;
+	float: left;
+	height: 145px;
+	text-align: center;
+	position: relative;
+}
+
+.widget .each-widget-tipo a {
+    display: block;
+    height: 100px;
+    padding-top: 94px;
+    text-transform: lowercase;
+}
+
+.widget .each-widget-artesanal a {
+	background: url( 'images/icon-artesanal.png' ) center center no-repeat;
+}
+.widget .each-widget-restaurante a {
+	background: url( 'images/icon-restaurante.png' ) center center no-repeat;
+}
+.widget .each-widget-soft a {
+	background: url( 'images/icon-soft.png' ) center center no-repeat;
+}
+.widget .each-widget-chocolate-e-creme a {
+	background: url( 'images/icon-chocolate.png' ) center center no-repeat;
 }
 
 /*--------------------------------------------------------------
@@ -686,6 +781,7 @@ a:active {
 .site-content .wrap #secondary {
 	float: left;
 	width: 27%;
+	padding-left: 10px;
 }
 
 .each-post {
@@ -715,6 +811,8 @@ a:active {
 	max-height: 300px;
 	overflow: hidden;
 	margin-bottom: 20px;
+	background: #cccccc;
+	text-align: center;
 }
 
 .each-post p {
@@ -1057,10 +1155,26 @@ a:active {
 	max-height: 360px;
 	overflow: hidden;
 }
-.body-category-produtos .post {
+.body-category-produtos .post, .body-category-produtos article {
 	float: left;
 	width: 16%;
 	max-height: 300px;
+	margin-left:10px;
+}
+.body-category-produtos article {
+	float: left;
+	width: 24%;
+	margin-left:3px;
+}
+.body-category-produtos article a {
+	color:white;
+}
+.body-category-produtos article img{
+	width:100%;
+	height:220px !important;
+}
+.body-category-produtos article:first-child {
+	margin-left:0;
 }
 .body-category-produtos .post:first-child {
 	margin-left: 11%;
