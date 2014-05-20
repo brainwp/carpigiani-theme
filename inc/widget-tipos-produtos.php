@@ -96,6 +96,7 @@ class tipos_widget extends WP_Widget {
 function load_tipos_widget() {
 	register_widget( 'tipos_widget' );
 }
+
 add_action( 'widgets_init', 'load_tipos_widget' );
 
 ?>

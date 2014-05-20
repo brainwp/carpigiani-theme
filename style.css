@@ -1176,10 +1176,26 @@ a:active {
 	max-height: 360px;
 	overflow: hidden;
 }
-.body-category-produtos .post {
+.body-category-produtos .post, .body-category-produtos article {
 	float: left;
 	width: 16%;
 	max-height: 300px;
+	margin-left:10px;
+}
+.body-category-produtos article {
+	float: left;
+	width: 24%;
+	margin-left:3px;
+}
+.body-category-produtos article a {
+	color:white;
+}
+.body-category-produtos article img{
+	width:100%;
+	height:220px !important;
+}
+.body-category-produtos article:first-child {
+	margin-left:0;
 }
 .body-category-produtos .post:first-child {
 	margin-left: 11%;

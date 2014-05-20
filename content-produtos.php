@@ -5,23 +5,16 @@
  * @package carpigiani-theme
  */
 ?>
-
-<div class="master-wrap">
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'content-produtos' ); ?>>
-		<!-- <div class="entry-title-slider"><h1 class="entry-title">Produtos<?php //the_title(); ?></h1></div> -->
-		<div class="entry-content">
-
-			<ul class="entry-image-slider">
-				<?php
-				the_post_thumbnail('medium');
-				?>
-				<!-- <<<<<<< HEAD -->
-			</ul>
-		</div>
-		<!-- .entry-content -->
-	</article>
-	<!-- #post-## -->
-</div><!-- .master-wrap -->
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'content-produtos' ); ?> class="box">
+	<!-- <div class="entry-title-slider"><h1 class="entry-title">Produtos<?php //the_title(); ?></h1></div> -->
+	<?php
+	the_post_thumbnail( 'medium' );
+	?>
+	<a href="<?php the_permalink();?>"><?php the_title();?></a>
+	<!-- <<<<<<< HEAD -->
+</article>
+<!-- .entry-content -->
+<!-- #post-## -->
 <!-- =======
 		<h1 class="entry-title">Produtos<?php //the_title(); ?></h1>
 		
