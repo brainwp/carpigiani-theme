@@ -10,7 +10,5 @@ function _query_rules () {
 	return array(
 		'^blog/([^/]+)/?$' => 'template=blog', // sample rule
 		'^blog/?$' => 'template=blog',
-		'^produtos/?$' => 'template=produtos',
-		'^produtos/?p-type=([^/]+)/?$' => 'template=produtos'
 	);
 }

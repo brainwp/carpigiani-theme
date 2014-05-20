@@ -3,7 +3,6 @@
  * The template for Blog
   * @package carpigiani-theme
  */
-global $_query;
 get_header(); ?>
 
 	<div class="wrap">
