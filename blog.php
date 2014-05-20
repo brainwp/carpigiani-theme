@@ -5,7 +5,7 @@
  */
 get_header(); ?>
 
-	<div class="wrap">
+	<div class="wrap-blog">
 		<div id="primary" class="content-area blog">
 			<main id="main" class="site-main" role="main">
 
@@ -33,6 +33,6 @@ get_header(); ?>
 
 	<?php get_sidebar(); ?>
 	
-	</div><!-- .wrap -->
+	</div><!-- .wrap-blog -->
 
 <?php get_footer(); ?>

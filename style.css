@@ -800,14 +800,14 @@ a:active {
 	overflow: hidden;
 }
 
-.site-content .wrap #primary {
+.site-content .wrap #primary, .site-content .wrap-blog #primary {
 	float: left;
 	margin-right: 2%;
 	width: 70%;
 	max-width: 980px;
 }
 
-.site-content .wrap #secondary {
+.site-content .wrap #secondary, .site-content .wrap-blog #secondary {
 	float: left;
 	width: 27%;
 	padding-left: 10px;
@@ -1057,7 +1057,7 @@ a:active {
 }
 
 .content-page .wrap {
-	max-width: 800px;
+	max-width: 980px;
 	margin: 0 auto;
 	padding: 20px 0 10px;
 }
@@ -1532,9 +1532,13 @@ section.tit-chocolate-e-creme {
 	height: auto;
 	margin-bottom: 20px;
 }
-
+.site-content .wrap-blog {
+	max-width: 1280px;
+	margin: 0 auto;
+	overflow: hidden;
+}
 .content-single .wrap {
-	max-width: 800px;
+	max-width: 1280px;
 	margin: 0 auto;
 	padding: 20px 0 10px;
 }
@@ -2173,5 +2177,10 @@ footer .social-icons #facebook{
 	.body-content-home .wrap .box .icon {
 		max-width: 170px;
 		max-height: 100px;
+	}
+}
+@media (min-width: 768px) {
+	.rmm {
+		display: none;
 	}
 }
