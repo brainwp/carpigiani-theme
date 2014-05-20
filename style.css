@@ -646,6 +646,11 @@ a:active {
 .widget-title {
 	color: #008FCB; /* Azul padrão */
 	font-size: 1.8em;
+	text-align: center;
+	display: block;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #DDD;
 }
 .widget ul {
 	margin: 10px 15px;
@@ -687,15 +692,36 @@ a:active {
 
 .widget.widget_tipos_widget ul {
 	padding: 0;
-	margin: 0;
+	margin: 10px 0;
 }
 
 .widget .each-widget-tipo {
 	width: 48%;
 	margin: 0 2% 5px 0;
 	float: left;
-	height: 110px;
-	background: #CCC;
+	height: 145px;
+	text-align: center;
+	position: relative;
+}
+
+.widget .each-widget-tipo a {
+    display: block;
+    height: 100px;
+    padding-top: 94px;
+    text-transform: lowercase;
+}
+
+.widget .each-widget-artesanal a {
+	background: url( 'images/icon-artesanal.png' ) center center no-repeat;
+}
+.widget .each-widget-restaurante a {
+	background: url( 'images/icon-restaurante.png' ) center center no-repeat;
+}
+.widget .each-widget-soft a {
+	background: url( 'images/icon-soft.png' ) center center no-repeat;
+}
+.widget .each-widget-chocolate-e-creme a {
+	background: url( 'images/icon-chocolate.png' ) center center no-repeat;
 }
 
 /*--------------------------------------------------------------
