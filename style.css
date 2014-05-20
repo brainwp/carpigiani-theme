@@ -1445,6 +1445,12 @@ header {
 	height: 215px;
 	background-color: #FFFFFF;
 }
+.track-header {
+    background-color: #008EC8;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+}
 #i-search {
 	background: url("images/i-search.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     float: left;
@@ -1464,8 +1470,8 @@ header {
 
 #masthead .wrap {
 	max-width: 980px;
-	height: auto;
-	background-color: #008ec8;
+	/* height: auto;
+	background-color: #008ec8; */
 	margin: 0 auto;
 }
 
@@ -1727,9 +1733,6 @@ footer .social-icons #facebook{
 .content-search .entry-summary {
     padding: 0 20px 5px 20px;
     margin: 0;
-}
-#tidio-plugin-container-right-bottom .tidio-layout-popup, #tidio-chat-popup .tidio-layout-popup {
-	background-color: #008EC8 !important;
 }
 
 /*--------------------------------------------------------------

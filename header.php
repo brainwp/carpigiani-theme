@@ -41,66 +41,75 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<div class="wrap">
+		<section class="track-header">
+			<div class="wrap">
 
-			<div class="logo">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</div><!-- .logo -->
+				<div class="logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</div><!-- .logo -->
 
-			<div class="site-branding">
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle"><?php _e( 'Primary Menu', 'carpigiani-theme' ); ?></button>
-					<a class="skip-link screen-reader-text" href="#content">
-						<?php _e( 'Skip to content', 'carpigiani-theme' ); ?>
-					</a>
+				<div class="site-branding">
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<button class="menu-toggle"><?php _e( 'Primary Menu', 'carpigiani-theme' ); ?></button>
+						<a class="skip-link screen-reader-text" href="#content">
+							<?php _e( 'Skip to content', 'carpigiani-theme' ); ?>
+						</a>
 
-					<?php
-						$defaults = array(
-							'theme_location'  => '',
-							'menu'            => '',
-							'container'       => 'div',
-							'container_class' => '',
-							'container_id'    => '',
-							'menu_class'      => 'menu',
-							'menu_id'         => '',
-							'echo'            => true,
-							'fallback_cb'     => 'wp_page_menu',
-							'before'          => '',
-							'after'           => '',
-							'link_before'     => '',
-							'link_after'      => '',
-							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'depth'           => 0,
-							'walker'          => ''
-						);
+						<?php
+							$defaults = array(
+								'theme_location'  => '',
+								'menu'            => '',
+								'container'       => 'div',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => 'menu',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								'depth'           => 0,
+								'walker'          => ''
+							);
 
-						wp_nav_menu( $defaults );
+							wp_nav_menu( $defaults );
 
-					?>
-					<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul><li class="item-menu">%3$s</li></ul>' ) ); ?>
-				</nav>
-			</div><!-- #site-navigation -->
+						?>
+						<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul><li class="item-menu">%3$s</li></ul>' ) ); ?>
+					</nav>
+				</div><!-- #site-navigation -->
 
-			<!-- <div class="infos-header">
-				<span id="i-search"></span><input type="text" name="campo" id="search" value="" style="width:100px;">
-				<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
-			</div>.infos-header -->
+				<!-- <div class="infos-header">
+					<span id="i-search"></span><input type="text" name="campo" id="search" value="" style="width:100px;">
+					<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
+				</div>.infos-header -->
 
-			<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-				<div class="body-search">
-					<div class="wrapper-simple">
-						<input type="text" placeholder="Pesquisa" name="s" id="" value="<?php the_search_query(); ?>">
-						<input type="submit" value="">
-						<img src="<?php bloginfo( 'template_url' ) ?>/images/i-search.png">
-					</div>
+				<form role="search" method="get" id="searchform" class="search-form" action="<?php echo home_url( '/' ); ?>">
+					<div class="body-search">
+						<div class="wrapper-simple"><label class="screen-reader-text" for="s">Search for:</label>
+							<input type="text" placeholder="Pesquisa" name="s" id="s" value="<?php the_search_query(); ?>">
+							<input type="submit" value="">
+							<img src="<?php bloginfo( 'template_url' ) ?>/images/i-search.png">
+						</div>
 
-					<div class="infos-header">
-						<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
-					</div>
-				</div><!-- .body-search -->
-			</form>
+						<div class="infos-header">
+							<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
+						</div>
+					</div><!-- .body-search -->
+				</form>
 
-		</div><!-- .wrap -->
+				<!-- <form role="search" method="get" id="searchform" action="<?php //echo home_url( '/' ); ?>">
+				    <div><label class="screen-reader-text" for="s">Search for:</label>
+				        <input type="text" value="" name="s" id="s" />
+				        <input type="submit" id="searchsubmit" value="Search" />
+				    </div>
+				</form> -->
+
+			</div><!-- .wrap -->
+		</section><!-- .track-header -->
 
 	</header><!-- #masthead -->
 
