@@ -87,9 +87,9 @@
 					<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
 				</div>.infos-header -->
 
-				<form role="search" method="get" id="searchform" class="search-form" action="<?php echo home_url( '/' ); ?>">
+				<form id="search-form" role="search" method="get" id="searchform" class="search-form" action="<?php echo home_url( '/' ); ?>">
 					<div class="body-search">
-						<div class="wrapper-simple"><label class="screen-reader-text" for="s">Search for:</label>
+						<div class="wrapper-simple">
 							<input type="text" placeholder="Pesquisa" name="s" id="s" value="<?php the_search_query(); ?>">
 							<input type="submit" value="">
 							<img src="<?php bloginfo( 'template_url' ) ?>/images/i-search.png">

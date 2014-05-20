@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
-	$('.wrapper-simple input[type=text]').css('background-color', '#008EC8');
-	
+	$('.wrapper-simple input[type=text]').css('background-color', '#008EC8');	
 		$('.wrapper-simple input[type=submit]').toggle(function(){
 		
 		$('.wrapper-simple').animate({'width':'350px'})
