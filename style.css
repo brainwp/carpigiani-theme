@@ -1291,6 +1291,9 @@ section.cat-chocolate {
 .cat-hover a:hover {
 	color: #ffffff;
 }
+#produtos-row{
+	transition:300ms all ease;
+}
 
 
 
