@@ -285,3 +285,11 @@ function post_type_nav_class($classes, $item){
 	}
 return $classes;
 }
+
+/**
+* Customin the Footer WordPress.
+*/
+function remove_footer_admin () {
+	echo '© <a href="http://brasa.art.br//" target="blank">Brasa</a> - Obrigado por criar com Brasa';
+}
+add_filter('admin_footer_text', 'remove_footer_admin');

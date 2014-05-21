@@ -1404,6 +1404,9 @@ section.tit-chocolate-e-creme {
 	    float: left;
 	    width: 100%;
 	}
+	.infos-header {
+		display: none;
+	}
 
 	/* .box-loader:nth-child(2n-1){
 		background-color: inherit;
@@ -1949,6 +1952,9 @@ footer .social-icons #facebook{
 .content-search .entry-summary {
     padding: 0 20px 5px 20px;
     margin: 0;
+}
+.offline i {
+	display:none;
 }
 
 /*--------------------------------------------------------------
