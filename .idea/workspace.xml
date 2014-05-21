@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/js/ajax.js" line="20" mnemonic="9" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1f161fd3-d075-47b4-b136-006c003e0e81" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ajax.js" afterPath="$PROJECT_DIR$/js/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archive-produtos.php" afterPath="$PROJECT_DIR$/archive-produtos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="carpigiani-theme-master.iws" />
@@ -37,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1324" column="38" selection-start="27060" selection-end="27060" vertical-scroll-proportion="0.4304762" vertical-offset="22282" max-vertical-offset="37332">
+            <state line="1336" column="0" selection-start="27314" selection-end="27314" vertical-scroll-proportion="9.32" vertical-offset="22945" max-vertical-offset="37332">
               <folding />
             </state>
           </provider>
@@ -55,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ajax.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="49" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+            <state line="29" column="1" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.8756661" vertical-offset="0" max-vertical-offset="1139">
               <folding />
             </state>
           </provider>
@@ -172,9 +173,9 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/content-produtos.php" />
         <option value="$PROJECT_DIR$/js/scripts.js" />
-        <option value="$PROJECT_DIR$/js/ajax.js" />
         <option value="$PROJECT_DIR$/archive-produtos.php" />
         <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/js/ajax.js" />
       </list>
     </option>
   </component>
@@ -323,7 +324,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -451,23 +452,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="5" selection-start="1218" selection-end="1218" vertical-scroll-proportion="-15.423077" vertical-offset="381" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/custom-produtos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="33" selection-start="1139" selection-end="1147" vertical-scroll-proportion="-17.653847" vertical-offset="153" max-vertical-offset="1717">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="49" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
           <folding />
         </state>
       </provider>
@@ -481,7 +468,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1324" column="38" selection-start="27060" selection-end="27060" vertical-scroll-proportion="0.4304762" vertical-offset="22282" max-vertical-offset="37332">
+        <state line="1336" column="0" selection-start="27314" selection-end="27314" vertical-scroll-proportion="9.32" vertical-offset="22945" max-vertical-offset="37332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="5" selection-start="1218" selection-end="1218" vertical-scroll-proportion="-15.423077" vertical-offset="381" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="1" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.8756661" vertical-offset="0" max-vertical-offset="1139">
           <folding />
         </state>
       </provider>
