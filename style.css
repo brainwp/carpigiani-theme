@@ -1315,7 +1315,7 @@ section.cat-chocolate-e-creme {
 
 
 
-.cat-hover-artesenal:hover, .cat-hover-artesenal.active {
+.cat-hover-artesanal:hover, .cat-hover-artesanal.active {
 	background-color: #EBDEED;
 }
 .cat-hover-restaurante:hover, .cat-hover-restaurante.active{
@@ -1327,7 +1327,7 @@ section.cat-chocolate-e-creme {
 .cat-hover-chocolate-e-creme:hover, .cat-hover-chocolate-e-creme.active {
 	background-color: #8E857C;
 }
-section.tit-artesenal {
+section.tit-artesanal {
 	background-color: #EBDEED;
 }
 section.tit-restaurante {
