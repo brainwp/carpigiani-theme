@@ -54,6 +54,7 @@ and Blueprint http://www.blueprintcss.org/
 14.0 - Footer
 15.0 - Produtos
 	15.1 - Single Produtos
+16.0 - Admin Wordpress
 
 --------------------------------------------------------------*/
 
@@ -2178,4 +2179,12 @@ footer .social-icons #facebook{
 	.rmm {
 		display: none;
 	}
+}
+
+
+/*--------------------------------------------------------------
+16.0 - Admin Wordpress
+--------------------------------------------------------------*/
+#wpadminbar>li>a {
+
 }
