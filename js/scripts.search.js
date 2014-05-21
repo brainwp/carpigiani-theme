@@ -14,7 +14,7 @@ $(document).ready(function () {
 	        next_move = "shrink";
 	    } else {
 	        css = {
-	            width: '37px',
+	            width: '300px',
 	            /*height: '152px'*/
 	        };     
 	        //console.log('hi');
