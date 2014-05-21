@@ -46,7 +46,7 @@
 
 		<section class="track-header">
 			<div class="wrap">
-				<!-- .START | Menu Responsive -->
+
 				<div class="rmm">
 		            <ul>
 						<?php
@@ -72,7 +72,6 @@
 						?>		                
 		            </ul>
 		        </div><!-- .rmm -->
-				<!-- .END | Menu Responsive -->
 
 				<div class="logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
@@ -121,6 +120,10 @@
 							<input type="submit" value="">
 							<img src="<?php bloginfo( 'template_url' ) ?>/images/i-search.png">
 						</div>
+
+						<div class="infos-header">
+							<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
+						</div><!-- .infos-header -->
 
 					</div><!-- .body-search -->
 				</form>
