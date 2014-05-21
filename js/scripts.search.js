@@ -1,6 +1,30 @@
-$(document).ready(function() {
 
-	$('.wrapper-simple input[type=text]').css('background-color', '#008EC8');	
+/* Animate input search Header */
+var next_move = "expand";
+$(document).ready(function () {
+
+	$(".wrapper-simple").click(function() {
+	    console.log(next_move);
+	    var css = {};
+	    if (next_move == "expand") {
+	        css = {
+	            width: '300px',
+	            /*height: '300px'*/
+	        };
+	        next_move = "shrink";
+	    } else {
+	        css = {
+	            width: '37px',
+	            /*height: '152px'*/
+	        };     
+	        //console.log('hi');
+	        next_move = "expand";
+	    }
+	    $(this).animate(css, 200);
+	});
+
+
+	/*$('.wrapper-simple input[type=text]').css('background-color', '#008EC8');	
 	$('.wrapper-simple input[type=submit]').toggle(function(){
 	
 		$('.wrapper-simple').animate({'width':'350px'})
@@ -18,6 +42,6 @@ $(document).ready(function() {
 			
 		}
 
-	);
+	);*/
 
 });

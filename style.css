@@ -386,7 +386,7 @@ a:active {
 .main-navigation {
 	display: block;
 	float: left;
-	width: 70%;
+	width: 100%;
 }
 #site-navigation {
 	display: table;
@@ -394,7 +394,7 @@ a:active {
 }
 .menu-menu-header-container {
 	float: left;
-	width:100%;
+	width:101%;
     /* width: 21em; */
     margin: 0.9em 0 0 -0.062em;
     /* width: 26em;
@@ -799,7 +799,13 @@ a:active {
 	margin: 0 auto;
 	overflow: hidden;
 }
-
+.no-results p, .no-results form {
+	margin-left: 20px;
+}
+.no-results h1 {
+	font-size: 42px;
+	font-weight: bold;
+}
 .site-content .wrap #primary, .site-content .wrap-blog #primary {
 	float: left;
 	margin-right: 2%;
@@ -1715,7 +1721,7 @@ header {
 	height: 4.750em;
 	text-indent: -9999px;
 	position: relative;
-	margin: 55px 0 0 0;
+	margin: 62px 0 0 0;
 }
 
 .logo a {
@@ -1730,10 +1736,10 @@ header {
     max-width: 300px;
     overflow: hidden; */
     float: right;
-	margin: -5px 0 0;
+	margin: 56px 0 0;
 	max-width: 500px;
 	overflow: hidden;
-	width: 440px;
+	/* width: 440px; */
 }
 .suporte-header {
 	float: right !important;
@@ -1767,23 +1773,14 @@ header .responsive img {
     display:block;
 }
 .wrapper-simple {
-	text-align: center;
-	/* margin: 0 auto;
-	display: block; */
-	width: 60px;
-	height: 45px;
-	padding: 10px 5px;
-	/* background: -webkit-gradient(linear, left top, left bottom, from(#f5fafe), to(#e2edf4)); */
-	/* border-radius: 5px; */
 	box-shadow: none;
-	position: relative;
-	top: 83px;
-	left: -6px;
-
-	/* float: right; */
-	 /* margin: 45px 0 0;  */
-	/* max-width: 500px; */
-	overflow: hidden;	
+    height: 37px;
+    overflow: hidden;
+    padding: 10px 5px;
+    position: absolute;
+    text-align: center;
+    top: 103px;
+    width: 37px;	
 }
 .wrapper-simple input[type=submit] {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -1800,42 +1797,43 @@ header .responsive img {
     z-index: 2;
 }
 .wrapper-simple input[type=submit]:active {
-	 box-shadow: inset rgba(0,0,0,.4) 0 1px 1px; 
+	 /* box-shadow: inset rgba(0,0,0,.4) 0 1px 1px;  */
 }
 .wrapper-simple input[type="submit"]:focus {
-	 box-shadow: none;
+	  box-shadow: none; 
 }
-
 .wrapper-simple input[type=submit]:hover {
-	 background: none;
+	 /* background: none; */
 }
 .wrapper-simple input[type=text] {
-	font-family: Arial;
-	font-style: italic;
-	color: #FFFFFF;
+	/* font-family: Arial;
 	background: #d8e6ef;  
 	border-radius:2px;
-	/* padding: 10px 10px 15px 10px; */
 	width: 250px;
 	border: 0;
-	font-size: 16px;
-	/* text-shadow: rgba(255, 255, 255, 0.7) 1px 1px 1px; */
-	/* box-shadow: inset rgba(0,0,0,.4) 0 1px 1px; */
+	text-shadow: rgba(255, 255, 255, 0.7) 1px 1px 1px;
+	box-shadow: inset rgba(0,0,0,.4) 0 1px 1px;
 	position: absolute;
 	top: 17px;
 	width: 1px;
 	z-index: 1;
 	padding-left: 2em;
-	margin-left: .2em;
-}
-.wrapper-simple input[type=text]:focus {
+	margin-left: .2em; */
+	padding: 0 10px 10px 20px;
 	color: #FFFFFF;
+	font-style: italic;
+	background: #008EC8;
+	font-size: 16px;
+	text-indent: 35px
 }
+/* .wrapper-simple input[type=text]:focus {
+	color: #FFFFFF;
+} */
 .wrapper-simple img {
-	position: absolute;
-	top: 1.5em;
-	left: 1.2em;
-	z-index: 1;
+	left: 0.8em;
+    position: absolute;
+    top: 1.1em;
+    z-index: 1;
 }
 .wrapper-simple .cancel {
 	background: url("images/cancel-search.png") no-repeat scroll 8px 7px rgba(0, 0, 0, 0) !important;
@@ -1926,7 +1924,7 @@ footer .social-icons #facebook{
 	float: left;
 }
 .search-form {
-	float:left;
+	display:table;
 }
 .content-search header {
 	height: inherit;

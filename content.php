@@ -4,9 +4,9 @@
  */
 ?>
 
-<section class="content-search content-results">
+
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="wrap">
+
 			<header class="entry-header page-header">
 				<h1 class="entry-title page-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
@@ -34,7 +34,7 @@
 			<?php endif; ?>
 			
 			</header><!-- .entry-header -->
-		</div>
+
 
 		<footer class="entry-footer">
 			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
@@ -66,4 +66,3 @@
 			<?php //edit_post_link( __( 'Edit', 'carpigiani-theme' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-footer -->
 	</article><!-- #post-## -->
-</section><!-- content-page content-search -->

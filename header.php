@@ -46,6 +46,7 @@
 
 		<section class="track-header">
 			<div class="wrap">
+				<!-- .START | Menu Responsive -->
 				<div class="rmm">
 		            <ul>
 						<?php
@@ -71,6 +72,7 @@
 						?>		                
 		            </ul>
 		        </div><!-- .rmm -->
+				<!-- .END | Menu Responsive -->
 
 				<div class="logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
@@ -120,19 +122,12 @@
 							<img src="<?php bloginfo( 'template_url' ) ?>/images/i-search.png">
 						</div>
 
-						<div class="infos-header">
-							<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
-						</div><!-- .infos-header -->
 					</div><!-- .body-search -->
 				</form>
 
-				<!-- <form role="search" method="get" id="searchform" action="<?php //echo home_url( '/' ); ?>">
-				    <div><label class="screen-reader-text" for="s">Search for:</label>
-				        <input type="text" value="" name="s" id="s" />
-				        <input type="submit" id="searchsubmit" value="Search" />
-				    </div>
-				</form> -->
-
+				<div class="infos-header">
+					<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
+				</div><!-- .infos-header -->
 			</div><!-- .wrap -->
 		</section><!-- .track-header -->
 
