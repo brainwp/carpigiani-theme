@@ -186,7 +186,12 @@ require_once ( get_stylesheet_directory() . '/inc/custom-produtos.php' );
 /**
  * WP MVC.
  */
-//require_once ( get_stylesheet_directory() . '/router.php' );
+require_once ( get_stylesheet_directory() . '/router.php' );
+
+/**
+ * Widget Tipos de Produtos
+ */
+require_once ( get_stylesheet_directory() . '/inc/widget-tipos-produtos.php' );
 
 /**
  * Widget Tipos de Produtos

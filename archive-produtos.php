@@ -132,6 +132,6 @@ if ( ! isset( $_GET['p-type'] ) ) {
 	<?php while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
 		<?php get_template_part( 'content', 'produtos' ); ?>
 	<?php endwhile; // end of the loop. ?>
-<?
+<?php
 }
 ?>
