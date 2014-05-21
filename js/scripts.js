@@ -70,5 +70,6 @@ jQuery(function($) {
 	// chat link suporte
 	$('.i-suporte').on('click', function(){
 		$('#tidio-chat-popup').css('display', 'block');
+		$('#tidio-chat-container').css('display', 'block');
 	});
 });

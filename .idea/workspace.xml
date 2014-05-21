@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f161fd3-d075-47b4-b136-006c003e0e81" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ajax.js" afterPath="$PROJECT_DIR$/js/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archive-produtos.php" afterPath="$PROJECT_DIR$/archive-produtos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog.php" afterPath="$PROJECT_DIR$/blog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/carpigiani-theme.pot" afterPath="$PROJECT_DIR$/languages/carpigiani-theme.pot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category.php" afterPath="$PROJECT_DIR$/category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content.php" afterPath="$PROJECT_DIR$/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/options.php" afterPath="$PROJECT_DIR$/options.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scripts.js" afterPath="$PROJECT_DIR$/js/scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scripts.search.js" afterPath="$PROJECT_DIR$/js/scripts.search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/single.php" afterPath="$PROJECT_DIR$/single.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/widget-tipos-produtos.php" afterPath="$PROJECT_DIR$/inc/widget-tipos-produtos.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="carpigiani-theme-master.iws" />
@@ -80,7 +65,7 @@
       <file leaf-file-name="scripts.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.84317344" vertical-offset="750" max-vertical-offset="1343">
+            <state line="70" column="0" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.6863469" vertical-offset="818" max-vertical-offset="1360">
               <folding />
             </state>
           </provider>
@@ -532,7 +517,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.84317344" vertical-offset="750" max-vertical-offset="1343">
+        <state line="70" column="0" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.6863469" vertical-offset="818" max-vertical-offset="1360">
           <folding />
         </state>
       </provider>
