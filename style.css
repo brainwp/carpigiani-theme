@@ -812,13 +812,11 @@ a:active {
 	width: 70%;
 	max-width: 980px;
 }
-
 .site-content .wrap #secondary, .site-content .wrap-blog #secondary {
 	float: left;
 	width: 27%;
 	padding-left: 10px;
 }
-
 .each-post {
 	width: 100%;
 	overflow: hidden;
@@ -829,18 +827,15 @@ a:active {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
-
 .each-post h1 {
 	display: block;
 	padding: 20px;
 	font-size: 2.6em;
 }
-
 .each-post h1 a {
 	text-decoration: none;
 	color: #008FCB;
 }
-
 .each-post .thumb {
 	width: 100%;
 	max-height: 300px;
@@ -849,14 +844,12 @@ a:active {
 	background: #cccccc;
 	text-align: center;
 }
-
 .each-post p {
 	font-size: 1em;
 	padding: 0 20px;
 	color: #333;
 	margin-bottom: 0;
 }
-
 .each-post .leia {
 	background: #CCC;
 	padding: 5px 10px;
@@ -866,11 +859,9 @@ a:active {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
-
 .each-post .leia:hover {
 	background: #0092ca;
 }
-
 .each-post .leia a {
 	color: #fff;
 	text-decoration: none;
