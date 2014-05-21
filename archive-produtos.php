@@ -62,7 +62,7 @@ if ( ! isset( $_GET['p-type'] ) ) {
 
 							<div id="mdiv-<?php echo $cat_ID; ?>" class="cat-hover cat-hover-<?php echo $category->slug ?> mdiv">
 
-								<a id="trick" class="trick trick-<?php echo $category->slug ?>" rel="<?php echo get_bloginfo( 'url' ) . '/produtos/?p-type=' . $category->slug; ?>" href="#scroll">
+								<a id="trick" class="trick trick-<?php echo $category->slug ?>" rel="<?php echo get_bloginfo( 'url' ) . '/produtos/?p-type=' . $category->slug; ?>" href="#scroll" data-class-slug="<?php echo $category->slug; ?>">
 									<span class="cat-icon icon-<?php echo $category->slug ?>"></span>
 									<span class="excerpt"><a rel="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
 								</a>
@@ -80,7 +80,7 @@ if ( ! isset( $_GET['p-type'] ) ) {
 				<!-- .wrap -->
 			</section>
 			<!-- .body-content-produtos -->
-				<section id="produtos-row" class="cat-artesanal body-category-produtos" rel="<?php echo esc_url( $category_link ); ?>">
+				<section id="produtos-row" class="body-category-produtos cat-soft"  rel="<?php echo esc_url( $category_link ); ?>">
 					<div class="wrap" id="cat-prod-container">
 						<?php while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
 							<?php get_template_part( 'content', 'produtos' ); ?>
