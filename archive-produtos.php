@@ -98,11 +98,26 @@ if ( ! isset( $_GET['p-type'] ) ) {
 			</section>
 			<!-- .body-content-produtos -->
 				<section id="produtos-row" class="body-category-produtos cat-soft"  rel="<?php echo esc_url( $category_link ); ?>">
-					<div class="wrap" id="cat-prod-container">
-						<?php while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
-							<?php get_template_part( 'content', 'produtos' ); ?>
-						<?php endwhile; // end of the loop. ?>
-					</div>
+					<div id="cat-prod-container">
+							<?php
+							$_i = 0;
+							while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
+								<?php
+								if($_i == 0){
+									echo '<li class="wrap">';
+								}
+								get_template_part( 'content', 'produtos' );
+								if($_i == 4){
+									echo '</li>';
+									$_i = 0;
+								}
+								$_i++;
+								?>
+							<?php endwhile; // end of the loop. ?>
+						<a id="prev-slider" class="prev" href="#"></a>
+						<a id="next-slider" class="next" href="#"></a>
+						<div class="clearfix"></div>
+	                </div>
 				</section><!-- .body-category-produtos -->
 
 		</main>
@@ -146,9 +161,23 @@ if ( ! isset( $_GET['p-type'] ) ) {
 		) );
 	}
 	?>
-	<?php while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
-		<?php get_template_part( 'content', 'produtos' ); ?>
+	<?php
+	$_i = 0;
+	while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
+		<?php
+		if($_i == 0){
+			echo '<div class="wrap">';
+		}
+		get_template_part( 'content', 'produtos' );
+		if($_i == 4){
+			echo '</div>';
+			$_i = 0;
+		}
+		$_i++;
+		?>
 	<?php endwhile; // end of the loop. ?>
+	<a id="prev-slider" class="prev" href="#"></a>
+	<a id="next-slider" class="next" href="#"></a>
 <?php
 }
 ?>

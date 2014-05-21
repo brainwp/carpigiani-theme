@@ -1291,7 +1291,7 @@ section.cat-chocolate-e-creme {
 	color: #ffffff;
 }
 #produtos-row{
-	transition:300ms all ease;
+	transition:700ms all linear;
 }
 
 

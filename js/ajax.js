@@ -18,12 +18,6 @@ $(document).ready(function(){
 		$(this).addClass('active');
 		return false;
     });
-	$('.trick a').on('click', function(){
-		$('.cat-hover').each(function(){
-			$(this).removeClass('active');
-		})
-		$(this).addClass('active');
-	});
 	/*$.ajax({
         url: "http://localhost/wp-content/themes/carpigiani-theme/single-home.php",
         type: "POST",
