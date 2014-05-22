@@ -5,6 +5,9 @@
  * @package carpigiani-theme
  */
 
+define('PASTA_MEU_WORDPRESS',$_SERVER['DOCUMENT_ROOT']);
+define('PASTA_MEU_TEMA',str_replace("\\",'/',dirname(__FILE__)));
+define('CAMINHO_MEU_TEMA','/' . substr(PASTA_MEU_TEMA,stripos(PASTA_MEU_TEMA,'wp-content')));
 
 define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/options-framework/inc/' );
 require_once dirname( __FILE__ ) . '/inc/options-framework/inc/options-framework.php';
@@ -285,3 +288,36 @@ function post_type_nav_class($classes, $item){
 	}
 return $classes;
 }
+
+/**
+* Customin the Footer WordPress.
+*/
+function remove_footer_admin () {
+	echo '© <a href="http://brasa.art.br//" target="blank">Brasa</a> - Obrigado por criar com Brasa';
+}
+add_filter('admin_footer_text', 'remove_footer_admin');
+
+/**
+* Customin Logo login.
+*/
+add_action('login_head', 'carpigiani_custom_logo_login');
+function carpigiani_custom_logo_login() {
+	echo '
+	<style type="text/css">
+		body.login div#login h1 a {
+			background-image:url('.get_bloginfo('template_directory').'/images/adm/logo-login.png) !important;
+			background-size: 317px 129px;
+			padding: 30px 120px;
+		}
+	</style>
+	';
+}
+
+/*add_action('admin_head', 'my_custom_logo');
+function my_custom_logo() {
+echo '
+<style type="text/css">
+#header-logo { background: url('.get_bloginfo('stylesheet_directory').'/images/adm/logo-login.png) !important; }
+</style>
+';
+}*/

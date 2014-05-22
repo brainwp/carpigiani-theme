@@ -54,6 +54,7 @@ and Blueprint http://www.blueprintcss.org/
 14.0 - Footer
 15.0 - Produtos
 	15.1 - Single Produtos
+16.0 - Admin Wordpress
 
 --------------------------------------------------------------*/
 
@@ -1257,6 +1258,10 @@ section.cat-chocolate-e-creme {
 	background-color: #8E857C;
 	border-bottom: 2px solid #605A54;
 }
+section.cat-chocolate-e-creme {
+	background-color: #8E857C;
+	border-bottom: 2px solid #605A54;
+}
 .cat-icon {
 	display: table;
 	margin: 0 auto;
@@ -1287,12 +1292,18 @@ section.cat-chocolate-e-creme {
 .cat-hover a:hover {
 	color: #ffffff;
 }
+<<<<<<< HEAD
 
 #produtos-row{
 	transition:700ms all linear;
 }
 
 
+=======
+#produtos-row{
+	transition:300ms all ease;
+}
+>>>>>>> produtos
 .mdiv {
 	background-color: none;
 }
@@ -1308,6 +1319,7 @@ section.cat-chocolate-e-creme {
 .mdiv-8 {
 	background-color: #BFD6D0;
 }
+<<<<<<< HEAD
 
 
 
@@ -1316,6 +1328,12 @@ section.cat-chocolate-e-creme {
 	background-color: #EBDEED;
 }
 .cat-hover-restaurante:hover, .cat-hover-restaurante.active{
+=======
+.cat-hover-artesenal:hover, .cat-hover-artesenal.active {
+	background-color: #EBDEED;
+}
+.cat-hover-restaurante:hover, .cat-hover-restaurante.active {
+>>>>>>> produtos
 	background-color: #D2CB84;
 }
 .cat-hover-soft:hover, .cat-hover-soft.active {
@@ -1405,6 +1423,9 @@ section.tit-chocolate-e-creme {
 	.error-404 img {
 	    float: left;
 	    width: 100%;
+	}
+	.infos-header {
+		display: none;
 	}
 
 	/* .box-loader:nth-child(2n-1){
@@ -1701,7 +1722,7 @@ header {
 
 .site-branding {
     display: table;
-    margin: 104px auto 0 30px;
+    margin: 119px auto 0 30px;
     float: left;
     max-width: 700px;
     z-index: 1;
@@ -1787,7 +1808,7 @@ header .responsive img {
     position: relative;
     top: -2px;
     vertical-align: sub;
-    z-index: 2;
+    z-index: -1;
 }
 .wrapper-simple input[type=submit]:active {
 	 /* box-shadow: inset rgba(0,0,0,.4) 0 1px 1px;  */
@@ -1909,6 +1930,7 @@ footer .social-icons #facebook{
 
 .i-suporte {
 	float: left;
+	cursor:pointer;
 }
 .search-menu {
 	
@@ -1951,6 +1973,9 @@ footer .social-icons #facebook{
 .content-search .entry-summary {
     padding: 0 20px 5px 20px;
     margin: 0;
+}
+.offline i {
+	display:none;
 }
 
 /*--------------------------------------------------------------
