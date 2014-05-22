@@ -50,9 +50,9 @@ jQuery(function($) {
 			}
 		}
 	});
-	$('#cat-prod-container').carouFredSel({
-		prev: '#prev-slider',
-		next: '#next-slider',
+	$('#foo2').carouFredSel({
+		prev: '#prev-outros',
+		next: '#next-outros',
 		responsive: true,
 		width: '100%',
 		scroll: {
@@ -60,7 +60,7 @@ jQuery(function($) {
 			pauseOnHover: true,
 		},
 		items: {
-			width: 980,
+			width: 400,
 			visible: {
 				min: 1,
 				max: 1
