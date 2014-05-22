@@ -1289,9 +1289,9 @@ section.cat-chocolate {
 .cat-hover a:hover {
 	color: #ffffff;
 }
-
-
-
+#produtos-row{
+	transition:300ms all ease;
+}
 .mdiv {
 	background-color: none;
 }
@@ -1307,20 +1307,16 @@ section.cat-chocolate {
 .mdiv-8 {
 	background-color: #BFD6D0;
 }
-
-
-
-
-.cat-hover-artesenal:hover {
+.cat-hover-artesenal:hover, .cat-hover-artesenal.active {
 	background-color: #EBDEED;
 }
-.cat-hover-restaurante:hover{
+.cat-hover-restaurante:hover, .cat-hover-restaurante.active {
 	background-color: #D2CB84;
 }
-.cat-hover-soft:hover {
+.cat-hover-soft:hover, .cat-hover-soft.active {
 	background-color: #BFD6D0;
 }
-.cat-hover-chocolate-e-creme:hover {
+.cat-hover-chocolate-e-creme:hover, .cat-hover-chocolate-e-creme.active {
 	background-color: #8E857C;
 }
 section.tit-artesenal {
@@ -1703,7 +1699,7 @@ header {
 
 .site-branding {
     display: table;
-    margin: 104px auto 0 30px;
+    margin: 119px auto 0 30px;
     float: left;
     max-width: 700px;
     z-index: 1;
@@ -1789,7 +1785,7 @@ header .responsive img {
     position: relative;
     top: -2px;
     vertical-align: sub;
-    z-index: 2;
+    z-index: -1;
 }
 .wrapper-simple input[type=submit]:active {
 	 /* box-shadow: inset rgba(0,0,0,.4) 0 1px 1px;  */
@@ -1911,6 +1907,7 @@ footer .social-icons #facebook{
 
 .i-suporte {
 	float: left;
+	cursor:pointer;
 }
 .search-menu {
 	
@@ -2179,12 +2176,4 @@ footer .social-icons #facebook{
 	.rmm {
 		display: none;
 	}
-}
-
-
-/*--------------------------------------------------------------
-16.0 - Admin Wordpress
---------------------------------------------------------------*/
-#wpadminbar>li>a {
-
 }
