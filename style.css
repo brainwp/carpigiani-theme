@@ -54,6 +54,7 @@ and Blueprint http://www.blueprintcss.org/
 14.0 - Footer
 15.0 - Produtos
 	15.1 - Single Produtos
+	15.2 - Slider Archive Produtos
 16.0 - Admin Wordpress
 
 --------------------------------------------------------------*/
@@ -1171,16 +1172,16 @@ a:active {
     width: 100%;
 }
 .site-content .body-content-produtos .wrap {
-    margin: 20px auto;
+    margin: 20px auto 0;
     max-width: 980px;
     overflow: hidden;
 }
 .body-content-produtos .wrap .box {
     float: left;
-    padding: 10px;
     text-align: center;
     width: 25%;
     padding: 20px;
+    cursor: pointer;
 }
 .body-content-produtos .wrap .box .icon {
     display: block;
@@ -1253,8 +1254,7 @@ section.cat-soft {
 	background-color: #BFD6D0;
 	border-bottom: 2px solid #95B5AC;
 }
-
-section.cat-chocolate {
+section.cat-chocolate, section.cat-chocolate-e-creme {
 	background-color: #8E857C;
 	border-bottom: 2px solid #605A54;
 }
@@ -1264,7 +1264,7 @@ section.cat-chocolate {
 	width: 75px;
 	height: 75px;	
 }
-.icon-artesenal {
+.icon-artesanal {
 	background: url( 'images/icon-artesanal.png' ) no-repeat;
 
 }
@@ -1291,6 +1291,8 @@ section.cat-chocolate {
 }
 #produtos-row{
 	transition:300ms all ease;
+	padding: 10px 0;
+	position: relative;
 }
 .mdiv {
 	background-color: none;
@@ -1305,9 +1307,9 @@ section.cat-chocolate {
 	background-color: #D2CB84;
 }
 .mdiv-8 {
-	background-color: #BFD6D0;
+	background-color: #EBDEED;
 }
-.cat-hover-artesenal:hover, .cat-hover-artesenal.active {
+.cat-hover-artesanal:hover, .cat-hover-artesanal.active {
 	background-color: #EBDEED;
 }
 .cat-hover-restaurante:hover, .cat-hover-restaurante.active {
@@ -1319,7 +1321,7 @@ section.cat-chocolate {
 .cat-hover-chocolate-e-creme:hover, .cat-hover-chocolate-e-creme.active {
 	background-color: #8E857C;
 }
-section.tit-artesenal {
+section.tit-artesanal {
 	background-color: #EBDEED;
 }
 section.tit-restaurante {
@@ -2153,6 +2155,39 @@ footer .social-icons #facebook{
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
+
+/*--------------------------------------------------------------
+15.2 - Slider Archive Produtos
+--------------------------------------------------------------*/
+#cat-prod-container .caroufredsel_wrapper ul {
+	height: 350px;
+}
+
+#cat-prod-container ul li {
+	text-align: center;
+}
+
+#cat-prod-container ul li a.permalink {
+	text-decoration: none;
+	font-size: 1.2em;
+	padding: 5px;
+	display: block;
+}
+
+#cat-prod-container ul li img {
+	width: 100%;
+	max-height: 250px;
+	margin: 0 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+}
+
+#cat-prod-container .prev, #cat-prod-container .next {
+	top: 150px;
+}
+
+
 
 @media (max-width: 600px) {
 	.body-content-home .wrap .box {

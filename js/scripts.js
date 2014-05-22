@@ -1,4 +1,21 @@
-jQuery(function($) { 
+jQuery(function($) {
+	$('#foo7').carouFredSel({
+		prev: '#prev-slider',
+		next: '#next-slider',
+		responsive: true,
+		width: '100%',
+		scroll: {
+			items: 1,
+			pauseOnHover: true,
+		},
+		items: {
+			width: 250,
+			visible: {
+				min: 1,
+				max: 4
+			}
+		}
+	});
 	$('#foo5').carouFredSel({
 		prev: '#prev-slider',
 		next: '#next-slider',

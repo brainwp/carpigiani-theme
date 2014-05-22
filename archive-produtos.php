@@ -99,21 +99,28 @@ if ( ! isset( $_GET['p-type'] ) ) {
 			<!-- .body-content-produtos -->
 				<section id="produtos-row" class="body-category-produtos cat-soft"  rel="<?php echo esc_url( $category_link ); ?>">
 					<div id="cat-prod-container">
-							<?php
-							$_i = 0;
-							while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
-								<?php
-								if($_i == 0){
-									echo '<li class="wrap">';
-								}
-								get_template_part( 'content', 'produtos' );
-								if($_i == 4){
-									echo '</li>';
-									$_i = 0;
-								}
-								$_i++;
-								?>
+
+						<div id="carousel" class="wrap list_carousel responsive">
+							
+							<ul id="foo7">
+
+							<?php while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
+							
+								<li class="item">        
+							    	<a href="<?php the_permalink(); ?>">
+							    		<?php the_post_thumbnail( 'slider-archive-produto' ); ?>
+							    	</a>
+									<a class="permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>	
+								</li><!-- .item -->    
+
 							<?php endwhile; // end of the loop. ?>
+
+							</ul><!-- #foo7 -->
+							
+							<div class="clearfix"></div>
+
+						</div><!-- #carousel -->
+
 						<a id="prev-slider" class="prev" href="#"></a>
 						<a id="next-slider" class="next" href="#"></a>
 						<div class="clearfix"></div>
@@ -161,23 +168,30 @@ if ( ! isset( $_GET['p-type'] ) ) {
 		) );
 	}
 	?>
-	<?php
-	$_i = 0;
-	while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
-		<?php
-		if($_i == 0){
-			echo '<div class="wrap">';
-		}
-		get_template_part( 'content', 'produtos' );
-		if($_i == 4){
-			echo '</div>';
-			$_i = 0;
-		}
-		$_i++;
-		?>
-	<?php endwhile; // end of the loop. ?>
+	<div id="carousel" class="wrap list_carousel responsive">
+							
+		<ul id="foo7">
+
+		<?php while ( $produtos->have_posts() ) : $produtos->the_post(); ?>
+		
+			<li class="item">        
+		    	<a href="<?php the_permalink(); ?>">
+		    		<?php the_post_thumbnail( 'slider-archive-produto' ); ?>
+		    	</a>
+				<a class="permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>	
+			</li><!-- .item -->    
+
+		<?php endwhile; // end of the loop. ?>
+
+		</ul><!-- #foo7 -->
+		
+		<div class="clearfix"></div>
+
+	</div><!-- #carousel -->
+
 	<a id="prev-slider" class="prev" href="#"></a>
 	<a id="next-slider" class="next" href="#"></a>
+	<div class="clearfix"></div>
 <?php
-}
+	}
 ?>
