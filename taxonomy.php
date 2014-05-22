@@ -1,53 +1,109 @@
 <?php
-/*$categories = get_the_category();
-$separator = ' ';
-$output = '';
-if($categories){
-	foreach($categories as $category) {
-		$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
-	}
-echo trim($output, $separator);
-}*/
+/**
+ * The template for displaying Archive pages.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package carpigiani-theme
+ */
 
-$categories = get_categories( $args );
+get_header(); ?>
 
-foreach( $categories as $category ) :
-$cat_ID = $category->term_id; // Get ID the category.
-// Get the URL of this category
-$category_link = get_category_link( $cat_ID );
-// Get the Slug of this category
-$category_slug = get_category_link( $category->slug );
-?>
-<?php endforeach; ?>
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+			<section class="content-page">
+				<div class="wrap">
 
-<?php echo $category->slug; ?>
+					<?php if ( have_posts() ) : ?>
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<section id="" class="body-category-produtos tit-<?php echo $category->slug; ?>">
-			<div class="wrap">
+						<header class="page-header">
+							<h1 class="page-title">
+								<?php
+									if ( is_category() ) :
+										single_cat_title();
 
-					<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-						<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-						<?php the_content(); ?>
-					</div>
+									elseif ( is_tag() ) :
+										single_tag_title();
 
-				<?php endwhile; ?>
+									elseif ( is_author() ) :
+										printf( __( 'Author: %s', 'carpigiani-theme' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
-					<div class="navigation">
-						<div class="next-posts"><?php next_posts_link(); ?></div>
-						<div class="prev-posts"><?php previous_posts_link(); ?></div>
-					</div>
+									elseif ( is_day() ) :
+										printf( __( 'Day: %s', 'carpigiani-theme' ), '<span>' . get_the_date() . '</span>' );
 
-				<?php else : ?>
+									elseif ( is_month() ) :
+										printf( __( 'Month: %s', 'carpigiani-theme' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'carpigiani-theme' ) ) . '</span>' );
 
-					<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-						<h1>Not Found</h1>
-					</div>
+									elseif ( is_year() ) :
+										printf( __( 'Year: %s', 'carpigiani-theme' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'carpigiani-theme' ) ) . '</span>' );
 
-				<?php endif; ?>
-			</div>
-		</section><!-- .content-pagee -->
-	</div>
-</div>
+									elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
+										_e( 'Asides', 'carpigiani-theme' );
+
+									elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
+										_e( 'Galleries', 'carpigiani-theme');
+
+									elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
+										_e( 'Images', 'carpigiani-theme');
+
+									elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
+										_e( 'Videos', 'carpigiani-theme' );
+
+									elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
+										_e( 'Quotes', 'carpigiani-theme' );
+
+									elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
+										_e( 'Links', 'carpigiani-theme' );
+
+									elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
+										_e( 'Statuses', 'carpigiani-theme' );
+
+									elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
+										_e( 'Audios', 'carpigiani-theme' );
+
+									elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
+										_e( 'Chats', 'carpigiani-theme' );
+
+									else :
+										_e( 'Archives', 'carpigiani-theme' );
+
+									endif;
+								?>
+							</h1>
+							<?php
+								// Show an optional term description.
+								$term_description = term_description();
+								if ( ! empty( $term_description ) ) :
+									printf( '<div class="taxonomy-description">%s</div>', $term_description );
+								endif;
+							?>
+						</header><!-- .page-header -->
+
+						<?php /* Start the Loop */ ?>
+						<?php while ( have_posts() ) : the_post(); ?>
+
+							<?php
+								/* Include the Post-Format-specific template for the content.
+								 * If you want to override this in a child theme, then include a file
+								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+								 */
+								get_template_part( 'content', get_post_format() );
+							?>
+
+						<?php endwhile; ?>
+
+						<?php carpigiani_theme_paging_nav(); ?>
+
+					<?php else : ?>
+
+						<?php get_template_part( 'content', 'none' ); ?>
+
+					<?php endif; ?>
+
+				</div><!-- .wrap -->
+			</section><!-- .content-page -->
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+<?php //get_sidebar(); ?>
+<?php get_footer(); ?>

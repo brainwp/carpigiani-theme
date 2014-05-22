@@ -54,7 +54,7 @@ and Blueprint http://www.blueprintcss.org/
 14.0 - Footer
 15.0 - Produtos
 	15.1 - Single Produtos
-16.0 - Admin Wordpress
+16.0 - Chat
 
 --------------------------------------------------------------*/
 
@@ -1089,6 +1089,10 @@ a:active {
 	text-align: center;
 }
 
+.body-content-home .wrap .box .excerpt {
+	line-height: 1;
+}
+
 .body-content-home .wrap .box .icon {
 	width: 100%;
 	max-height: 100px;
@@ -1994,7 +1998,8 @@ footer .social-icons #facebook{
 
 .slider-content-single .desc h1 {
 	color: #008fcb;
-	line-height: 1.4;
+	line-height: 1.2;
+	font-size: 2.2em;
 }
 
 .slider-content-single .wrap {
@@ -2180,3 +2185,12 @@ footer .social-icons #facebook{
 		display: none;
 	}
 }
+
+/*--------------------------------------------------------------
+16.0 - Chat On-line
+--------------------------------------------------------------*/
+#tidio-chat-popup .tidio-brand-logo {
+	display: none;
+}
+
+
