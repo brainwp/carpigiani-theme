@@ -1254,11 +1254,7 @@ section.cat-soft {
 	border-bottom: 2px solid #95B5AC;
 }
 
-section.cat-chocolate-e-creme {
-	background-color: #8E857C;
-	border-bottom: 2px solid #605A54;
-}
-section.cat-chocolate-e-creme {
+section.cat-chocolate {
 	background-color: #8E857C;
 	border-bottom: 2px solid #605A54;
 }
@@ -1268,8 +1264,9 @@ section.cat-chocolate-e-creme {
 	width: 75px;
 	height: 75px;	
 }
-.icon-artesanal {
+.icon-artesenal {
 	background: url( 'images/icon-artesanal.png' ) no-repeat;
+
 }
 .icon-restaurante {
 	background: url( 'images/icon-restaurante.png' ) no-repeat;
@@ -1292,18 +1289,9 @@ section.cat-chocolate-e-creme {
 .cat-hover a:hover {
 	color: #ffffff;
 }
-<<<<<<< HEAD
-
-#produtos-row{
-	transition:700ms all linear;
-}
-
-
-=======
 #produtos-row{
 	transition:300ms all ease;
 }
->>>>>>> produtos
 .mdiv {
 	background-color: none;
 }
@@ -1319,21 +1307,10 @@ section.cat-chocolate-e-creme {
 .mdiv-8 {
 	background-color: #BFD6D0;
 }
-<<<<<<< HEAD
-
-
-
-
-.cat-hover-artesanal:hover, .cat-hover-artesanal.active {
-	background-color: #EBDEED;
-}
-.cat-hover-restaurante:hover, .cat-hover-restaurante.active{
-=======
 .cat-hover-artesenal:hover, .cat-hover-artesenal.active {
 	background-color: #EBDEED;
 }
 .cat-hover-restaurante:hover, .cat-hover-restaurante.active {
->>>>>>> produtos
 	background-color: #D2CB84;
 }
 .cat-hover-soft:hover, .cat-hover-soft.active {
@@ -1342,7 +1319,7 @@ section.cat-chocolate-e-creme {
 .cat-hover-chocolate-e-creme:hover, .cat-hover-chocolate-e-creme.active {
 	background-color: #8E857C;
 }
-section.tit-artesanal {
+section.tit-artesenal {
 	background-color: #EBDEED;
 }
 section.tit-restaurante {
