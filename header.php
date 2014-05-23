@@ -18,19 +18,15 @@
 <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png" type="image/x-icon">
 
 <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
-
-<!-- <link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/demo.css" />
-<link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/elastislide.css" />
-<link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/custom.css" /> -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
 
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="<?php //bloginfo( 'template_url' ) ?>/js/jquerypp.custom.js"></script>
-<script type="text/javascript" src="<?php //bloginfo( 'template_url' ) ?>/js/jquery.elastislide.js"></script>
-<script type="text/javascript">	
-	$( '#carousel-elast' ).elastislide();	
-</script> -->
+
+<!-- Start | Especial style for images taxonomy -->
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ) ?>/css/style_common.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ) ?>/css/style10.css" type="text/css" media="screen" />
+<!-- End | Especial style for images taxonomy -->
 
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ) ?>/rmm-css/responsivemobilemenu.css" type="text/css" media="screen" />
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ) ?>/js/responsivemobilemenu.js"></script>
@@ -46,6 +42,7 @@
 
 		<section class="track-header">
 			<div class="wrap">
+				<!-- .START | Menu Responsive -->
 				<div class="rmm">
 		            <ul>
 						<?php
@@ -71,6 +68,7 @@
 						?>		                
 		            </ul>
 		        </div><!-- .rmm -->
+				<!-- .END | Menu Responsive -->
 
 				<div class="logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
@@ -117,22 +115,16 @@
 						<div class="wrapper-simple">
 							<input type="text" placeholder="Pesquisa" name="s" id="s" value="<?php the_search_query(); ?>">
 							<input type="submit" value="">
-							<img src="<?php bloginfo( 'template_url' ) ?>/images/i-search.png">
+							<!-- <img class="searchBlue" src="<?php //bloginfo( 'template_url' ) ?>/images/i-searchBlue.png"> -->
+							<img class="searchBlue"/>
 						</div>
 
-						<div class="infos-header">
-							<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
-						</div><!-- .infos-header -->
 					</div><!-- .body-search -->
 				</form>
 
-				<!-- <form role="search" method="get" id="searchform" action="<?php //echo home_url( '/' ); ?>">
-				    <div><label class="screen-reader-text" for="s">Search for:</label>
-				        <input type="text" value="" name="s" id="s" />
-				        <input type="submit" id="searchsubmit" value="Search" />
-				    </div>
-				</form> -->
-
+				<div class="infos-header">
+					<span class="i-suporte suporte-header"><p>Suporte Online</p></span>
+				</div><!-- .infos-header -->
 			</div><!-- .wrap -->
 		</section><!-- .track-header -->
 

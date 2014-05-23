@@ -10,8 +10,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'carpigiani-theme' ); ?></h1>
-	</header><!-- .page-header -->
+		<h1 class="page-title"><?php _e( 'Nada Encontrado!', 'carpigiani-theme' ); ?></h1>
 
 	<div class="page-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
@@ -20,7 +19,8 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'carpigiani-theme' ); ?></p>
+			<!-- <p><?php //_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'carpigiani-theme' ); ?></p> -->
+			<p><?php _e( 'Pedimos desculpa, mas não achamos nenhum resultado com sua busca. Se preferir tente novavente', 'carpigiani-theme' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
@@ -30,4 +30,5 @@
 
 		<?php endif; ?>
 	</div><!-- .page-content -->
+	</header><!-- .page-header -->
 </section><!-- .no-results -->

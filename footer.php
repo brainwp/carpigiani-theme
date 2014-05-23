@@ -73,12 +73,6 @@
 
 </script>
 
-<script>
-$(document).ready(function () {
-  prepare_search_form('#s', 'search...', '<?php echo htmlentities(html_entity_decode($_GET['s'])); ?>');
-});
-</script>
-
 <?php wp_footer(); ?>
 
 </body>

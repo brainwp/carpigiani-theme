@@ -1,53 +1,79 @@
 <?php
-/*$categories = get_the_category();
-$separator = ' ';
-$output = '';
-if($categories){
-	foreach($categories as $category) {
-		$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+/**
+ * The template for displaying Archive pages.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package carpigiani-theme
+ */
+
+get_header(); ?>
+
+<style>
+	.flex-container {
+		max-width: 980px;
+		margin: 0 auto;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+    	display: flex;
+    	flex-wrap: wrap; /* Quebra de linha */
+    	/* -webkit-flex-flow: column;
+    	flex-flow: column; */
 	}
-echo trim($output, $separator);
-}*/
+	.flex-container div {
+    	/* margin:10px; */
+    	width:auto;
+    	height:176px;
+	}
+	.flex-container div img {
+    	-webkit-flex:1 1 auto;
+    	-moz-flex:1 1 auto;
+    	-ms-flex:1 1 auto;
+    	-o-flex:1 1 auto;
+    	flex:1 1 auto;
+	}
+	.clear-posts {
+		width:100%;
+		background-color: #008EC8;
+		padding: 10px;
+	}
+	.clear-posts p {
+		display:table;
+		margin: 0 auto;
+		color: #ffffff;
+	}
+</style>
 
-$categories = get_categories( $args );
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-foreach( $categories as $category ) :
-$cat_ID = $category->term_id; // Get ID the category.
-// Get the URL of this category
-$category_link = get_category_link( $cat_ID );
-// Get the Slug of this category
-$category_slug = get_category_link( $category->slug );
-?>
-<?php endforeach; ?>
+			<section class="content-page">
+				<div class="wrap">
+					<ul class="flex-container">
 
-<?php echo $category->slug; ?>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<section id="" class="body-category-produtos tit-<?php echo $category->slug; ?>">
-			<div class="wrap">
+						<div class="view view-tenth">
+							<?php the_post_thumbnail( 'th-taxonomy' ); ?>
+							<div class="mask">
+		                        <h2><?php the_title(); ?></h2>
+		                        <a href="<?php the_permalink(); ?>" class="info">Leia mais</a>
+		                    </div><!-- .mask -->
+						</div><!-- .view .view-tenth -->
+						
+						<?php endwhile; else: ?>
+						<span class="clear-posts">
+							<p><?php _e('Desculpe, nenhum post encontrado com seus critérios.'); ?></p>
+						</span>
+						<?php endif; ?>
 
-					<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-						<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-						<?php the_content(); ?>
-					</div>
+					</ul><!-- .flex-container -->
+				</div><!-- .wrap -->
+			</section><!-- .content-page -->
 
-				<?php endwhile; ?>
+		</main><!-- #main -->
+	</section><!-- #primary -->
 
-					<div class="navigation">
-						<div class="next-posts"><?php next_posts_link(); ?></div>
-						<div class="prev-posts"><?php previous_posts_link(); ?></div>
-					</div>
-
-				<?php else : ?>
-
-					<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-						<h1>Not Found</h1>
-					</div>
-
-				<?php endif; ?>
-			</div>
-		</section><!-- .content-pagee -->
-	</div>
-</div>
+<?php get_footer(); ?>

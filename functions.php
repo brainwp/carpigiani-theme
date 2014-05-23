@@ -5,7 +5,6 @@
  * @package carpigiani-theme
  */
 
-
 define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/options-framework/inc/' );
 require_once dirname( __FILE__ ) . '/inc/options-framework/inc/options-framework.php';
 
@@ -80,6 +79,8 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'slider-home', 600, 290, true );
 	add_image_size( 'slider-cat-produto', 980, 433, true );
 	add_image_size( 'th-cat-post', 140, 245, true );
+	add_image_size( 'slider-archive-produto', 240, 280, true );
+	add_image_size( 'th-taxonomy', 176, 176, true );
 }
 
 	// This theme uses wp_nav_menu() in one location.
@@ -285,3 +286,38 @@ function post_type_nav_class($classes, $item){
 	}
 return $classes;
 }
+
+/**
+* Customin the Footer WordPress.
+*/
+function remove_footer_admin () {
+	echo '© <a href="http://brasa.art.br//" target="blank">Brasa</a> - Obrigado por criar com Brasa';
+}
+add_filter('admin_footer_text', 'remove_footer_admin');
+
+/**
+* Customin Logo login.
+*/
+add_action('login_head', 'carpigiani_custom_logo_login');
+function carpigiani_custom_logo_login() {
+	echo '
+	<style type="text/css">
+		body.login div#login h1 a {
+			background-image:url('.get_bloginfo('template_directory').'/images/adm/logo-login.png) !important;
+			background-size: 317px 129px;
+			padding: 30px 120px;
+		}
+	</style>
+	';
+}
+require  get_template_directory() . '/produtos-ajax.php';
+
+
+/*add_action('admin_head', 'my_custom_logo');
+function my_custom_logo() {
+echo '
+<style type="text/css">
+#header-logo { background: url('.get_bloginfo('stylesheet_directory').'/images/adm/logo-login.png) !important; }
+</style>
+';
+}*/
