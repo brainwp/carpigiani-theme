@@ -56,6 +56,7 @@ and Blueprint http://www.blueprintcss.org/
 	15.1 - Single Produtos
 	15.2 - Slider Archive Produtos
 16.0 - Admin WordPress
+16.0 - Chat
 
 --------------------------------------------------------------*/
 
@@ -457,7 +458,7 @@ a:active {
 .nav-menu .actived a:hover {
 	border-bottom: none;
 }
-.nav-menu .actived {
+.menu-menu-header-container .actived {
 	border-bottom: solid 3px #cecece;
 }
 /* Small menu */
@@ -762,7 +763,6 @@ a:active {
 	float: left;
 	width: 100%;
 	min-height: 280px;
-	background-color: #EDECEC;
 	overflow: hidden;
 }
 
@@ -955,7 +955,7 @@ a:active {
 	max-width: 980px;
 	height: 280px;
 	padding: 0;
-	margin: 6px;
+	margin: 0 6px;
 	display: block;
 	overflow: hidden;
 	float: left;
@@ -1069,7 +1069,7 @@ a:active {
 --------------------------------------------------------------*/
 .content-page {
 	color: #005264;
-	background-color: #EEF0EF;
+	background-color: #F9F9F9;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -1078,7 +1078,7 @@ a:active {
 .content-page .wrap {
 	max-width: 980px;
 	margin: 0 auto;
-	padding: 20px 0 10px;
+	padding: 20px 0 20px;
 }
 
 .content-page .entry-content, .content-page .entry-content p {
@@ -1109,6 +1109,10 @@ a:active {
 	float: left;
 	padding: 10px;
 	text-align: center;
+}
+
+.body-content-home .wrap .box .excerpt {
+	line-height: 1;
 }
 
 .body-content-home .wrap .box .icon {
@@ -1327,10 +1331,12 @@ section.cat-chocolate, section.cat-chocolate-e-creme {
 	background-color: #D2CB84;
 }
 .mdiv-8 {
+
 	background-color: #EBDEED;
 }
 .cat-hover-artesanal:hover, .cat-hover-artesanal.active {
-	background-color: #EBDEED;
+
+	background-color: #BFD6D0;
 }
 .cat-hover-restaurante:hover, .cat-hover-restaurante.active {
 	background-color: #D2CB84;
@@ -1691,7 +1697,7 @@ header {
 }
 .track-header {
     background-color: #008EC8;
-    height: 50px;
+    height: 25px;
     margin: 0 auto;
     max-width: 100%;
 }
@@ -1701,6 +1707,18 @@ header {
     height: 15px;
     margin: 3.525em 0.4em 0;
     width: 15px;
+}
+.searchBlue {
+	background: url("images/i-searchBlue.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: left;
+    height: 15px;
+    width: 15px;
+}
+.iconChange {
+    float: left;
+	background: url("images/i-search.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    width: 15px;
+    height: 15px;
 }
 #search {
 	float: left;
@@ -1734,7 +1752,7 @@ header {
 	height: 4.750em;
 	text-indent: -9999px;
 	position: relative;
-	margin: 62px 0 0 0;
+	margin: 72px 0 0 0;
 }
 
 .logo a {
@@ -1787,12 +1805,12 @@ header .responsive img {
 }
 .wrapper-simple {
 	box-shadow: none;
-    height: 37px;
+    height: 46px;
     overflow: hidden;
     padding: 10px 5px;
     position: absolute;
     text-align: center;
-    top: 103px;
+    top: 106px;
     width: 37px;	
 }
 .wrapper-simple input[type=submit] {
@@ -1832,12 +1850,14 @@ header .responsive img {
 	z-index: 1;
 	padding-left: 2em;
 	margin-left: .2em; */
-	padding: 0 10px 10px 20px;
+	padding: 0 10px 4px 20px;
 	color: #FFFFFF;
+	background-color: inherit;
 	font-style: italic;
-	background: #008EC8;
+	/* background: #008EC8; */
 	font-size: 16px;
-	text-indent: 35px
+	text-indent: 35px;
+	border: none;
 }
 /* .wrapper-simple input[type=text]:focus {
 	color: #FFFFFF;
@@ -1847,10 +1867,25 @@ header .responsive img {
     position: absolute;
     top: 1.1em;
     z-index: 1;
+    padding: 7px;
 }
 .wrapper-simple .cancel {
 	background: url("images/cancel-search.png") no-repeat scroll 8px 7px rgba(0, 0, 0, 0) !important;
     height: 37px !important;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ffffff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ffffff;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ffffff;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -1988,6 +2023,7 @@ footer .social-icons #facebook{
 	background-color: #eef0ef;
 	overflow: hidden;
 	position: relative;
+	height: auto;
 }
 
 .slider-content-single .master-wrap {
@@ -2014,7 +2050,8 @@ footer .social-icons #facebook{
 
 .slider-content-single .desc h1 {
 	color: #008fcb;
-	line-height: 1.4;
+	line-height: 1.2;
+	font-size: 2.2em;
 }
 
 .slider-content-single .wrap {
@@ -2106,6 +2143,14 @@ footer .social-icons #facebook{
 
 .footer-content-single .outras-categorias ul li.chocolate-e-creme {
 	background: url('images/icon-chocolate.png') center 8px no-repeat transparent;
+}
+
+.footer-content-single .outras-categorias ul li.restaurante {
+	background: url('images/icon-restaurante.png') 35px 8px no-repeat transparent;
+}
+
+.footer-content-single .outras-categorias ul li.chocolate-e-creme {
+	background: url('images/icon-chocolate.png') 35px 8px no-repeat transparent;
 }
 
 .footer-content-single .outras-categorias ul li.soft {
@@ -2244,3 +2289,12 @@ footer .social-icons #facebook{
 		display: none;
 	}
 }
+
+/*--------------------------------------------------------------
+16.0 - Chat On-line
+--------------------------------------------------------------*/
+#tidio-chat-popup .tidio-brand-logo {
+	display: none;
+}
+
+
