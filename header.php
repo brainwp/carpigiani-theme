@@ -20,17 +20,13 @@
 <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
 
-<!-- <link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/demo.css" />
-<link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/elastislide.css" />
-<link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/custom.css" /> -->
-
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="<?php //bloginfo( 'template_url' ) ?>/js/jquerypp.custom.js"></script>
-<script type="text/javascript" src="<?php //bloginfo( 'template_url' ) ?>/js/jquery.elastislide.js"></script>
-<script type="text/javascript">	
-	$( '#carousel-elast' ).elastislide();	
-</script> -->
+
+<!-- Start | Especial style for images taxonomy -->
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ) ?>/css/style_common.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ) ?>/css/style10.css" type="text/css" media="screen" />
+<!-- End | Especial style for images taxonomy -->
 
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ) ?>/rmm-css/responsivemobilemenu.css" type="text/css" media="screen" />
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ) ?>/js/responsivemobilemenu.js"></script>

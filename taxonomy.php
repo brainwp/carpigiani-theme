@@ -22,12 +22,12 @@ get_header(); ?>
     	/* -webkit-flex-flow: column;
     	flex-flow: column; */
 	}
-	.flex-container div img {
-		background:#CCC;
-    	margin:10px;
-    	width:176px;
+	.flex-container div {
+    	/* margin:10px; */
+    	width:auto;
     	height:176px;
-
+	}
+	.flex-container div img {
     	-webkit-flex:1 1 auto;
     	-moz-flex:1 1 auto;
     	-ms-flex:1 1 auto;
@@ -44,7 +44,13 @@ get_header(); ?>
 					<ul class="flex-container">
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-						<div class="body-post-tax"><?php the_post_thumbnail( 'th-taxonomy' ); ?><a href=""><?php //the_title(); ?></a></div>
+						<div class="view view-tenth body-post-tax">
+							<?php the_post_thumbnail( 'th-taxonomy' ); ?>
+							<div class="mask">
+		                        <h2><?php the_title(); ?></h2>
+		                        <a href="<?php the_permalink(); ?>" class="info">Leia mais</a>
+		                    </div>
+						</div>
 						
 						<?php endwhile; else: ?>
 						<p><?php _e('Desculpe, nenhum post encontrado com seus critérios.'); ?></p>
