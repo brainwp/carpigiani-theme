@@ -5,10 +5,6 @@
  * @package carpigiani-theme
  */
 
-define('PASTA_MEU_WORDPRESS',$_SERVER['DOCUMENT_ROOT']);
-define('PASTA_MEU_TEMA',str_replace("\\",'/',dirname(__FILE__)));
-define('CAMINHO_MEU_TEMA','/' . substr(PASTA_MEU_TEMA,stripos(PASTA_MEU_TEMA,'wp-content')));
-
 define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/options-framework/inc/' );
 require_once dirname( __FILE__ ) . '/inc/options-framework/inc/options-framework.php';
 
@@ -83,6 +79,7 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'slider-home', 600, 290, true );
 	add_image_size( 'slider-cat-produto', 980, 433, true );
 	add_image_size( 'th-cat-post', 140, 245, true );
+	add_image_size( 'th-taxonomy', 176, 176, true );
 }
 
 	// This theme uses wp_nav_menu() in one location.
