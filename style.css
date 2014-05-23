@@ -55,7 +55,7 @@ and Blueprint http://www.blueprintcss.org/
 15.0 - Produtos
 	15.1 - Single Produtos
 	15.2 - Slider Archive Produtos
-16.0 - Admin Wordpress
+16.0 - Admin WordPress
 
 --------------------------------------------------------------*/
 
@@ -2188,7 +2188,17 @@ footer .social-icons #facebook{
 }
 
 
+/*--------------------------------------------------------------
+??? - Plugins
+--------------------------------------------------------------*/
+.lazysocialbuttons {
+	height: auto !important;
+    padding: 10px 0 20px;
+}
 
+/*--------------------------------------------------------------
+??? - Responsividade
+--------------------------------------------------------------*/
 @media (max-width: 600px) {
 	.body-content-home .wrap .box {
 		width: 50%;
