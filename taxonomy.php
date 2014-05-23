@@ -34,33 +34,46 @@ get_header(); ?>
     	-o-flex:1 1 auto;
     	flex:1 1 auto;
 	}
+	.clear-posts {
+		width:100%;
+		background-color: #008EC8;
+		padding: 10px;
+	}
+	.clear-posts p {
+		display:table;
+		margin: 0 auto;
+		color: #ffffff;
+	}
 </style>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
 			<section class="content-page">
 				<div class="wrap">
-
 					<ul class="flex-container">
+
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-						<div class="view view-tenth body-post-tax">
+						<div class="view view-tenth">
 							<?php the_post_thumbnail( 'th-taxonomy' ); ?>
 							<div class="mask">
 		                        <h2><?php the_title(); ?></h2>
 		                        <a href="<?php the_permalink(); ?>" class="info">Leia mais</a>
-		                    </div>
-						</div>
+		                    </div><!-- .mask -->
+						</div><!-- .view .view-tenth -->
 						
 						<?php endwhile; else: ?>
-						<p><?php _e('Desculpe, nenhum post encontrado com seus critérios.'); ?></p>
+						<span class="clear-posts">
+							<p><?php _e('Desculpe, nenhum post encontrado com seus critérios.'); ?></p>
+						</span>
 						<?php endif; ?>
-					</ul><!-- .flex-container -->
 
+					</ul><!-- .flex-container -->
 				</div><!-- .wrap -->
 			</section><!-- .content-page -->
+
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

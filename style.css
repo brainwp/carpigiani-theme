@@ -1056,7 +1056,7 @@ a:active {
 .content-page .wrap {
 	max-width: 980px;
 	margin: 0 auto;
-	padding: 20px 0 10px;
+	padding: 20px 0 20px;
 }
 
 .content-page .entry-content, .content-page .entry-content p {
