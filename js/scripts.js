@@ -1,4 +1,43 @@
 jQuery(function($) {
+
+	$.ajaxSetup({cache:false});
+	$(".cat-hover").on('click',function(){
+		var post_link = $(this).attr("rel");
+		var slug = $(this).attr('data-class-slug');
+		var id = $(this).attr('data-id');
+		//alert(post_id);
+		//$("#single-home-container").html("<div class='box'><span class='loader5'></span></div>");
+		$("#foo7").html("<div class='box-loader'><span class='clock'></span></div>");
+		$.get(post_link, function( data ) {
+			$("#foo7").trigger("pause");
+			$("#foo7").html(data);
+			$("#foo7").trigger("play", true);
+			$('#foo7').carouFredSel({
+				prev: '#prev-slider',
+				next: '#next-slider',
+				responsive: true,
+				width: '100%',
+				scroll: {
+					items: 4,
+					pauseOnHover: true
+				},
+				items: {
+					width: 250,
+					visible: {
+						min: 4,
+						max: 4
+					}
+				}
+			});
+		});
+		$('#produtos-row').removeClass('cat-soft cat-restaurante cat-chocolate-e-creme cat-artesanal');
+		$('#produtos-row').addClass('cat-'+slug);
+		$('.cat-hover').each(function(){
+			$(this).removeClass('active');
+		})
+		$(this).addClass('active');
+		return false;
+	});
 	$('#foo7').carouFredSel({
 		prev: '#prev-slider',
 		next: '#next-slider',
@@ -6,7 +45,7 @@ jQuery(function($) {
 		width: '100%',
 		scroll: {
 			items: 1,
-			pauseOnHover: true,
+			pauseOnHover: true
 		},
 		items: {
 			width: 250,
