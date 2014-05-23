@@ -18,7 +18,7 @@
 <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png" type="image/x-icon">
 
 <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
 
 <!-- <link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/demo.css" />
 <link rel="stylesheet" type="text/css" href="<?php //bloginfo( 'template_url' ) ?>/css/elastislide.css" />
