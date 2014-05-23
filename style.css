@@ -1686,6 +1686,18 @@ header {
     margin: 3.525em 0.4em 0;
     width: 15px;
 }
+.searchBlue {
+	background: url("images/i-searchBlue.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: left;
+    height: 15px;
+    width: 15px;
+}
+.iconChange {
+    float: left;
+	background: url("images/i-search.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    width: 15px;
+    height: 15px;
+}
 #search {
 	float: left;
 	margin-top: 3.125em;
@@ -1771,7 +1783,7 @@ header .responsive img {
 }
 .wrapper-simple {
 	box-shadow: none;
-    height: 37px;
+    height: 46px;
     overflow: hidden;
     padding: 10px 5px;
     position: absolute;
@@ -1816,12 +1828,14 @@ header .responsive img {
 	z-index: 1;
 	padding-left: 2em;
 	margin-left: .2em; */
-	padding: 0 10px 10px 20px;
+	padding: 0 10px 4px 20px;
 	color: #FFFFFF;
+	background-color: inherit;
 	font-style: italic;
-	background: #008EC8;
+	/* background: #008EC8; */
 	font-size: 16px;
-	text-indent: 35px
+	text-indent: 35px;
+	border: none;
 }
 /* .wrapper-simple input[type=text]:focus {
 	color: #FFFFFF;

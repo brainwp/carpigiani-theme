@@ -115,7 +115,7 @@
 						<div class="wrapper-simple">
 							<input type="text" placeholder="Pesquisa" name="s" id="s" value="<?php the_search_query(); ?>">
 							<input type="submit" value="">
-							<img src="<?php bloginfo( 'template_url' ) ?>/images/i-search.png">
+							<img class="searchBlue" src="<?php //bloginfo( 'template_url' ) ?>/images/i-searchBlue.png">
 						</div>
 
 					</div><!-- .body-search -->
