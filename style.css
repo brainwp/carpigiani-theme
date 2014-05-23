@@ -1788,7 +1788,7 @@ header .responsive img {
     padding: 10px 5px;
     position: absolute;
     text-align: center;
-    top: 103px;
+    top: 106px;
     width: 37px;	
 }
 .wrapper-simple input[type=submit] {
@@ -1845,10 +1845,25 @@ header .responsive img {
     position: absolute;
     top: 1.1em;
     z-index: 1;
+    padding: 7px;
 }
 .wrapper-simple .cancel {
 	background: url("images/cancel-search.png") no-repeat scroll 8px 7px rgba(0, 0, 0, 0) !important;
     height: 37px !important;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ffffff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ffffff;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ffffff;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #ffffff;
 }
 
 /*--------------------------------------------------------------
