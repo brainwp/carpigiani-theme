@@ -791,6 +791,25 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
+.edit-link {
+	display: block;
+}
+
+.edit-link a {
+	text-decoration: none;
+	padding: 10px;
+	background: #008FCB; /* Azul padrão */
+	color: #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.edit-link a:hover {
+	background: #0177a9; /* Azul escuro */
+}
+
 .site-content .wrap {
 	max-width: 980px;
 	margin: 0 auto;
@@ -903,7 +922,7 @@ a:active {
 }
 
 #respond #commentform input[type="submit"]:hover {
-	background: #0177a9; /* Azul escuro */;
+	background: #0177a9; /* Azul escuro */
 }
 
 
@@ -1989,6 +2008,7 @@ footer .social-icons #facebook{
 	color: #255563;
 	font-size: 1.5em;
 	line-height: 1;
+	margin: 15px 0 15px 0;
 }
 
 .slider-content-single .desc h1 {
@@ -2058,7 +2078,8 @@ footer .social-icons #facebook{
 .footer-content-single .outras-categorias ul {
 	list-style: none;
 	padding: 0;
-	margin: 30px 0 0 0;
+	margin: 35px 0 0 0;
+	overflow: hidden;
 }
 
 .footer-content-single .outras-categorias ul li {
@@ -2075,19 +2096,19 @@ footer .social-icons #facebook{
 }
 
 .footer-content-single .outras-categorias ul li.artesanal {
-	background: url('images/icon-artesanal.png') 16px 8px no-repeat transparent;
+	background: url('images/icon-artesanal.png') center 8px no-repeat transparent;
 }
 
 .footer-content-single .outras-categorias ul li.restaurante {
-	background: url('images/icon-restaurante.png') 16px 8px no-repeat transparent;
+	background: url('images/icon-restaurante.png') center 8px no-repeat transparent;
 }
 
 .footer-content-single .outras-categorias ul li.chocolate-e-creme {
-	background: url('images/icon-chocolate.png') 16px 8px no-repeat transparent;
+	background: url('images/icon-chocolate.png') center 8px no-repeat transparent;
 }
 
 .footer-content-single .outras-categorias ul li.soft {
-	background: url('images/icon-soft.png') 16px 8px no-repeat transparent;
+	background: url('images/icon-soft.png') center 8px no-repeat transparent;
 }
 
 .footer-content-single .outras-categorias ul li a {

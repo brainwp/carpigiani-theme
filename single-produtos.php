@@ -23,7 +23,6 @@ get_header(); ?>
 						if ( $terms != null ){
 							foreach( $terms as $term ) {
 								echo "<h2 class=" . $term->name . ">" . $term->name . "</h2>";
-								echo "<h1>" . get_the_title() . "</h1>";
 								echo $term->description;
 								unset( $term );
 						} } ?>
@@ -75,6 +74,7 @@ get_header(); ?>
 					$args = array(
 								'orderby' => 'count',
 								'hide_empty' => 0,
+								'number' => 3,
 								'exclude' => $this_term,
 							); 
 				        $terms = get_terms( 'tipos', $args );
