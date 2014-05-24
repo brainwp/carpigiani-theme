@@ -2064,6 +2064,7 @@ footer .social-icons #facebook{
 
 .slider-content-single .list_carousel li.item .image {
 	float: right;
+	float: right;
 	width: auto;
 	height: 280px;
 	text-align: center;
@@ -2230,7 +2231,6 @@ footer .social-icons #facebook{
 #cat-prod-container .caroufredsel_wrapper ul {
 	height: 350px;
 }
-
 #cat-prod-container ul li {
 	text-align: center;
 }

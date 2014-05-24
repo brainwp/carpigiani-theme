@@ -61,7 +61,7 @@
 
 									<a id="trick" class="trick trick-<?php echo $category->slug ?>">
 										<span class="cat-icon icon-<?php echo $category->slug ?>"></span>
-										<span class="excerpt"><a rel="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
+										<span class="excerpt"><a href="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
 									</a>
 
 								</div>
@@ -77,7 +77,7 @@
 
 								<a id="trick" class="trick trick-<?php echo $category->slug ?>">
 									<span class="cat-icon icon-<?php echo $category->slug ?>"></span>
-									<span class="excerpt"><a rel="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
+									<span class="excerpt"><a href="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
 								</a>
 
 							</div>
@@ -98,7 +98,7 @@
 					<div id="cat-prod-container">
 
 						<div id="carousel" class="wrap list_carousel responsive">
-							
+							<div id="hide-ajax" style="display: none"></div>
 							<ul id="foo7">
 
 							<?php while ( $produtos->have_posts() ) : $produtos->the_post(); ?>

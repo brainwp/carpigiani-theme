@@ -7,11 +7,10 @@ jQuery(function($) {
 		var id = $(this).attr('data-id');
 		//alert(post_id);
 		//$("#single-home-container").html("<div class='box'><span class='loader5'></span></div>");
-		$("#foo7").html("<div class='box-loader'><span class='clock'></span></div>");
+		$("#foo7").html(" ");
 		$.get(post_link, function( data ) {
-			$("#foo7").trigger("pause");
-			$("#foo7").html(data);
-			$("#foo7").trigger("play", true);
+			$('#hide-ajax').html(data);
+			$("#foo7").trigger("destroy");
 			$('#foo7').carouFredSel({
 				prev: '#prev-slider',
 				next: '#next-slider',
@@ -19,7 +18,7 @@ jQuery(function($) {
 				width: '100%',
 				scroll: {
 					items: 1,
-					pauseOnHover: true,
+					pauseOnHover: true
 				},
 				items: {
 					width: 250,
@@ -29,7 +28,13 @@ jQuery(function($) {
 					}
 				}
 			});
+			$('.item').each(function(){
+				var content = $(this).html();
+				var item = '<li class="item">' + content + '</li>';
+				$('#foo7').trigger( 'insertItem', [item, 1, false] );
+			});
 		});
+		$("#foo7").trigger("play", true);
 		$('#produtos-row').removeClass('cat-soft cat-restaurante cat-chocolate-e-creme cat-artesanal');
 		$('#produtos-row').addClass('cat-'+slug);
 		$('.cat-hover').each(function(){
