@@ -1004,6 +1004,7 @@ a:active {
 	background-color: #eef0ef;
 	overflow: hidden;
 	position: relative;
+	height: 400px;
 }
 
 
@@ -1296,7 +1297,10 @@ section.cat-chocolate-e-creme {
 	color: #ffffff;
 }
 #produtos-row{
-	transition:300ms all ease;
+	height: 400px;
+    padding: 10px 0;
+    position: relative;
+    transition: all 300ms ease 0s;
 }
 .mdiv {
 	background-color: none;
@@ -1508,7 +1512,7 @@ section.tit-chocolate-e-creme {
 }
 
 .body-category-produtos .wrap {
-    margin: 20px auto;
+    margin: 35px auto 0 auto;
     max-width: 980px !important;
     /* max-height: 330px; */
     overflow: hidden;
@@ -1675,7 +1679,7 @@ header {
 }
 .track-header {
     background-color: #008EC8;
-    height: 25px;
+    height: 18px;
     margin: 0 auto;
     max-width: 100%;
 }
