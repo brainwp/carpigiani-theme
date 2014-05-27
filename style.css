@@ -2265,7 +2265,6 @@ footer .social-icons #facebook{
 /*--------------------------------------------------------------
 ??? - Responsividade
 --------------------------------------------------------------*/
-
 @media (max-width: 600px) {
 	.body-content-home .wrap .box {
 		width: 50%;
@@ -2293,7 +2292,10 @@ footer .social-icons #facebook{
 		margin: 0 auto;
 		display: table;
 	}
-	
+	.content-page .wrap {
+		width: 80%;
+	}
+
 }
 
 @media (max-width: 360px) {
