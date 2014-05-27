@@ -1159,7 +1159,7 @@ a:active {
     font-size: 2.5em;
     margin: 0 auto;
     text-transform: lowercase;
-    width: 979px;
+    width: 980px;
 }
 .slider-content-produtos .master-wrap article.content-produtos {
     margin-bottom: -5px;
@@ -2294,6 +2294,11 @@ footer .social-icons #facebook{
 	}
 	.content-page .wrap {
 		width: 80%;
+	}
+	.slider-content .entry-title {
+	    width: 100%;
+	    font-size: 2em;
+		padding: 7px 15px;
 	}
 
 }
