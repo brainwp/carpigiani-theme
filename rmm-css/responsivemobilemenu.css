@@ -121,7 +121,7 @@ border-bottom-right-radius: 6px;
 	color:white;
 	text-align:left;
 	position:relative;
-	top: 6px;
+	/* top: 6px; */
 	background-image:url('../rmm-img/graphite-menu-bg.png');
 	background-repeat:repeat-x;
 	border-radius:6px;
