@@ -2276,6 +2276,24 @@ footer .social-icons #facebook{
 	#tidio-plugin-container-right-bottom {
 		display: none;
 	}
+	.full {
+		width: 99%;
+	}
+	.suporte-footer {
+		display: none;
+	}
+	#law {
+		float: inherit;
+		margin: 40px auto;
+		font-size: 0.9em;
+		display: table;
+	}
+	footer .social-icons {
+		float: inherit;
+		margin: 0 auto;
+		display: table;
+	}
+	
 }
 
 @media (max-width: 360px) {
