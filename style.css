@@ -152,6 +152,7 @@ textarea {
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-weight: 300;
 	/*font-family: 'Montserrat Alternates', 'sans-serif';*/
 }
 h1 { font-size: 2.6em; }
@@ -788,7 +789,24 @@ a:active {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+.edit-link {
+	display: block;
+}
 
+.edit-link a {
+	text-decoration: none;
+	padding: 10px;
+	background: #008FCB; /* Azul padrão */
+	color: #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.edit-link a:hover {
+	background: #0177a9; /* Azul escuro */
+}
 .site-content .wrap {
 	max-width: 980px;
 	margin: 0 auto;
@@ -910,7 +928,7 @@ a:active {
 --------------------------------------------------------------*/
 .slider-content-home .wrap {
 	max-width: 980px;
-	margin: 0 auto;
+	margin: 55px auto 0;
 	overflow: hidden;
 }
 .list_carousel {
@@ -931,7 +949,7 @@ a:active {
 	text-align: left;
 	width: 100%;
 	max-width: 980px;
-	height: 280px;
+	height:343px;
 	padding: 0;
 	margin: 0 6px;
 	display: block;
@@ -968,7 +986,7 @@ a:active {
 }
 .prev {
 	position: absolute;
-	top: 115px;
+	top: 145px;
 	z-index: 2147483647;
 	-webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
@@ -984,7 +1002,7 @@ a:active {
 }
 .next {
 	position: absolute;
-	top: 115px;
+	top: 145px;
 	z-index: 2147483647;
 	padding: 15px 25px;
 	-webkit-border-radius: 25px;
@@ -1004,7 +1022,7 @@ a:active {
 	background-color: #eef0ef;
 	overflow: hidden;
 	position: relative;
-	height: 400px;
+	height: 350px;
 }
 
 
@@ -1257,15 +1275,18 @@ section.cat-soft {
 	background-color: #BFD6D0;
 	border-bottom: 2px solid #95B5AC;
 }
-
-section.cat-chocolate-e-creme {
+section.cat-chocolate, section.cat-chocolate-e-creme {
+	background-color: #8E857C;
+	border-bottom: 2px solid #605A54;
+}
+/* section.cat-chocolate-e-creme {
 	background-color: #8E857C;
 	border-bottom: 2px solid #605A54;
 }
 section.cat-chocolate-e-creme {
 	background-color: #8E857C;
 	border-bottom: 2px solid #605A54;
-}
+} */
 .cat-icon {
 	display: table;
 	margin: 0 auto;
@@ -1315,7 +1336,8 @@ section.cat-chocolate-e-creme {
 	background-color: #D2CB84;
 }
 .mdiv-8 {
-	background-color: #BFD6D0;
+	/* background-color: #BFD6D0; */
+	background-color: #EBDEED;
 }
 .cat-hover-artesenal:hover, .cat-hover-artesenal.active {
 	background-color: #EBDEED;
@@ -2006,21 +2028,22 @@ footer .social-icons #facebook{
 	background-color: #eef0ef;
 	overflow: hidden;
 	position: relative;
-	height: auto;
+	height: 415px;
 }
 
 .slider-content-single .master-wrap {
 	max-width: 980px;
-	margin: 0 auto;
+	margin: 35px auto 0;
 	overflow: hidden;
 }
 
 .slider-content-single .desc {
-	max-width: 400px;
+	max-width: 600px;
 	margin: 0 auto;
 	overflow: hidden;
 	float: left;
-	padding: 20px 30px 0 0;
+	/* padding: 20px 30px 0 0; */
+	padding: 0 0 0 18%;
 	font-size: 0.9em;
 }
 
@@ -2028,6 +2051,7 @@ footer .social-icons #facebook{
 	color: #255563;
 	font-size: 1.5em;
 	line-height: 1;
+	margin: 15px 0 15px 0;
 }
 
 .slider-content-single .desc h1 {
@@ -2038,9 +2062,11 @@ footer .social-icons #facebook{
 
 .slider-content-single .wrap {
 	max-width: 580px;
-	margin: 0 auto;
+	/* margin: 0 auto; */
+	margin: 0 10%;
 	overflow: hidden;
 	float: right;
+	width: 160px;
 }
 
 .slider-content-single .list_carousel li.item .image {
@@ -2098,7 +2124,8 @@ footer .social-icons #facebook{
 .footer-content-single .outras-categorias ul {
 	list-style: none;
 	padding: 0;
-	margin: 30px 0 0 0;
+	margin: 35px 0 0 0;
+	overflow: hidden;
 }
 
 .footer-content-single .outras-categorias ul li {
@@ -2127,7 +2154,7 @@ footer .social-icons #facebook{
 }
 
 .footer-content-single .outras-categorias ul li.soft {
-	background: url('images/icon-soft.png') 16px 8px no-repeat transparent;
+	background: url('images/icon-soft.png') 35px 8px no-repeat transparent;
 }
 
 .footer-content-single .outras-categorias ul li a {
@@ -2195,6 +2222,49 @@ footer .social-icons #facebook{
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
+/*--------------------------------------------------------------
+15.2 - Slider Archive Produtos
+--------------------------------------------------------------*/
+#cat-prod-container .caroufredsel_wrapper ul {
+	height: 350px;
+}
+
+#cat-prod-container ul li {
+	text-align: center;
+}
+
+#cat-prod-container ul li a.permalink {
+	text-decoration: none;
+	font-size: 1.2em;
+	padding: 5px;
+	display: block;
+}
+
+#cat-prod-container ul li img {
+	width: 100%;
+	max-height: 250px;
+	margin: 0 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+}
+
+#cat-prod-container .prev, #cat-prod-container .next {
+	top: 150px;
+}
+
+
+/*--------------------------------------------------------------
+??? - Plugins
+--------------------------------------------------------------*/
+.lazysocialbuttons {
+	height: auto !important;
+    padding: 10px 0 20px;
+}
+
+/*--------------------------------------------------------------
+??? - Responsividade
+--------------------------------------------------------------*/
 
 @media (max-width: 600px) {
 	.body-content-home .wrap .box {
@@ -2226,5 +2296,78 @@ footer .social-icons #facebook{
 #tidio-chat-popup .tidio-brand-logo {
 	display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
