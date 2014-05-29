@@ -1339,7 +1339,7 @@ section.cat-chocolate-e-creme {
 	/* background-color: #BFD6D0; */
 	background-color: #EBDEED;
 }
-.cat-hover-artesenal:hover, .cat-hover-artesenal.active {
+.cat-hover-artesanal:hover, .cat-hover-artesanal.active {
 	background-color: #EBDEED;
 }
 .cat-hover-restaurante:hover, .cat-hover-restaurante.active {
@@ -2296,7 +2296,7 @@ footer .social-icons #facebook{
 		width: 80%;
 	}
 	.slider-content .entry-title {
-	    width: 100%;
+	    width: 50%;
 	    font-size: 2em;
 		padding: 7px 15px;
 	}
@@ -2304,13 +2304,23 @@ footer .social-icons #facebook{
     	background: url("images/icon-small-soft.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	}
 	.icon-restaurante {
-    	background: url("images/icon-small-restaurante.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	    background: url("images/icon-small-restaurante.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	}
 	.icon-chocolate-e-creme {
     	background: url("images/icon-small-chocolate.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	}
 	.icon-artesanal {
-    	background: url("images/icon-small-soft.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    	background: url("images/icon-small-artesanal.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	}
+	.body-content-produtos .wrap .box {
+	    padding: inherit;
+	}
+	.cat-hover {
+		line-height: 1;
+		padding: 11px;
+	}
+	.cat-hover a:last-child {
+		font-size: 0.5em;
 	}
 	.cat-icon {
 	    display: table;
