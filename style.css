@@ -2316,8 +2316,8 @@ footer .social-icons #facebook{
 	    padding: inherit;
 	}
 	.cat-hover {
-		line-height: 1;
-		padding: 11px;
+		line-height: 0.4;
+    	padding: 15px;
 	}
 	.cat-hover a:last-child {
 		font-size: 0.5em;
@@ -2327,6 +2327,20 @@ footer .social-icons #facebook{
 	    height: 35px;
 	    margin: 0 auto;
 	    width: 35px;
+	}
+	#cat-prod-container ul li a.permalink {
+	    font-size: 0.9em;
+	}
+	#cat-prod-container ul li img {
+	    width: auto;
+	}
+
+}
+
+@media only screen and (max-device-width: 480px) {
+	.body-content-produtos .wrap .box {
+	    width: 20%;
+	    padding: 20px 0;
 	}
 
 }
