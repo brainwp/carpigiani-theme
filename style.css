@@ -2300,6 +2300,24 @@ footer .social-icons #facebook{
 	    font-size: 2em;
 		padding: 7px 15px;
 	}
+	.icon-soft {
+    	background: url("images/icon-small-soft.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	}
+	.icon-restaurante {
+    	background: url("images/icon-small-soft.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	}
+	.icon-chocolate-e-creme {
+    	background: url("images/icon-small-soft.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	}
+	.icon-artesanal {
+    	background: url("images/icon-small-soft.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	}
+	.cat-icon {
+	    display: table;
+	    height: 35px;
+	    margin: 0 auto;
+	    width: 35px;
+	}
 
 }
 
