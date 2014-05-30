@@ -2338,6 +2338,21 @@ footer .social-icons #facebook{
 	#law {
 	    margin: 0 auto 40px;
 	}
+	ul#foo5 li .excerpt {
+		display: none;
+	}
+	.list_carousel li.item .image {
+		width: 100%;
+	}
+	.list_carousel li.item .image img {
+	    margin: 0 auto;
+	    width: auto;
+	    height: 230px;
+	    margin: 0 35%;
+	}
+	.slider-content-home .wrap {
+		margin: 15px auto 0;
+	}
 
 }
 
