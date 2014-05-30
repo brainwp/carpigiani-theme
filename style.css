@@ -2353,6 +2353,74 @@ footer .social-icons #facebook{
 	.slider-content-home .wrap {
 		margin: 15px auto 0;
 	}
+	.master-wrap .desc {
+		display: none;
+	}
+	.content-single-produto {
+	    padding: 0 20px;
+	}
+	.content-single-produto h1 {
+	    font-size: 1.9em;
+	}
+	.slider-content-single {
+	    height: 300px;
+	}
+	.footer-content-single .outras-categorias {
+		float: inherit;
+		height: 170px;
+	}
+	.footer-content-single .outras-categorias ul li {
+	    border-radius: 5px 5px 5px 5px;
+	    float: left;
+	    height: 172px;
+	    margin-right: 5px;
+	    position: relative;
+	    text-align: center;
+	    text-transform: lowercase;
+	    width: 95px;
+	}
+	.footer-content-single .outras-categorias ul li.chocolate-e-creme {
+	    background: url("images/icon-small-chocolate.png") no-repeat scroll 35px 8px rgba(0, 0, 0, 0);
+	}
+	.footer-content-single .outras-categorias ul li.restaurante {
+	    background: url("images/icon-small-restaurante.png") no-repeat scroll 35px 8px rgba(0, 0, 0, 0);
+	}
+	.footer-content-single .outras-categorias ul li.artesanal {
+	    background: url("images/icon-small-artesanal.png") no-repeat scroll 35px 8px rgba(0, 0, 0, 0);
+	}
+	.footer-content-single .outras-categorias ul li a {
+	    padding: 47px 7px 0;
+	    width: 108px;
+	    font-size: 0.8em;
+	}
+	.footer-content-single .outros-produtos {
+	    width: 100%;
+	}
+	.caroufredsel_wrapper {
+		margin: 0 100px;
+	}
+	.slider-content-single .wrap {
+	    float: right;
+	    margin: 0 20%;
+	    max-width: 580px;
+	    overflow: hidden;
+	    width: 100%;
+	}
+	.list_carousel li.item {
+	    color: #005264;
+	    display: block;
+	    float: left;
+	    font-size: 0.8em;
+	    font-weight: lighter;
+	    height: 343px;
+	    margin: 0 6px;
+	    max-width: 980px;
+	    overflow: hidden;
+	    padding: 0;
+	    text-align: left;
+	    width: 100%;
+	    min-width: 360px;
+	}
 
 }
 
