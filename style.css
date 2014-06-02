@@ -2519,6 +2519,25 @@ footer .social-icons #facebook{
 	    display: inherit;
 	}
 
+	/* Responsive Blog */
+	.site-content .wrap #primary, .site-content .wrap-blog #primary {
+	    float: inherit;
+	    margin: 0 auto;
+	    max-width: 980px;
+	    width: 90%;
+	}
+	.site-content .wrap #secondary, .site-content .wrap-blog #secondary {
+	    float: left;
+	    padding-left: 10px;
+	    width: 97%;
+	}
+	.each-post h1 {
+	   font-size: 2em;
+	}
+	.content-single h1 {
+	    font-size: 2em;
+	}
+
 }
 
 @media only screen and (max-device-width: 480px) {
