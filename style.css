@@ -2314,7 +2314,7 @@ footer .social-icons #facebook{
 }
 
 #cat-prod-container ul li img {
-	width: 100%;
+	/* width: 100%; */
 	max-height: 250px;
 	margin: 0 15px;
 	-webkit-border-radius: 5px;
@@ -2324,6 +2324,16 @@ footer .social-icons #facebook{
 
 #cat-prod-container .prev, #cat-prod-container .next {
 	top: 150px;
+}
+.body-img-destaque {
+    width: 100%;
+    height: 433px;
+    background-color: #E8E3EC;
+}
+.body-img-destaque .img-destaque {
+	display: table;
+    margin: 0 auto;
+    width: 72%;
 }
 
 
