@@ -30,6 +30,17 @@ if ( ! isset( $_GET['p-type'] ) ) {
 			</section>
 			<!-- #carousel .slider-content-single -->
 
+			<?php //if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<section class="body-img-destaque">
+				<div class="img-destaque">
+						<?php $page->ID = '48'; ?> <!-- Post ID da page Produtos Admin -->
+						<?php echo get_the_post_thumbnail($page->ID, 'slider-cat-produto'); ?>
+				</div>
+			</section>
+			<?php //endwhile; else: ?>
+			<!-- <p><?php //_e('Sorry, no posts matched your criteria.'); ?></p> -->
+			<?php //endif; ?>
+
 			<section id="scroll" class="body-content body-content-produtos">
 				<div class="wrap">
 
