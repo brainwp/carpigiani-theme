@@ -791,7 +791,20 @@ a:active {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+.edit-link {
+	display: block;
+}
 
+.edit-link a {
+	text-decoration: none;
+	padding: 10px;
+	background: #008FCB; /* Azul padrão */
+	color: #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+}
 .edit-link {
 	display: block;
 }
@@ -810,7 +823,6 @@ a:active {
 .edit-link a:hover {
 	background: #0177a9; /* Azul escuro */
 }
-
 .site-content .wrap {
 	max-width: 980px;
 	margin: 0 auto;
@@ -932,7 +944,7 @@ a:active {
 --------------------------------------------------------------*/
 .slider-content-home .wrap {
 	max-width: 980px;
-	margin: 0 auto;
+	margin: 55px auto 0;
 	overflow: hidden;
 }
 .list_carousel {
@@ -953,7 +965,7 @@ a:active {
 	text-align: left;
 	width: 100%;
 	max-width: 980px;
-	height: 280px;
+	height:343px;
 	padding: 0;
 	margin: 0 6px;
 	display: block;
@@ -990,7 +1002,7 @@ a:active {
 }
 .prev {
 	position: absolute;
-	top: 115px;
+	top: 145px;
 	z-index: 2147483647;
 	-webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
@@ -1006,7 +1018,7 @@ a:active {
 }
 .next {
 	position: absolute;
-	top: 115px;
+	top: 145px;
 	z-index: 2147483647;
 	padding: 15px 25px;
 	-webkit-border-radius: 25px;
@@ -1026,6 +1038,7 @@ a:active {
 	background-color: #eef0ef;
 	overflow: hidden;
 	position: relative;
+	height: 350px;
 }
 
 
@@ -1162,7 +1175,7 @@ a:active {
     font-size: 2.5em;
     margin: 0 auto;
     text-transform: lowercase;
-    width: 979px;
+    width: 980px;
 }
 .slider-content-produtos .master-wrap article.content-produtos {
     margin-bottom: -5px;
@@ -1282,6 +1295,15 @@ section.cat-chocolate, section.cat-chocolate-e-creme {
 	background-color: #8E857C;
 	border-bottom: 2px solid #605A54;
 }
+/* section.cat-chocolate-e-creme {
+>>>>>>> produtos
+	background-color: #8E857C;
+	border-bottom: 2px solid #605A54;
+}
+section.cat-chocolate-e-creme {
+	background-color: #8E857C;
+	border-bottom: 2px solid #605A54;
+} */
 .cat-icon {
 	display: table;
 	margin: 0 auto;
@@ -1314,9 +1336,10 @@ section.cat-chocolate, section.cat-chocolate-e-creme {
 	color: #ffffff;
 }
 #produtos-row{
-	transition:300ms all ease;
-	padding: 10px 0;
-	position: relative;
+	height: 400px;
+    padding: 10px 0;
+    position: relative;
+    transition: all 300ms ease 0s;
 }
 .mdiv {
 	background-color: none;
@@ -1331,7 +1354,11 @@ section.cat-chocolate, section.cat-chocolate-e-creme {
 	background-color: #D2CB84;
 }
 .mdiv-8 {
-
+	/* background-color: #BFD6D0; */
+	background-color: #EBDEED;
+}
+.cat-hover-artesanal:hover, .cat-hover-artesanal.active {
+>>>>>>> produtos
 	background-color: #EBDEED;
 }
 .cat-hover-artesanal:hover, .cat-hover-artesanal.active {
@@ -1530,7 +1557,7 @@ section.tit-chocolate-e-creme {
 }
 
 .body-category-produtos .wrap {
-    margin: 20px auto;
+    margin: 35px auto 0 auto;
     max-width: 980px !important;
     /* max-height: 330px; */
     overflow: hidden;
@@ -1697,7 +1724,7 @@ header {
 }
 .track-header {
     background-color: #008EC8;
-    height: 25px;
+    height: 18px;
     margin: 0 auto;
     max-width: 100%;
 }
@@ -2024,21 +2051,22 @@ footer .social-icons #facebook{
 	background-color: #eef0ef;
 	overflow: hidden;
 	position: relative;
-	height: auto;
+	height: 415px;
 }
 
 .slider-content-single .master-wrap {
 	max-width: 980px;
-	margin: 0 auto;
+	margin: 35px auto 0;
 	overflow: hidden;
 }
 
 .slider-content-single .desc {
-	max-width: 400px;
+	max-width: 600px;
 	margin: 0 auto;
 	overflow: hidden;
 	float: left;
-	padding: 20px 30px 0 0;
+	/* padding: 20px 30px 0 0; */
+	padding: 0 0 0 18%;
 	font-size: 0.9em;
 }
 
@@ -2057,9 +2085,11 @@ footer .social-icons #facebook{
 
 .slider-content-single .wrap {
 	max-width: 580px;
-	margin: 0 auto;
+	/* margin: 0 auto; */
+	margin: 0 10%;
 	overflow: hidden;
 	float: right;
+	width: 160px;
 }
 
 .slider-content-single .list_carousel li.item .image {
@@ -2155,7 +2185,7 @@ footer .social-icons #facebook{
 }
 
 .footer-content-single .outras-categorias ul li.soft {
-	background: url('images/icon-soft.png') center 8px no-repeat transparent;
+	background: url('images/icon-soft.png') 35px 8px no-repeat transparent;
 }
 
 .footer-content-single .outras-categorias ul li a {
@@ -2223,8 +2253,49 @@ footer .social-icons #facebook{
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
+/*--------------------------------------------------------------
+15.2 - Slider Archive Produtos
+--------------------------------------------------------------*/
+#cat-prod-container .caroufredsel_wrapper ul {
+	height: 350px;
+}
+
+#cat-prod-container ul li {
+	text-align: center;
+}
+
+#cat-prod-container ul li a.permalink {
+	text-decoration: none;
+	font-size: 1.2em;
+	padding: 5px;
+	display: block;
+}
+
+#cat-prod-container ul li img {
+	/* width: 100%; */
+	width: auto;
+	max-height: 250px;
+	margin: 0 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+}
+
+#cat-prod-container .prev, #cat-prod-container .next {
+	top: 150px;
+}
+
 
 /*--------------------------------------------------------------
+??? - Plugins
+--------------------------------------------------------------*/
+.lazysocialbuttons {
+	height: auto !important;
+    padding: 10px 0 20px;
+}
+
+/*--------------------------------------------------------------
+<<<<<<< HEAD
 15.2 - Slider Archive Produtos
 --------------------------------------------------------------*/
 #cat-prod-container .caroufredsel_wrapper ul {
@@ -2265,6 +2336,8 @@ footer .social-icons #facebook{
 }
 
 /*--------------------------------------------------------------
+=======
+>>>>>>> produtos
 ??? - Responsividade
 --------------------------------------------------------------*/
 @media (max-width: 600px) {
@@ -2274,6 +2347,163 @@ footer .social-icons #facebook{
 	.body-content-home .wrap .box .icon {
 		max-height: 150px;
 	}
+	#tidio-plugin-container-right-bottom {
+		display: none;
+	}
+	.full {
+		width: 99%;
+	}
+	.suporte-footer {
+		display: none;
+	}
+	#law {
+		float: inherit;
+		margin: 40px auto;
+		font-size: 0.9em;
+		display: table;
+	}
+	footer .social-icons {
+		float: inherit;
+		margin: 0 auto;
+		display: table;
+	}
+	.content-page .wrap {
+		width: 80%;
+	}
+	.slider-content .entry-title {
+	    width: 50%;
+	    font-size: 2em;
+		padding: 7px 15px;
+	}
+	.icon-soft {
+    	background: url("images/icon-small-soft.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	}
+	.icon-restaurante {
+	    background: url("images/icon-small-restaurante.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	}
+	.icon-chocolate-e-creme {
+    	background: url("images/icon-small-chocolate.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	}
+	.icon-artesanal {
+    	background: url("images/icon-small-artesanal.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	}
+	.body-content-produtos .wrap .box {
+	    padding: inherit;
+	}
+	.cat-hover {
+		line-height: 0.4;
+    	padding: 15px;
+	}
+	.cat-hover a:last-child {
+		font-size: 0.5em;
+	}
+	.cat-icon {
+	    display: table;
+	    height: 35px;
+	    margin: 0 auto;
+	    width: 35px;
+	}
+	#cat-prod-container ul li a.permalink {
+	    font-size: 0.9em;
+	}
+	#cat-prod-container ul li img {
+	    width: auto;
+	}
+	#law {
+	    margin: 0 auto 40px;
+	}
+	ul#foo5 li .excerpt {
+		display: none;
+	}
+	.list_carousel li.item .image {
+		width: 100%;
+	}
+	.list_carousel li.item .image img {
+	    margin: 0 auto;
+	    width: auto;
+	    height: 230px;
+	    margin: 0 35%;
+	}
+	.slider-content-home .wrap {
+		margin: 15px auto 0;
+	}
+	.master-wrap .desc {
+		display: none;
+	}
+	.content-single-produto {
+	    padding: 0 20px;
+	}
+	.content-single-produto h1 {
+	    font-size: 1.9em;
+	}
+	.slider-content-single {
+	    height: 300px;
+	}
+	.footer-content-single .outras-categorias {
+		float: inherit;
+		height: 170px;
+	}
+	.footer-content-single .outras-categorias ul li {
+	    border-radius: 5px 5px 5px 5px;
+	    float: left;
+	    height: 172px;
+	    margin-right: 5px;
+	    position: relative;
+	    text-align: center;
+	    text-transform: lowercase;
+	    width: 95px;
+	}
+	.footer-content-single .outras-categorias ul li.chocolate-e-creme {
+	    background: url("images/icon-small-chocolate.png") no-repeat scroll 35px 8px rgba(0, 0, 0, 0);
+	}
+	.footer-content-single .outras-categorias ul li.restaurante {
+	    background: url("images/icon-small-restaurante.png") no-repeat scroll 35px 8px rgba(0, 0, 0, 0);
+	}
+	.footer-content-single .outras-categorias ul li.artesanal {
+	    background: url("images/icon-small-artesanal.png") no-repeat scroll 35px 8px rgba(0, 0, 0, 0);
+	}
+	.footer-content-single .outras-categorias ul li a {
+	    padding: 47px 7px 0;
+	    width: 108px;
+	    font-size: 0.8em;
+	}
+	.footer-content-single .outros-produtos {
+	    width: 100%;
+	}
+	.caroufredsel_wrapper {
+		margin: 0 100px;
+	}
+	.slider-content-single .wrap {
+	    float: right;
+	    margin: 0 20%;
+	    max-width: 580px;
+	    overflow: hidden;
+	    width: 100%;
+	}
+	.list_carousel li.item {
+	    color: #005264;
+	    display: block;
+	    float: left;
+	    font-size: 0.8em;
+	    font-weight: lighter;
+	    height: 343px;
+	    margin: 0 6px;
+	    max-width: 980px;
+	    overflow: hidden;
+	    padding: 0;
+	    text-align: left;
+	    width: 100%;
+	    min-width: 360px;
+	}
+
+}
+
+@media only screen and (max-device-width: 480px) {
+	.body-content-produtos .wrap .box {
+	    width: 20%;
+	    padding: 20px 0;
+	}
+
 }
 
 @media (max-width: 360px) {
@@ -2285,6 +2515,7 @@ footer .social-icons #facebook{
 		max-height: 100px;
 	}
 }
+
 @media (min-width: 768px) {
 	.rmm {
 		display: none;
@@ -2297,5 +2528,78 @@ footer .social-icons #facebook{
 #tidio-chat-popup .tidio-brand-logo {
 	display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

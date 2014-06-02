@@ -24,7 +24,7 @@ jQuery(function($) {
 				items: {
 					width: 250,
 					visible: {
-						min: 4,
+						min: 1, //4
 						max: 4
 					}
 				}
