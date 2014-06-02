@@ -2330,6 +2330,12 @@ footer .social-icons #facebook{
     height: 433px;
     background-color: #E8E3EC;
 }
+/* Somente para Chrome e Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.body-img-destaque {
+		height: 429px;
+	}
+}
 .body-img-destaque .img-destaque {
 	display: table;
     margin: 0 auto;
