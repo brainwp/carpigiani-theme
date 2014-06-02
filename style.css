@@ -2424,6 +2424,7 @@ footer .social-icons #facebook{
 	}
 	#cat-prod-container ul li img {
 	    width: auto;
+	    margin: 0 0 0 -65px;
 	}
 	#law {
 	    margin: 0 auto 40px;
@@ -2510,6 +2511,12 @@ footer .social-icons #facebook{
 	    text-align: left;
 	    width: 100%;
 	    min-width: 360px;
+	}
+	.body-img-destaque {
+	    height: 97px;
+	}
+	.body-img-destaque .img-destaque {
+	    display: inherit;
 	}
 
 }
