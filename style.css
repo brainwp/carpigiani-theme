@@ -2545,6 +2545,7 @@ footer .social-icons #facebook{
 	}
 	.widget {
 	    clear: both;
+	    width: 100%;
 	}
 	header {
 	    height: inherit;
@@ -2552,6 +2553,20 @@ footer .social-icons #facebook{
 	#secondary {
 		display:block;
 		margin:0 auto;
+		width:95%;
+	}
+	.logo {
+		margin: 30px 0 30px;
+	}
+	.page-title {
+	    font-size: 1.3em;
+	}
+	.entry-title {
+	    font-size: 2em;
+	}
+	.site-main {
+		margin:0 auto;
+		display:block;
 		width:95%;
 	}
 
