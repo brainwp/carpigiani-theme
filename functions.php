@@ -320,3 +320,13 @@ echo '
 </style>
 ';
 }*/
+
+/**
+* Don't show version the wordepres.
+*/
+remove_action('wp_head', 'wp_generator');
+
+/**
+* Desable DEBUG.
+*/
+define('WP_DEBUG', false);
