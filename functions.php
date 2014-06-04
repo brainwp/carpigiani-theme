@@ -305,8 +305,8 @@ function carpigiani_custom_logo_login() {
 	<style type="text/css">
 		body.login div#login h1 a {
 			background-image:url('.get_bloginfo('template_directory').'/images/adm/logo-login.png) !important;
-			background-size: 317px 129px;
-			padding: 30px 120px;
+			background-size: 277px 109px;
+			padding: 20px 120px;
 		}
 	</style>
 	';

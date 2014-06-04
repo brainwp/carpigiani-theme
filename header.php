@@ -111,7 +111,7 @@
 
 				</div><!-- #site-navigation -->
 
-				<form id="search-form" role="search" method="get" id="searchform" class="search-form" action="<?php echo home_url( '/' ); ?>">
+				<form id="search-form" role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
 					<div class="body-search">
 						<div class="wrapper-simple">
 							<input type="text" placeholder="Pesquisa" name="s" id="s" value="<?php the_search_query(); ?>">
