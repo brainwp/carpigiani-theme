@@ -13,19 +13,22 @@ get_header(); ?>
 	.flex-container {
 		max-width: 980px;
 		margin: 0 auto;
-		display: -webkit-flex;
+		/* display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
 		display: -o-flex;
-    	display: flex;
+		display: flex; */
     	flex-wrap: wrap; /* Quebra de linha */
     	/* -webkit-flex-flow: column;
     	flex-flow: column; */
 	}
 	.flex-container div {
-    	/* margin:10px; */
+    	/* margin:10px;
     	width:auto;
-    	height:176px;
+    	height:176px; */
+
+    	height: 376px;
+    	width: auto;
 	}
 	.flex-container div img {
     	-webkit-flex:1 1 auto;
