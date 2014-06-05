@@ -1172,7 +1172,6 @@ a:active {
     display: table;
     font-size: 2.5em;
     margin: 0 auto;
-    text-transform: lowercase;
     width: 980px;
 }
 .slider-content-produtos .master-wrap article.content-produtos {
@@ -1229,7 +1228,6 @@ a:active {
     color: #6E7073;
     font-size: 1.10em;
     text-decoration: none;
-    text-transform: lowercase;
 }
 .body-category-produtos {
 	clear: both;
@@ -2127,7 +2125,6 @@ footer .social-icons #facebook{
 
 .footer-content-single h3 {
 	color: #295263;
-	text-transform: lowercase;
 	font-size: 1.6em;
 	text-align: center;
 }
