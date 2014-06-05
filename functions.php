@@ -362,7 +362,8 @@ if (isset($_GET['activated']) && is_admin()){
 		    $terms = array( 'artesanal','chocolate e creme','soft','restaurante' );
 		    foreach( $terms as $term ){
 		        if( !term_exists( $term, 'tipos' ) ){
-		            wp_insert_term( $term, 'tipos', array( 'slug' => $term ) );
+		        	$desc = "Adicione aqui a descrição para o tipo de produto " . $term . ".";
+		            wp_insert_term( $term, 'tipos', array( 'slug' => $term, 'description' => $desc ) );
 		        }
 		    }
 		}
