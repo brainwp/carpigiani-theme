@@ -4,6 +4,8 @@ var next_move = "expand";
 $(document).ready(function () {
 
 	$(".wrapper-simple").click(function() {
+		$('.wrapper-simple img').addClass( 'iconChange' ). removeClass( 'searchBlue' );
+	    $('input').css('background', '#008EC8');
 	    console.log(next_move);
 	    var css = {};
 	    if (next_move == "expand") {
@@ -17,7 +19,7 @@ $(document).ready(function () {
 	            width: '300px',
 	            /*height: '152px'*/
 	        };     
-	        //console.log('hi');
+	        console.log('hi');
 	        next_move = "expand";
 	    }
 	    $(this).animate(css, 200);
