@@ -356,4 +356,46 @@ if (isset($_GET['activated']) && is_admin()){
 				update_option( 'permalink_structure', '/%postname%/' );
 		}
 	}
+	function default_terms() {
+		$terms = get_terms( 'tipos', array( 'hide_empty' => false ) );
+		if( empty( $terms ) ){
+		    $terms = array( 'artesanal','chocolate e creme','soft','restaurante' );
+		    foreach( $terms as $term ){
+		        if( !term_exists( $term, 'tipos' ) ){
+		            wp_insert_term( $term, 'tipos', array( 'slug' => $term ) );
+		        }
+		    }
+		}
+	}
+
+	add_action( 'after_switch_theme', 'default_terms' );
 }
+
+function show_message_admin( $message ) {
+	echo '<div id="message" class="error">';
+	echo "<p>$message</p></div>";
+}
+
+function check_plugins() {
+	$m = 'É necessário instalar, ativar e configurar o(s) plugin(s)';
+	if ( !is_plugin_active( 'tidio-live-chat/tidio-elements.php' ) ) {
+		$m .= ' <a target= \"_blank\" href=\"https://wordpress.org/plugins/tidio-live-chat/\">Tidio Live Chat</a>';
+	}
+	if ( !is_plugin_active( 'lazy-social-buttons/lazy-social-buttons.php' ) ) {
+		$m .= ', <a target= \"_blank\" href=\"https://wordpress.org/plugins/lazy-social-buttons/\">Lazy Social Buttons</a>';
+	}
+	if ( !is_plugin_active( 'alo-easymail/alo-easymail.php' ) ) {
+		$m .= ', <a target= \"_blank\" href=\"http://wordpress.org/plugins/alo-easymail/\">ALO EasyMail Newsletter</a>';
+	}
+	if ( !is_plugin_active( 'jetpack/jetpack.php' ) ) {
+		$m .= ', <a target= \"_blank\" href=\"http://wordpress.org/plugins/jetpack/\">JetPack</a>';
+	}
+	if ( !is_plugin_active( 'login-lockdown/loginlockdown.php' ) ) {
+		$m .= ', <a target= \"_blank\" href=\"https://wordpress.org/plugins/login-lockdown/\">Login LockDown</a>';
+	}
+	$m .= '.';
+	if ( strpos( $m,'target' ) == true ) {
+		show_message_admin( $m );
+	}
+}
+add_action( 'admin_notices', 'check_plugins' );
