@@ -11,6 +11,7 @@ get_header(); ?>
 
 <style>
 	.flex-container {
+		display: table;
 		max-width: 980px;
 		margin: 0 auto;
 		/* display: -webkit-flex;

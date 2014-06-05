@@ -13,9 +13,9 @@
    cursor: default;
    background: #fff url('images/bgimg.jpg') no-repeat center center;
 }
-.view .mask,.view .content {
+.view .mask, .view .content {
    width: 176px;
-   height: 176px;
+   height: 376px;
    position: absolute;
    overflow: hidden;
    top: 0;

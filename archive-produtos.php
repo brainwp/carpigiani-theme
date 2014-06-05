@@ -35,8 +35,8 @@ if ( ! isset( $_GET['p-type'] ) ) {
 				<div class="img-destaque">
 						<?php $page->ID = '48'; ?> <!-- Post ID da page Produtos Admin -->
 						<?php echo get_the_post_thumbnail($page->ID, 'slider-cat-produto'); ?>
-				</div>
-			</section>
+				</div><!-- .img-destaque -->
+			</section><!-- .body-img-destaque -->
 			<?php //endwhile; else: ?>
 			<!-- <p><?php //_e('Sorry, no posts matched your criteria.'); ?></p> -->
 			<?php //endif; ?>
