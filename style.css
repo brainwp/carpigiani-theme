@@ -834,11 +834,9 @@ a:active {
 	overflow: hidden;
 }
 .no-results p, .no-results form {
-	margin-left: 20px;
 }
 .no-results h1 {
 	font-size: 42px;
-	font-weight: bold;
 }
 .site-content .wrap #primary, .site-content .wrap-blog #primary {
 	float: left;
@@ -1716,11 +1714,10 @@ object {
 /*--------------------------------------------------------------
 13.0 - Header
 --------------------------------------------------------------*/
-header {
+header.site-header {
 	float: left;
 	width: 100%;
 	height: 215px;
-	background-color: #FFFFFF;
 }
 .track-header {
     background-color: #008EC8;
@@ -1984,8 +1981,6 @@ footer .social-icons #facebook{
 }
 
 
-
-
 /** Home
 *	- geral
 */
@@ -1995,7 +1990,6 @@ footer .social-icons #facebook{
 	cursor:pointer;
 }
 .search-menu {
-	
 }
 .i-search {
 	float: left;
@@ -2005,18 +1999,16 @@ footer .social-icons #facebook{
 }
 .content-search header {
 	height: inherit;
-    padding: 10px 20px 10px 0;
+    padding: 0 20px 10px 0;
 }
 .content-search h1.page-title {
-    padding: 10px 20px;	
+    padding: 0 0 10px 0;	
 }
 .content-search h1 {
-	/* background-color: #008FCB;
-	    color: #FFFFFF; */
     display: table;
-    font-size: 28px;
+    font-size: 2.6em;
     height: inherit;
-    padding: 10px 20px 10px 0;
+    padding: 10px 0 10px 0;
     width: auto;
 }
 .content-search .entry-title a {
