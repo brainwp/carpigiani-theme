@@ -81,7 +81,7 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'slider-cat-produto', 980, 433, true );
 	add_image_size( 'th-cat-post', 140, 245, true );
 	add_image_size( 'slider-archive-produto', 240, 280, true );
-	add_image_size( 'th-taxonomy', 176, 176, true );
+	add_image_size( 'th-taxonomy', 176, 376, true );
 }
 
 	// This theme uses wp_nav_menu() in one location.
