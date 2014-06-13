@@ -186,7 +186,7 @@ if ( ! isset( $_GET['p-type'] ) ) {
 		    	<a href="<?php the_permalink(); ?>">
 		    		<?php the_post_thumbnail( 'slider-archive-produto' ); ?>
 		    	</a>
-				<a class="permalink" href="<?php the_permalink(); ?>">AJAX  //<?php the_title(); ?></a>
+				<a class="permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			</li><!-- .item -->    
 
 		<?php endwhile; // end of the loop. ?>

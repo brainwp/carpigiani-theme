@@ -1358,13 +1358,11 @@ section.cat-chocolate-e-creme {
 	background-color: #EBDEED;
 }
 .cat-hover-artesanal:hover, .cat-hover-artesanal.active {
->>>>>>> produtos
 	background-color: #EBDEED;
 }
-.cat-hover-artesanal:hover, .cat-hover-artesanal.active {
-
+/*.cat-hover-artesanal:hover, .cat-hover-artesanal.active {
 	background-color: #BFD6D0;
-}
+}*/
 .cat-hover-restaurante:hover, .cat-hover-restaurante.active {
 	background-color: #D2CB84;
 }
@@ -2055,26 +2053,31 @@ footer .social-icons #facebook{
 }
 
 .slider-content-single .master-wrap {
-	max-width: 980px;
+	/*max-width: 980px;*/
+	max-width: 780px;
 	margin: 35px auto 0;
 	overflow: hidden;
 }
 
 .slider-content-single .desc {
-	max-width: 600px;
+	/*max-width: 600px;*/
+	max-width: 460px;
 	margin: 0 auto;
 	overflow: hidden;
-	float: left;
+	/*float: left;*/
+	float: right;
 	/* padding: 20px 30px 0 0; */
-	padding: 0 0 0 18%;
+	/*padding: 0 0 0 18%;*/
 	font-size: 0.9em;
 }
 
 .slider-content-single .desc h2 {
 	color: #255563;
-	font-size: 1.5em;
+	font-size: 3.5em;
+	/*font-size: 1.5em;*/
 	line-height: 1;
-	margin: 15px 0 15px 0;
+	/*margin: 15px 0 15px 0;*/
+	margin: 0 0 50px;
 }
 
 .slider-content-single .desc h1 {
@@ -2491,8 +2494,9 @@ footer .social-icons #facebook{
 		margin: 0 100px;
 	}
 	.slider-content-single .wrap {
-	    float: right;
-	    margin: 0 20%;
+	    /*float: right;*/
+	    float: left;
+	    /*margin: 0 20%;*/
 	    max-width: 580px;
 	    overflow: hidden;
 	    width: 100%;

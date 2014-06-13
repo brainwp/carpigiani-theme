@@ -23,8 +23,9 @@ jQuery(function($) {
 				},
 				items: {
 					width: 250,
+					height: 280,
 					visible: {
-						min: 1, //4
+						min: 4,
 						max: 4
 					}
 				}
@@ -49,6 +50,7 @@ jQuery(function($) {
 		},
 		items: {
 			width: 250,
+			height: 280,
 			visible: {
 				min: 1,
 				max: 4
