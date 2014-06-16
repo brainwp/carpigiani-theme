@@ -18,7 +18,7 @@ jQuery(function($) {
 				responsive: true,
 				width: '100%',
 				scroll: {
-					items: 4,
+					items: 1,
 					pauseOnHover: true
 				},
 				items: {
