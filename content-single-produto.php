@@ -14,7 +14,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'content-single-produto' ); ?>>
 
 	<div class="thumb">
-		<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail( 'imagem-destacada' ); ?>
 	</div>
 	<div class="entry-content">
 		<h1 class="entry-title"><?php the_title(); ?> <span><?php the_field( 'sub_titulo' ); ?></span></h1>
