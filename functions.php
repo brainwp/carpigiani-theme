@@ -327,11 +327,6 @@ echo '
 remove_action('wp_head', 'wp_generator');
 
 /**
-* Desable DEBUG.
-*/
-define('WP_DEBUG', false);
-
-/**
  * Cria página automaticamente ao ativer o tema.
  * Testado em WP 3.8.1
  */
