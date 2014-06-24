@@ -2039,6 +2039,7 @@ footer .social-icons #facebook{
 15.1 - Single Produtos
 --------------------------------------------------------------*/
 .slider-content-single {
+	display: none;
 	width: 100%;
 	background-color: #eef0ef;
 	overflow: hidden;
@@ -2096,6 +2097,18 @@ footer .social-icons #facebook{
 	margin: 20px auto;
 	color: #666;
 	overflow: hidden;
+}
+
+.content-single-produto .thumb {
+	width: 30%;
+	max-width: 300px;
+	float: left;
+}
+
+.content-single-produto .entry-content {
+	width: 70%;
+	max-width: 500px;
+	float: left;
 }
 
 .content-single-produto h1 {
