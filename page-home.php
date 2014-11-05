@@ -21,7 +21,7 @@ get_header(); ?>
 					<?php $img = get_post_meta( get_the_ID(), 'image_slider_home', true ); ?>
 					<div class="image">
 						<?php if($img !== false && !empty($img)): ?>
-						   <?php $img = wp_get_attachment_image_src( $img, 'image_slider_home', false ); ?>
+						   <?php $img = wp_get_attachment_image_src( $img, 'slider-home', false ); ?>
 						   <img src="<?php echo $img[0]; ?>" width="<?php echo $img[1]; ?>" height="<?php echo $img[2]; ?>">
 						<?php endif; ?>
 					</div><!-- .image -->
