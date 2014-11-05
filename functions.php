@@ -76,8 +76,8 @@ function carpigiani_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 if ( function_exists( 'add_image_size' ) ) { 
-	//add_image_size( 'slider-home', 600, 290, true );
-	add_image_size( 'slider-home', 210, 343, true );
+	add_image_size( 'slider-home', 630, 290, true );
+	//add_image_size( 'slider-home', 210, 343, true );
 	add_image_size( 'slider-cat-produto', 980, 433, true );
 	add_image_size( 'th-cat-post', 140, 245, true );
 	add_image_size( 'slider-archive-produto', 240, 280, true );
@@ -255,7 +255,7 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_545a8a9f509f8',
-				'label' => 'Selecione a imagem do slider',
+				'label' => 'Selecione a imagem do slider com as dimensões de 630 x 290px',
 				'name' => 'image_slider_home',
 				'type' => 'image',
 				'save_format' => 'id',

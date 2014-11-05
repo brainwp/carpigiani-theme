@@ -34,7 +34,7 @@ if ( ! isset( $_GET['p-type'] ) ) {
 			<section class="body-img-destaque">
 				<div class="img-destaque">
 						<?php $page->ID = '48'; ?> <!-- Post ID da page Produtos Admin -->
-						<?php echo get_the_post_thumbnail($page->ID, 'slider-cat-produto'); ?>
+						<?php echo get_the_post_thumbnail($page->ID, 'th-cat-post'); ?>
 				</div><!-- .img-destaque -->
 			</section><!-- .body-img-destaque -->
 			<?php //endwhile; else: ?>
@@ -119,7 +119,7 @@ if ( ! isset( $_GET['p-type'] ) ) {
 							
 								<li class="item">        
 							    	<a href="<?php the_permalink(); ?>">
-							    		<?php the_post_thumbnail( 'slider-archive-produto' ); ?>
+							    		<?php the_post_thumbnail( 'th-cat-post' ); ?>
 							    	</a>
 									<a class="permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>	
 								</li><!-- .item -->    
@@ -184,7 +184,7 @@ if ( ! isset( $_GET['p-type'] ) ) {
 
 			<li class="item">        
 		    	<a href="<?php the_permalink(); ?>">
-		    		<?php the_post_thumbnail( 'slider-archive-produto' ); ?>
+		    		<?php the_post_thumbnail( 'th-cat-post' ); ?>
 		    	</a>
 				<a class="permalink" href="<?php the_permalink(); ?>">AJAX  //<?php the_title(); ?></a>
 			</li><!-- .item -->    

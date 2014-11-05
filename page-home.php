@@ -22,7 +22,7 @@ get_header(); ?>
 					<div class="image">
 						<?php if($img !== false && !empty($img)): ?>
 						   <?php $img = wp_get_attachment_image_src( $img, 'slider-home', false ); ?>
-						   <img src="<?php echo $img[0]; ?>" width="<?php echo $img[1]; ?>" height="<?php echo $img[2]; ?>">
+						   <a href="<?php the_permalink(); ?>"><img src="<?php echo $img[0]; ?>" width="<?php echo $img[1]; ?>" height="<?php echo $img[2]; ?>"></a>
 						<?php endif; ?>
 					</div><!-- .image -->
 				</li><!-- .item -->
