@@ -247,6 +247,42 @@ if(function_exists("register_field_group"))
 	));
 }
 
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_imagem-do-slider-na-home',
+		'title' => 'Imagem do slider na Home',
+		'fields' => array (
+			array (
+				'key' => 'field_545a8a9f509f8',
+				'label' => 'Selecione a imagem do slider',
+				'name' => 'image_slider_home',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'produtos',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
 
 /**
 * Disable Admin Bar for All Users.
