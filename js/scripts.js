@@ -43,6 +43,7 @@ jQuery(function($) {
 		$('.cat-hover').each(function(){
 			$(this).removeClass('active');
 		});
+		$('.cat-hover.active').removeClass('active');
 		$(this).addClass('active');
 	});
 	$('#foo7').carouFredSel({
