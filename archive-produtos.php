@@ -137,6 +137,7 @@ if ( ! isset( $_GET['p-type'] ) ) {
 						<div class="clearfix"></div>
 	                </div>
 				</section><!-- .body-category-produtos -->
+				<div id="ajax-container-hide" style="display:none"></div><!-- #ajax-container-hide -->
 
 		</main>
 		<!-- #main -->
