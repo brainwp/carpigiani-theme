@@ -34,7 +34,7 @@ if ( ! isset( $_GET['p-type'] ) ) {
 			<section class="body-img-destaque">
 				<div class="img-destaque">
 						<?php $page->ID = '48'; ?> <!-- Post ID da page Produtos Admin -->
-						<?php echo get_the_post_thumbnail($page->ID, 'th-cat-post'); ?>
+						<?php echo get_the_post_thumbnail($page->ID, 'slider-cat-produto'); ?>
 				</div><!-- .img-destaque -->
 			</section><!-- .body-img-destaque -->
 			<?php //endwhile; else: ?>
