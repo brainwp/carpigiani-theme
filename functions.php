@@ -414,17 +414,11 @@ function check_plugins() {
 	if ( !is_plugin_active( 'tidio-live-chat/tidio-elements.php' ) ) {
 		$m .= ' <a target= \"_blank\" href=\"https://wordpress.org/plugins/tidio-live-chat/\">Tidio Live Chat</a>';
 	}
-	if ( !is_plugin_active( 'lazy-social-buttons/lazy-social-buttons.php' ) ) {
-		$m .= ', <a target= \"_blank\" href=\"https://wordpress.org/plugins/lazy-social-buttons/\">Lazy Social Buttons</a>';
-	}
 	if ( !is_plugin_active( 'alo-easymail/alo-easymail.php' ) ) {
 		$m .= ', <a target= \"_blank\" href=\"http://wordpress.org/plugins/alo-easymail/\">ALO EasyMail Newsletter</a>';
 	}
 	if ( !is_plugin_active( 'jetpack/jetpack.php' ) ) {
 		$m .= ', <a target= \"_blank\" href=\"http://wordpress.org/plugins/jetpack/\">JetPack</a>';
-	}
-	if ( !is_plugin_active( 'login-lockdown/loginlockdown.php' ) ) {
-		$m .= ', <a target= \"_blank\" href=\"https://wordpress.org/plugins/login-lockdown/\">Login LockDown</a>';
 	}
 	$m .= '.';
 	if ( strpos( $m,'target' ) == true ) {
