@@ -41,9 +41,8 @@ jQuery(function($) {
 		$('#produtos-row').removeClass('cat-soft cat-restaurante cat-chocolate-e-creme cat-artesanal');
 		$('#produtos-row').addClass('cat-'+slug);
 		$('.cat-hover').each(function(){
-			$(this).removeClass('active');
+			$(this).removeClass('active mdiv-5 mdiv-6 mdiv-7 mdiv-8');
 		});
-		$('.cat-hover.active').removeClass('active');
 		$(this).addClass('active');
 	});
 	$('#foo7').carouFredSel({
