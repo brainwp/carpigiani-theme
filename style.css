@@ -1830,12 +1830,13 @@ header .responsive img {
 }
 .wrapper-simple {
 	box-shadow: none;
+	cursor: pointer;
     height: 46px;
     overflow: hidden;
     padding: 0 5px;
     position: absolute;
     text-align: center;
-    top: 101px;
+    top: 112px;
     width: 37px;	
 }
 .wrapper-simple input[type=submit] {
@@ -1875,7 +1876,7 @@ header .responsive img {
 	z-index: 1;
 	padding-left: 2em;
 	margin-left: .2em; */
-	padding: 0 10px 0 20px;
+	padding: 0 10px 0 28px;
 	color: #FFFFFF;
 	background-color: inherit;
 	font-style: italic;
