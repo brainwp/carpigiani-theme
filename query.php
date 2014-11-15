@@ -162,6 +162,7 @@ function _query_produtos() {
 			) );
 		}
 		if($type == 'artesanal'){
+			echo 'oia';
 			$_query->titulo = 'Produtos';
 			$wp_query = new WP_Query( array(
 				'post_type' => 'produtos',

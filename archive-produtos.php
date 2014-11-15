@@ -69,11 +69,11 @@ if ( ! isset( $_GET['p-type'] ) ) {
 						$category_slug = get_category_link( $category->slug );
 						if($category->slug == 'soft'){
 							?>
-							<div id="boxe" class="box" data-category="data-<?php echo $cat_ID; ?>">
+							<div class="box" data-category="data-<?php echo $cat_ID; ?>">
 
 								<div id="mdiv-<?php echo $cat_ID; ?>" class="cat-hover cat-hover-<?php echo $category->slug ?> mdiv active" rel="<?php echo get_bloginfo( 'url' ) . '/produtos/?p-type=' . $category->slug; ?>" href="#scroll" data-class-slug="<?php echo $category->slug; ?>" data-id="<?php echo $cat_ID; ?>">
 
-									<a id="trick" class="trick trick-<?php echo $category->slug ?>">
+									<a class="trick trick-<?php echo $category->slug ?>">
 										<span class="cat-icon icon-<?php echo $category->slug ?>"></span>
 										<span class="excerpt"><a rel="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
 									</a>
@@ -85,11 +85,11 @@ if ( ! isset( $_GET['p-type'] ) ) {
 								}
 								else{
 								?>
-						<div id="boxe" class="box" data-category="data-<?php echo $cat_ID; ?>">
+						<div class="box" data-category="data-<?php echo $cat_ID; ?>">
 
 							<div id="mdiv-<?php echo $cat_ID; ?>" class="cat-hover cat-hover-<?php echo $category->slug ?> mdiv" rel="<?php echo get_bloginfo( 'url' ) . '/produtos/?p-type=' . $category->slug; ?>" href="#scroll" data-class-slug="<?php echo $category->slug; ?>" data-id="<?php echo $cat_ID; ?>">
 
-								<a id="trick" class="trick trick-<?php echo $category->slug ?>">
+								<a class="trick trick-<?php echo $category->slug ?>">
 									<span class="cat-icon icon-<?php echo $category->slug ?>"></span>
 									<span class="excerpt"><a rel="<?php echo esc_url( $category_link ); ?>"><?php echo $category->name; ?></a></span>
 								</a>
@@ -119,7 +119,7 @@ if ( ! isset( $_GET['p-type'] ) ) {
 							
 								<li class="item">        
 							    	<a href="<?php the_permalink(); ?>">
-							    		<?php the_post_thumbnail( 'slider-archive-produto' ); ?>
+							    		<?php the_post_thumbnail( 'th-cat-post' ); ?>
 							    	</a>
 									<a class="permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>	
 								</li><!-- .item -->    
@@ -137,6 +137,7 @@ if ( ! isset( $_GET['p-type'] ) ) {
 						<div class="clearfix"></div>
 	                </div>
 				</section><!-- .body-category-produtos -->
+				<div id="ajax-container-hide" style="display:none"></div><!-- #ajax-container-hide -->
 
 		</main>
 		<!-- #main -->
@@ -184,9 +185,9 @@ if ( ! isset( $_GET['p-type'] ) ) {
 
 			<li class="item">        
 		    	<a href="<?php the_permalink(); ?>">
-		    		<?php the_post_thumbnail( 'slider-archive-produto' ); ?>
+		    		<?php the_post_thumbnail( 'th-cat-post' ); ?>
 		    	</a>
-				<a class="permalink" href="<?php the_permalink(); ?>">AJAX  //<?php the_title(); ?></a>
+				<a class="permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			</li><!-- .item -->    
 
 		<?php endwhile; // end of the loop. ?>

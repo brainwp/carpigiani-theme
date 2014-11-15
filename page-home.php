@@ -18,7 +18,13 @@ get_header(); ?>
 							Veja <?php the_title(); ?> &gt;&gt;
 						</a><!-- .btn -->		
 					</div><!-- .excerpt -->
-					<div class="image"><?php the_post_thumbnail( 'slider-home' ); ?></div><!-- .image -->
+					<?php $img = get_post_meta( get_the_ID(), 'image_slider_home', true ); ?>
+					<div class="image">
+						<?php if($img !== false && !empty($img)): ?>
+						   <?php $img = wp_get_attachment_image_src( $img, 'slider-home', false ); ?>
+						   <a href="<?php the_permalink(); ?>"><img src="<?php echo $img[0]; ?>" width="<?php echo $img[1]; ?>" height="<?php echo $img[2]; ?>"></a>
+						<?php endif; ?>
+					</div><!-- .image -->
 				</li><!-- .item -->
 			<?php endwhile;  wp_reset_query(); ?>
 

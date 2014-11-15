@@ -942,9 +942,10 @@ a:active {
 --------------------------------------------------------------*/
 .slider-content-home .wrap {
 	max-width: 980px;
-	margin: 55px auto 0;
+	margin: 28px auto 0;
 	overflow: hidden;
 }
+
 .list_carousel {
 	margin: 0;
 	width: 100%;
@@ -977,10 +978,12 @@ a:active {
 	padding: 20px 20px 0 0;
 }
 .list_carousel li.item .image {
+	border-radius: 4px;
 	float: right;
 	width: 65%;
-	height: 280px;
+	height: 290px;
 	text-align: right;
+	overflow: hidden;
 }
 .list_carousel li.item .btn {
 	padding: 10px 12px;
@@ -2037,6 +2040,7 @@ footer .social-icons #facebook{
 15.1 - Single Produtos
 --------------------------------------------------------------*/
 .slider-content-single {
+	display: none;
 	width: 100%;
 	background-color: #eef0ef;
 	overflow: hidden;
@@ -2094,6 +2098,19 @@ footer .social-icons #facebook{
 	margin: 20px auto;
 	color: #666;
 	overflow: hidden;
+}
+
+.content-single-produto .thumb {
+	width: 30%;
+	max-width: 340px;
+	float: left;
+}
+
+.content-single-produto .entry-content {
+	width: 70%;
+	max-width: 435px;
+	margin-left: 25px;
+	float: left;
 }
 
 .content-single-produto h1 {
@@ -2591,78 +2608,3 @@ footer .social-icons #facebook{
 #tidio-chat-popup .tidio-brand-logo {
 	display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

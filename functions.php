@@ -76,12 +76,13 @@ function carpigiani_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 if ( function_exists( 'add_image_size' ) ) { 
-	//add_image_size( 'slider-home', 600, 290, true );
-	add_image_size( 'slider-home', 210, 343, true );
+	add_image_size( 'slider-home', 630, 290, true );
+	//add_image_size( 'slider-home', 210, 343, true );
 	add_image_size( 'slider-cat-produto', 980, 433, true );
 	add_image_size( 'th-cat-post', 140, 245, true );
 	add_image_size( 'slider-archive-produto', 240, 280, true );
 	add_image_size( 'th-taxonomy', 176, 376, true );
+	add_image_size( 'imagem-destacada', 340, 540, array( 'center', 'center' ) );
 }
 
 	// This theme uses wp_nav_menu() in one location.
@@ -196,14 +197,9 @@ require_once ( get_stylesheet_directory() . '/router.php' );
 require_once ( get_stylesheet_directory() . '/inc/widget-tipos-produtos.php' );
 
 /**
- * Widget Tipos de Produtos
- */
-require_once ( get_stylesheet_directory() . '/inc/widget-tipos-produtos.php' );
-
-/**
  * ACF
  */
-define( 'ACF_LITE' , true );
+//define( 'ACF_LITE' , true );
 require get_template_directory() . '/inc/advanced-custom-fields/acf.php';
 
 if(function_exists("register_field_group"))
@@ -246,6 +242,42 @@ if(function_exists("register_field_group"))
 	));
 }
 
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_imagem-do-slider-na-home',
+		'title' => 'Imagem do slider na Home',
+		'fields' => array (
+			array (
+				'key' => 'field_545a8a9f509f8',
+				'label' => 'Selecione a imagem do slider com as dimensões de 630 x 290px',
+				'name' => 'image_slider_home',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'produtos',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
 
 /**
 * Disable Admin Bar for All Users.
@@ -327,11 +359,6 @@ echo '
 remove_action('wp_head', 'wp_generator');
 
 /**
-* Desable DEBUG.
-*/
-define('WP_DEBUG', false);
-
-/**
  * Cria página automaticamente ao ativer o tema.
  * Testado em WP 3.8.1
  */
@@ -382,17 +409,11 @@ function check_plugins() {
 	if ( !is_plugin_active( 'tidio-live-chat/tidio-elements.php' ) ) {
 		$m .= ' <a target= \"_blank\" href=\"https://wordpress.org/plugins/tidio-live-chat/\">Tidio Live Chat</a>';
 	}
-	if ( !is_plugin_active( 'lazy-social-buttons/lazy-social-buttons.php' ) ) {
-		$m .= ', <a target= \"_blank\" href=\"https://wordpress.org/plugins/lazy-social-buttons/\">Lazy Social Buttons</a>';
-	}
 	if ( !is_plugin_active( 'alo-easymail/alo-easymail.php' ) ) {
 		$m .= ', <a target= \"_blank\" href=\"http://wordpress.org/plugins/alo-easymail/\">ALO EasyMail Newsletter</a>';
 	}
 	if ( !is_plugin_active( 'jetpack/jetpack.php' ) ) {
 		$m .= ', <a target= \"_blank\" href=\"http://wordpress.org/plugins/jetpack/\">JetPack</a>';
-	}
-	if ( !is_plugin_active( 'login-lockdown/loginlockdown.php' ) ) {
-		$m .= ', <a target= \"_blank\" href=\"https://wordpress.org/plugins/login-lockdown/\">Login LockDown</a>';
 	}
 	$m .= '.';
 	if ( strpos( $m,'target' ) == true ) {
