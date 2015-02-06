@@ -199,7 +199,7 @@ require_once ( get_stylesheet_directory() . '/inc/widget-tipos-produtos.php' );
 /**
  * ACF
  */
-//define( 'ACF_LITE' , true );
+define( 'ACF_LITE' , true );
 require get_template_directory() . '/inc/advanced-custom-fields/acf.php';
 
 if(function_exists("register_field_group"))
